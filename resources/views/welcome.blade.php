@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/template') }}">ТЕМПЛЕТ-НАЧАЛО</a>
+                    <a href="{{ url('/template-practices') }}">ТЕМПЛЕТ-НАЧАЛО</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>

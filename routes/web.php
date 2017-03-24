@@ -11,8 +11,17 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/template', 'TemplateController');
+//Route::get('/template-practices', function () {
+//    return view('templates.index');
+//});
+
+Route::get('template-practices', 'TemplateController@index');
+Route::get('template-practices/introduction','TemplateController@index');
+Route::get('template-practices/triticum-spp','TemplateController@triticum');

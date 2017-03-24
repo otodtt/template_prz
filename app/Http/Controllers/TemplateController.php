@@ -13,8 +13,17 @@ class TemplateController extends Controller
      */
     public function index()
     {
-        echo 'From TemplateController';
+        $has_image = 0;
+        return view('templates.introduction', compact('has_image'));
     }
+
+
+    public function triticum()
+    {
+        $has_image = 0;
+        return view('templates.pages.01_grain.triticum', compact('has_image'));
+    }
+
 
     /**
      * Show the form for creating a new resource.

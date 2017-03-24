@@ -1,0 +1,402 @@
+#sidebar{
+    /*background-color: transparent;*/
+}
+.content{
+    margin-top: 3px;
+}
+.pull-left{
+    margin-left: 3px;
+}
+/*--------------
+    за бутона
+ -------------*/
+.btn-success, .btn-success:focus{
+    background-color: #3fc35f;
+    border: 2px solid #3fc35f;
+}
+/*.btn-success:focus{*/
+    /*background-color: #3fc35f;*/
+/*}*/
+
+.btn-success:hover{
+    color: #3fc35f;
+    background-color: #fff;
+}
+/*--------------
+    за МЕНЮ
+ -------------*/
+
+
+#side-menu .list-group-item{
+    background-color: #678f39;
+    padding-left: 10px;
+    border-radius: 0;
+    border-left: 1px solid #68903a;
+    border-top: 1px solid #68903a;
+    border-right: 1px solid #68903a;
+    border-bottom: 7px solid #97b568;
+    color: #ffffff;
+ }
+#side-menu .list-group-item:hover{
+    background-color: #527532;
+}
+#side-menu .active-group .list-group-item{
+    border-left: 5px solid #de9d62;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+
+
+/*------в падащото меню -----*/
+#side-menu .nav-second-level li .list-group-item {
+    background-color: #fafaf4;
+    border-bottom: 0 solid #c4c4c4;
+    padding-left: 20px;
+    color: #565656;
+    font-weight: normal;
+    font-style: normal;
+}
+#side-menu .nav-second-level li .list-group-item:hover {
+    background-color: #acdc77;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bolder;
+}
+#side-menu .nav-second-level .active .list-group-item {
+    background-color: #c6f88e;
+    border-left: 4px solid #de9d62;
+    /*padding-left: 20px;*/
+    color: #333;
+    font-style: italic;
+    font-weight: bolder;
+    /*text-shadow: 0.1em 0.1em 0.1em #333;*/
+}
+/*------в падащото меню -----*/
+
+
+
+/*body {*/
+/*padding-top: 50px;*/
+/*}*/
+/*/!**/
+/** Style tweaks*/
+/** --------------------------------------------------*/
+/**!/*/
+html, body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+    /*overflow: visible;*/
+    /*height: 100%;*/
+}
+/*body {*/
+/*padding-top: 70px;*/
+/*}*/
+/*footer {*/
+/*padding: 30px 0;*/
+/*}*/
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ * Greater thav 768px shows the menu by default and also flips the semantics
+ * The issue is to show menu for large screens and to hide for small
+ * Also need to do something clever to turn off the tabs for when the navigation is hidden
+ * Otherwise keyboard users cannot find the focus point
+ * (For now I will ignore that for mobile users and also not worry about
+ * screen re-sizing popping the menu out.)
+ */
+/*@media screen and (min-width: 780px)*/
+@media screen and (min-width: 1136px) {
+    #sidebar{
+        padding-right: 0;
+    }
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+    }
+
+    .row-offcanvas-right {
+        right: 25%;
+    }
+
+    .row-offcanvas-left {
+        left: 25%;
+    }
+
+    .row-offcanvas-right .sidebar-offcanvas {
+        right: -25%; /* 3 columns */
+        background-color: rgb(255, 255, 255);
+    }
+
+    .row-offcanvas-left .sidebar-offcanvas {
+        left: -25%; /* 3 columns */
+        background-color: rgb(255, 255, 255);
+    }
+
+    .row-offcanvas-right.active {
+        right: 0; /* 3 columns */
+    }
+
+    .row-offcanvas-left.active {
+        left: 0; /* 3 columns */
+    }
+
+    .row-offcanvas-right.active .sidebar-offcanvas {
+        background-color: rgb(254, 254, 254);
+    }
+    .row-offcanvas-left.active .sidebar-offcanvas {
+        background-color: rgb(254, 254, 254);
+    }
+
+    .row-offcanvas .content {
+        width: 75%; /* 9 columns */
+        -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+
+    }
+
+    .row-offcanvas.active .content {
+        width: 100%; /* 12 columns */
+    }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 222px;
+        width: 25%; /* 3 columns */
+    }
+}
+@media screen and (max-width: 1135px) {
+    .row-offcanvas-left .sidebar-offcanvas {
+        left: -25%;
+        background-color: rgb(255, 255, 255);
+    }
+
+
+
+
+
+
+
+
+
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+    }
+
+
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -35%; /* 6 columns */
+    }
+
+    .row-offcanvas-right.active {
+        right: 50%; /* 6 columns */
+    }
+
+    .row-offcanvas-left.active {
+        left: 35%; /* 6 columns */
+    }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 222px;
+        width: 35%; /* 6 columns */
+    }
+    .content{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 980px) {
+    .row-offcanvas-left .sidebar-offcanvas {
+        left: -25%;
+        background-color: rgb(255, 255, 255);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+    }
+
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -38%; /* 6 columns */
+    }
+
+    .row-offcanvas-right.active {
+        right: 50%; /* 6 columns */
+    }
+
+    .row-offcanvas-left.active {
+        left: 38%; /* 6 columns */
+    }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 222px;
+        width: 39%; /* 6 columns */
+    }
+    .content{
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+    }
+
+    .row-offcanvas-right {
+        right: 0;
+    }
+
+    .row-offcanvas-left {
+        left: 0;
+    }
+
+    .row-offcanvas-right
+    .sidebar-offcanvas {
+        right: -50%; /* 6 columns */
+    }
+
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -48%; /* 6 columns */
+    }
+
+    .row-offcanvas-right.active {
+        right: 50%; /* 6 columns */
+    }
+
+    .row-offcanvas-left.active {
+        left: 50%; /* 6 columns */
+    }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 222px;
+        width: 50%; /* 6 columns */
+    }
+    .pull-left{
+        margin-left: 0;
+    }
+    /*.right-fa{*/
+        /*display: none;*/
+    /*}*/
+    /*.left-fa{*/
+        /*display: block;*/
+    /*}*/
+}
+@media screen and (max-width: 690px){
+    .row-offcanvas-left.active {
+        left: 60%;
+    }
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -58%;
+    }
+    .sidebar-offcanvas {
+        /*position: absolute;*/
+        /*top: 222px;*/
+        width: 60%;
+    }
+}
+@media screen and (max-width: 580px){
+    .row-offcanvas-left.active {
+        left: 70%;
+    }
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -66%;
+    }
+    .sidebar-offcanvas {
+        /*position: absolute;*/
+        /*top: 222px;*/
+        width: 66%;
+    }
+}
+@media screen and (max-width: 460px){
+    /*.row-offcanvas-left.active {*/
+        /*left: 70%;*/
+    /*}*/
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -67%;
+    }
+    .sidebar-offcanvas {
+        /*position: absolute;*/
+        /*top: 222px;*/
+        width: 70%;
+    }
+}
+@media screen and (max-width: 430px){
+    #side-menu .list-group-item{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 380px){
+    #side-menu .list-group-item{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 360px){
+    .row-offcanvas-left.active {
+        left: 80%;
+    }
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -76%;
+    }
+    .sidebar-offcanvas {
+        /*position: absolute;*/
+        /*top: 222px;*/
+        width: 80%;
+    }
+    .pull-left{
+        margin-left: -10px;
+    }
+    /*------------*/
+    /*body {*/
+        /*overflow-x: hidden; /!* Prevent scroll on narrow devices *!/*/
+        /*height: 100%;*/
+    /*}*/
+    /*------------*/
+}
+/*@media screen and (max-width: 320px){*/
+    /*.row-offcanvas-left.active {*/
+        /*left: 80%;*/
+    /*}*/
+    /*.row-offcanvas-left*/
+    /*.sidebar-offcanvas {*/
+        /*left: -76%;*/
+    /*}*/
+    /*.sidebar-offcanvas {*/
+        /*/!*position: absolute;*!/*/
+        /*/!*top: 222px;*!/*/
+        /*width: 80%;*/
+    /*}*/
+/*}*/
