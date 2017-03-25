@@ -8,22 +8,22 @@
     margin-left: 3px;
 }
 /*--------------
-    за бутона
+    Р·Р° Р±СѓС‚РѕРЅР°
  -------------*/
 .btn-success, .btn-success:focus{
-    background-color: #3fc35f;
-    border: 2px solid #3fc35f;
+    background-color: #678f39;
+    border: 2px solid #97b568;
 }
 /*.btn-success:focus{*/
     /*background-color: #3fc35f;*/
 /*}*/
 
 .btn-success:hover{
-    color: #3fc35f;
-    background-color: #fff;
+    color: #fff;
+    background-color: #527532;
 }
 /*--------------
-    за МЕНЮ
+    Р·Р° РњР•РќР®
  -------------*/
 
 
@@ -48,7 +48,7 @@
 
 
 
-/*------в падащото меню -----*/
+/*------ РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ -----*/
 #side-menu .nav-second-level li .list-group-item {
     background-color: #fafaf4;
     border-bottom: 0 solid #c4c4c4;
@@ -72,7 +72,7 @@
     font-weight: bolder;
     /*text-shadow: 0.1em 0.1em 0.1em #333;*/
 }
-/*------в падащото меню -----*/
+/*------ РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ -----*/
 
 
 

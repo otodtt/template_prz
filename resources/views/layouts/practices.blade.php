@@ -199,7 +199,7 @@
                                         <a class="list-group-item second" href="{!!URL::to('/template-practices/triticum-spp')!!}"><i class='fa fa-angle-right fa-fw'></i> Пшеница</a>
                                     </li>
                                     <li class="active">
-                                        <a class="list-group-item second" href="{!!URL::to('/админ/шаблон-лого')!!}"><i class='fa fa-angle-right fa-fw'></i> Ечемик</a>
+                                        <a class="list-group-item second" href="{!!URL::to('/template-practices/hordeum-vulgare')!!}"><i class='fa fa-angle-right fa-fw'></i> Ечемик</a>
                                     </li>
                                     <li>
                                         <a class="list-group-item second" href="{!!URL::to('/админ/шаблон-удостоверение')!!}"><i class='fa fa-angle-right fa-fw'></i> Овес</a>
@@ -362,18 +362,14 @@
                 </section>
                 <hr>
                 @if($has_image !== 0)
-                    <div class="col-md-12 img-authors">
-                        <div class="row">
-                            <div class="col-md-2">
-                                Снимков материал от:
-                            </div>
-                            <div class="col-md-10">
-                                @section('authors')
-                                @show
-
-                            </div>
+                    <div class="panel panel-default img-authors">
+                        <div class="panel-heading">Снимков материал от:</div>
+                        <div class="panel-body">
+                            @section('authors')
+                            @show
                         </div>
                     </div>
+
                 @endif
             </div>
         </div>
@@ -449,7 +445,7 @@
     {!!Html::script("js/nouislider.js" )!!}
     <!-- mixit slider -->
     {{--<script type="text/javascript" src="js/jquery.mixitup.js"></script>--}}
-    {!!Html::script("js/query.mixitup.js" )!!}
+    {!!Html::script("js/jquery.mixitup.js" )!!}
     <!-- Add fancyBox -->
     {{--<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>--}}
     {!!Html::script("js/jquery.fancybox.pack.js" )!!}
@@ -468,15 +464,15 @@
 
     <!-- Add fancyBox main JS and CSS files -->
     {{--<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>--}}
-    {!!Html::script("js/fancybox/source/jquery.fancybox.js?v=2.1.5" )!!}
+    {!!Html::script("fancybox/source/jquery.fancybox.js?v=2.1.5" )!!}
     {{--<script type="text/javascript" src="js/myFancybox.js"></script>--}}
     {!!Html::script("js/myFancybox.js" )!!}
 
     <!--test-->
     {{--<script type="text/javascript" src="js-test/metisMenu.min.js"></script>--}}
     {{--<script type="text/javascript" src="js-test/sb-admin-2.js"></script>--}}
-    {!!Html::script("js-test//metisMenu.min.js" )!!}
-    {!!Html::script("js-test//sb-admin-2.js" )!!}
+    {!!Html::script("js-test/metisMenu.min.js" )!!}
+    {!!Html::script("js-test/sb-admin-2.js" )!!}
     <!--test-->
 
     <script type="text/javascript">

@@ -16,7 +16,7 @@
         </div>
 
         <div class="row" >
-            <div class="pest-description-container col-md-12 text-justify text-indent">
+            <div class="pest-description-container col-md-12 text-justifyss text-indent">
                 <h3 class="my_class_h3">УВОД</h3>
                 <p>
                     Още в средата на 80-те-години Работна група по продукти за растителна защита (ПРЗ) на Европейската Организация за
@@ -116,9 +116,9 @@
             </div>
         </div>
 
-        <div class="row logo-top">
+        <div class="row logo-top intro">
             <div class="col-lg-2 text-center " id="image-logo">
-                <img id="logo-image" src="../../img/logo_nsrz.png" alt="Лого НСРЗ" />
+                <img id="logo-image" src="../img/logo_nsrz.png" alt="Лого НСРЗ" />
             </div>
             <div class="col-lg-10 text-center " id="content-logo">
                 <h4 id="forest2">МИНИСТЕРСТВО НА ЗЕМЕДЕЛИЕТО И ГОРИТЕ</h4>
@@ -127,7 +127,7 @@
         </div>
 
         <div class="row text-right">
-            <img id="stamp" class="stamp" src="./img/stamp_director.png" alt="печат и подпис на директор" />
+            <img id="stamp" class="stamp" src="../img/stamp_director.png" alt="печат и подпис на директор" />
         </div>
 
 
@@ -140,7 +140,7 @@
 
         <!--Специфична сфера на действие-->
         <div class="row">
-            <div class="col-md-12 text-justify text-indent">
+            <div class="col-md-12 text-justifyss text-indent">
                 <div class="text-center">
                     <h3 id="">ПРИНЦИПИ НА ДОБРАТА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА</h3>
                 </div>
