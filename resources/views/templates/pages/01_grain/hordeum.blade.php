@@ -1153,10 +1153,10 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Weed/Lamium_amplexicaule.jpg" title="Мъртва коприва"><img src="../../img_pest/Weed/Lamium_amplexicaule_thumb.jpg" alt="Lamium amplexicaule" title="Мъртва коприва"/><span class="title_thumb">Мъртва коприва</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Weed/Ranunculus_arvensis.jpg" title="Полско лютиче"><img src="../../img_pest/Weed/Ranunculus_arvensis_thumb.jpg" alt="Ranunculus arvensis" title="Полско лютиче"/><span class="title_thumb">Полско лютиче</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Weed/Sinapis_arvensis.jpg" title="Полски синап"><img src="../../img_pest/Weed/Sinapis_arvensis_thumb.jpg" alt="Sinapis arvensis" title="Полски синап"/><span class="title_thumb">Полски синап</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Weed/Sorghum_halepensis.jpg" title="Балур"><img src="../../img_pest/Weed/Sorghum_halepensis_thumb.jpg" alt="Sorghum halepensis" title="Балур"/><span class="title_thumb">Балур</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Lamium_amplexicaule.jpg" title="Мъртва коприва"><img src="../../img_pest/Weed/Lamium_amplexicaule_thumb.jpg" alt="Lamium amplexicaule" title="Мъртва коприва"/><span class="title_thumb">Мъртва коприва</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Ranunculus_arvensis.jpg" title="Полско лютиче"><img src="../../img_pest/Weed/Ranunculus_arvensis_thumb.jpg" alt="Ranunculus arvensis" title="Полско лютиче"/><span class="title_thumb">Полско лютиче</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Sinapis_arvensis.jpg" title="Полски синап"><img src="../../img_pest/Weed/Sinapis_arvensis_thumb.jpg" alt="Sinapis arvensis" title="Полски синап"/><span class="title_thumb">Полски синап</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Sorghum_halepensis.jpg" title="Балур"><img src="../../img_pest/Weed/Sorghum_halepensis_thumb.jpg" alt="Sorghum halepensis" title="Балур"/><span class="title_thumb">Балур</span></a></li>
                 </ul>
             </div>
         </div>

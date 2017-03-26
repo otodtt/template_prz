@@ -1685,10 +1685,10 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/weed/Veronica_hederifolia.jpg" title="Бръшлянолистно великденче"><img src="../../img_pest/weed/Veronica_hederifolia_thumb.png" alt="Veronica hederifolia" title="Бръшлянолистно великденче"/><span class="title_thumb">Бръшлянолистно великденче</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/weed/Alopecurus_myosuroides.jpg" title="Полска лисича опашка"><img src="../../img_pest/weed/Alopecurus_myosuroides_thumb.png" alt="Alopecurus myosuroides" title="Полска лисича опашка"/><span class="title_thumb">Полска лисича опашка</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/weed/Avena_fatua.jpg" title="Див овес"><img src="../../img_pest/weed/Avena_fatua_thumb.jpg" alt="Avena fatua" title="Див овес"/><span class="title_thumb">Див овес</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/weed/Cirsium_arvense.jpg" title="Паламида"><img src="../../img_pest/weed/Cirsium_arvense_thumb.png" alt="Cirsium arvense" title="Паламида"/><span class="title_thumb">Паламида</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Veronica_hederifolia.jpg" title="Бръшлянолистно великденче"><img src="../../img_pest/weed/Veronica_hederifolia_thumb.png" alt="Veronica hederifolia" title="Бръшлянолистно великденче"/><span class="title_thumb">Бръшлянолистно великденче</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Alopecurus_myosuroides.jpg" title="Полска лисича опашка"><img src="../../img_pest/weed/Alopecurus_myosuroides_thumb.png" alt="Alopecurus myosuroides" title="Полска лисича опашка"/><span class="title_thumb">Полска лисича опашка</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Avena_fatua.jpg" title="Див овес"><img src="../../img_pest/weed/Avena_fatua_thumb.jpg" alt="Avena fatua" title="Див овес"/><span class="title_thumb">Див овес</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Cirsium_arvense.jpg" title="Паламида"><img src="../../img_pest/weed/Cirsium_arvense_thumb.png" alt="Cirsium arvense" title="Паламида"/><span class="title_thumb">Паламида</span></a></li>
                 </ul>
             </div>
         </div>
