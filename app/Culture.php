@@ -4,18 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Practices extends Model
+class Culture extends Model
 {
     /**
      * Защитена таблица
      *
      * @var string
      */
-    protected $table = 'practices';
+    protected $table = 'cultures';
 
     /**
      * Защитени колони в таблицата
      * @var array
      */
-    protected $fillable = ['link_id', 'name', 'full_name', 'text', 'group_id', 'culture_id', 'img_path'];
+    protected $fillable = ['group_id', 'name', 'latin_name'];
 }

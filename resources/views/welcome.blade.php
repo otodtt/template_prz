@@ -84,8 +84,8 @@
 
                 <div class="links">
                     <a href="{{ url('/template-practices') }}">ТЕМПЛЕТ-НАЧАЛО</a>
-                    <a href="{{ url('/template-practices/create') }}">ДОБАВИ ДРЗП</a>
-                    <a href="https://laravel-news.com">News</a>
+                    <a href="{{ url('/template-practices/show-culture') }}">ДОБАВИ ДРЗП</a>
+                    <a href="{{ url('/culture') }}">Култури</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>

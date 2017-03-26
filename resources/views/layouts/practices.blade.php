@@ -123,7 +123,7 @@
                     </button>
                     <!-- LOGO -->
                     <!-- Text based logo -->
-                    <a class="navbar-brand aa-logo" href="index.html"> Home <span>Property</span></a>
+                    <a class="navbar-brand aa-logo" href="/"> Home <span>Property</span></a>
                     <!-- Image based logo -->
                      <!--<a class="navbar-brand aa-logo-img" href="index.html"><img  src="img/logo.png" alt="logo"></a>-->
                 </div>
@@ -257,7 +257,7 @@
                                         <a class="list-group-item" href="{!!URL::to('/admin/directors')!!}"><i class='fa fa-angle-right fa-fw'></i> Рапица</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/directors')!!}"><i class='fa fa-angle-right fa-fw'></i> Фастъци</a>
+                                        <a class="list-group-item" href="{!!URL::to('/admin/directors')!!}"><i class='fa fa-angle-right fa-fw'></i> Фъстъци</a>
                                     </li>
                                 </ul>
                             </li>
@@ -366,6 +366,10 @@
                         <div class="panel-heading">Снимков материал от:</div>
                         <div class="panel-body">
                             @section('authors')
+                                @if($has_image == 1)
+                                    @include('templates.pages.01_grain.authors.triticum_authors')
+                                @elseif($has_image == 2)
+                                @endif
                             @show
                         </div>
                     </div>

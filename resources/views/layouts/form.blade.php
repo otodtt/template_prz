@@ -2,7 +2,7 @@
 <html lang="bg">
 <head>
     <meta charset="utf-8">
-    <title>Добавяне на неприятели</title>
+    <title>Добавяне</title>
 
     {!!Html::style("css/bootstrap.css" )!!}
 </head>

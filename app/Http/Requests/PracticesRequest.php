@@ -27,7 +27,6 @@ class PracticesRequest extends FormRequest
             'link_id'=> 'required|min:3|max:100|latin',
             'name'=> 'required|min:3|max:100|cyrillic_with',
             'full_name'=> 'required|min:3|max:500',
-            'text'=> 'required|min:3',
         ];
     }
 
@@ -51,10 +50,6 @@ class PracticesRequest extends FormRequest
             'full_name.required' => 'Попълни Целия линк!',
             'full_name.min' => 'Минимален брой символи за Целия линк - 3!',
             'full_name.max' => 'Максимален брой символи за името - 500!',
-
-            'text.required' => 'Попълни Текст за Вредителя!',
-            'text.min' => 'Минимален брой символи за Текст за Вредителя- 3!'
-
         ];
     }
 }

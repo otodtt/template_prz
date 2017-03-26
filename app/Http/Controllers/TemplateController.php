@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Culture;
 use App\Http\Requests\PracticesRequest;
 use App\Practices;
 use Illuminate\Http\Request;
@@ -45,11 +46,10 @@ class TemplateController extends Controller
             'text'=> $request['text'],
             'group_id'=> $request['group_id'],
             'culture_id'=> $request['culture_id'],
+            'img_path'=> $request['img_path'],
         ]);
 
-//        Session::flash('message', 'Фирмата е добавена успешно!');
-        return Redirect::to('/template-practices');
-//        dd($request);
+        return Redirect::to('/');
     }
 
 
@@ -60,7 +60,7 @@ class TemplateController extends Controller
     }
     public function hordeum()
     {
-        $has_image = 1;
+        $has_image = 2;
         return view('templates.pages.01_grain.hordeum', compact('has_image'));
     }
 
@@ -109,5 +109,21 @@ class TemplateController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show_culture()
+    {
+        $groups = array(1 =>'Зърненожитни',2 => 'Бобови', 3 => 'Технически', 4 => 'Зеленчуци',
+                        5 => 'Зеленчуци в съоражения', 6 => 'Овощни', 7 => 'Ягодоплодни', 8 => 'Лоза');
+        $practices = Practices::get();
+        $cultures = Culture::get();
+
+        return view('templates.index', compact('practices', 'groups', 'cultures'));
     }
 }
