@@ -22,14 +22,19 @@
                                    @foreach($practices as $pest)
                                        @if($pest->group_id == $k && $pest->culture_id)
                                            <div class="row">
-                                              <div class="col-lg-5"><p>{{$pest->name}}</p></div>
-                                              <div class="col-lg-4"><p>{{$pest->link_id}}</p></div>
-                                              <div class="col-lg-3">
-                                                  <a href="{!!URL::to('/culture/edit/'.$pest->id)!!}"
-                                                     class="fa fa-edit btn btn-xs btn-primary">
+                                               <div class="col-lg-5"><p>{{$pest->name}}</p></div>
+
+                                               <div class="col-lg-4"><p>{{$pest->link_id}}</p></div>
+                                               <div class="col-lg-3">
+                                                   <a href="{!!URL::to('/template-practices/edit/'.$pest->id)!!}"
+                                                      class="fa fa-edit btn btn-xs btn-primary">
                                                       &nbsp;Редактирай!
-                                                  </a>
-                                              </div>
+                                                   </a>
+                                                   <a href="{!!URL::to('/culture/edit/'.$pest->id)!!}"
+                                                      class="fa fa-edit btn btn-xs btn-success">
+                                                       &nbsp;Добави ПИВ
+                                                   </a>
+                                               </div>
                                            </div>
                                        @endif
                                    @endforeach

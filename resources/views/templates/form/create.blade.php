@@ -20,7 +20,7 @@
                 @endif
                 {!! Form::open(['url'=>'template-practices/store', 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
                     <fieldset>
-                        <legend>Legend</legend>
+                        <legend>ДОБАВЯНЕ НА НЕПРИЯТЕЛ</legend>
                         <div class="form-group">
                             <label class="col-lg-2 control-label">Група - Зърненожитни</label>
                             <div class="col-lg-10">

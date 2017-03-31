@@ -49,19 +49,7 @@ class TemplateController extends Controller
             'img_path'=> $request['img_path'],
         ]);
 
-        return Redirect::to('/');
-    }
-
-
-    public function triticum()
-    {
-        $has_image = 1;
-        return view('templates.pages.01_grain.triticum', compact('has_image'));
-    }
-    public function hordeum()
-    {
-        $has_image = 2;
-        return view('templates.pages.01_grain.hordeum', compact('has_image'));
+        return Redirect::to('template-practices/show-culture');
     }
 
 
@@ -72,10 +60,7 @@ class TemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    public function show($id){}
 
     /**
      * Show the form for editing the specified resource.
@@ -85,19 +70,34 @@ class TemplateController extends Controller
      */
     public function edit($id)
     {
-        //
+        $practices = Practices::findOrFail($id);
+        return view('templates.form.edit', compact('practices'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\PracticesRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PracticesRequest $request, $id)
     {
-        //
+        $practices = Practices::findOrFail($id);
+        $data =([
+            'link_id'=> $request['link_id'],
+            'name'=> $request['name'],
+            'full_name'=> $request['full_name'],
+            'text'=> $request['text'],
+            'group_id'=> $request['group_id'],
+            'culture_id'=> $request['culture_id'],
+            'img_path'=> $request['img_path'],
+        ]);
+
+        $practices->fill($data);
+        $practices->save();
+
+        return Redirect::to('template-practices/show-culture');
     }
 
     /**
@@ -106,10 +106,7 @@ class TemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+    public function destroy($id){}
 
 
     /**
@@ -126,4 +123,20 @@ class TemplateController extends Controller
 
         return view('templates.index', compact('practices', 'groups', 'cultures'));
     }
+
+
+
+
+
+    public function triticum()
+    {
+        $has_image = 1;
+        return view('templates.pages.01_grain.triticum', compact('has_image'));
+    }
+    public function hordeum()
+    {
+        $has_image = 2;
+        return view('templates.pages.01_grain.hordeum', compact('has_image'));
+    }
+
 }
