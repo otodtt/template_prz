@@ -202,16 +202,16 @@
                                         <a class="list-group-item second" href="{!!URL::to('/template-practices/hordeum-vulgare')!!}"><i class='fa fa-angle-right fa-fw'></i> Ечемик</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item second" href="{!!URL::to('/админ/шаблон-удостоверение')!!}"><i class='fa fa-angle-right fa-fw'></i> Овес</a>
+                                        <a class="list-group-item second" href="{!!URL::to('/template-practices/avena-sativa')!!}"><i class='fa fa-angle-right fa-fw'></i> Овес</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item second" href="{!!URL::to('/админ/шаблон-издание')!!}"><i class='fa fa-angle-right fa-fw'></i> Ръж</a>
+                                        <a class="list-group-item second" href="{!!URL::to('/template-practices/secale-cereale')!!}"><i class='fa fa-angle-right fa-fw'></i> Ръж</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item second" href="{!!URL::to('/админ/шаблон-сертификат')!!}"><i class='fa fa-angle-right fa-fw'></i> Царевица</a>
+                                        <a class="list-group-item second" href="{!!URL::to('/template-practices/zea-mays')!!}"><i class='fa fa-angle-right fa-fw'></i> Царевица</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item second" href="{!!URL::to('/админ/шаблон-становище')!!}"><i class='fa fa-angle-right fa-fw'></i> Борба с гризачи</a>
+                                        <a class="list-group-item second" href="{!!URL::to('/template-practices/rodentia')!!}"><i class='fa fa-angle-right fa-fw'></i> Борба с гризачи</a>
                                     </li>
                                 </ul>
                             </li>

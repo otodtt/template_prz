@@ -29,10 +29,15 @@ Route::post('template-practices/store', 'TemplateController@store');
 Route::get('template-practices/edit/{id}', 'TemplateController@edit');
 Route::post('template-practices/update/{id}', 'TemplateController@update');
 
+////////////////////
 Route::get('template-practices', 'TemplateController@index');
 Route::get('template-practices/introduction','TemplateController@index');
 Route::get('template-practices/triticum-spp','TemplateController@triticum');
 Route::get('template-practices/hordeum-vulgare','TemplateController@hordeum');
+Route::get('template-practices/avena-sativa','TemplateController@avena');
+Route::get('template-practices/secale-cereale','TemplateController@secale');
+Route::get('template-practices/zea-mays','TemplateController@zea');
+Route::get('template-practices/rodentia','TemplateController@rodentia');
 
 //Route::resource('culture', 'CultureController');
 Route::get('culture', 'CultureController@index');

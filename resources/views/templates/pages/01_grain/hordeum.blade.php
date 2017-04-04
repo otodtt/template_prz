@@ -197,8 +197,8 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Ustilago/Ustilago_hordei.jpg" title="Покрита главня"><img src="../../img_pest/Ustilago/Ustilago_hordei_thumb.jpg" alt="Ustilago hordei" title="Ustilago hordei"/><span class="title_thumb">Покрита главня</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Ustilago/Ustilago_nuda.jpg" title="Праховита главня"><img src="../../img_pest/Ustilago/Ustilago_nuda_thumb.jpg" alt="Ustilago nuda" title="Ustilago nuda"/><span class="title_thumb">Праховита главня</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/diseases/Ustilago_hordei.jpg" title="Покрита главня"><img src="../../img_pest/diseases/Ustilago_hordei_thumb.jpg" alt="Ustilago hordei" title="Ustilago hordei"/><span class="title_thumb">Покрита главня</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/diseases/Ustilago_nuda.jpg" title="Праховита главня"><img src="../../img_pest/diseases/Ustilago_nuda_thumb.jpg" alt="Ustilago nuda" title="Ustilago nuda"/><span class="title_thumb">Праховита главня</span></a></li>
                 </ul>
             </div>
         </div>
@@ -274,7 +274,7 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Erysiphe_graminis/Erysiphe_graminis_barley.jpg"  title="Брашнеста мана"><img src="../../img_pest/Erysiphe_graminis/Erysiphe_graminis_barley_thumb.jpg" alt="Erysiphe graminis" title="Erysiphe graminis"/><span class="title_thumb">Брашнеста мана</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/diseases/Erysiphe_graminis_barley.jpg"  title="Брашнеста мана"><img src="../../img_pest/diseases/Erysiphe_graminis_barley_thumb.jpg" alt="Erysiphe graminis" title="Erysiphe graminis"/><span class="title_thumb">Брашнеста мана</span></a></li>
                 </ul>
             </div>
         </div>
@@ -319,7 +319,7 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Pyrenophora_graminea/Pyrenophora_graminea.jpg" title="Ленточна болест - Pyrenophora graminea"><img src="../../img_pest/Pyrenophora_graminea/Pyrenophora_graminea_thumb.jpg" alt="Pyrenophora graminea" title="Pyrenophora graminea"/><span class="title_thumb">Ленточна болест</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/diseases/Pyrenophora_graminea.jpg" title="Ленточна болест - Pyrenophora graminea"><img src="../../img_pest/diseases/Pyrenophora_graminea_thumb.jpg" alt="Pyrenophora graminea" title="Pyrenophora graminea"/><span class="title_thumb">Ленточна болест</span></a></li>
                 </ul>
             </div>
         </div>
@@ -367,7 +367,7 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Puccinia_hordei/Puccinia_hordei.jpg" title="Листна ръжда"><img src="../../img_pest/Puccinia_hordei/Puccinia_hordei_thumb.jpg" alt="Puccinia hordei" title="Puccinia hordei"/><span class="title_thumb">Листна ръжда</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/diseases/Puccinia_hordei.jpg" title="Листна ръжда"><img src="../../img_pest/diseases/Puccinia_hordei_thumb.jpg" alt="Puccinia hordei" title="Puccinia hordei"/><span class="title_thumb">Листна ръжда</span></a></li>
                 </ul>
             </div>
         </div>
@@ -425,8 +425,8 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Fusarium_culmorum/Fusarium_culmorum.jpg" title="Базично гниене"><img src="../../img_pest/Fusarium_culmorum/Fusarium_culmorum_thumb.png" alt="Fusarium culmorum" title="Fusarium culmorum"/><span class="title_thumb">Базично гниене</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Monographella_nivalis/Monographella_nivalis.jpg" title="Снежна плесен"><img src="../../img_pest/Monographella_nivalis/Monographella_nivalis_thumb.png" alt="Monographella nivalis" title="Monographella nivalis"/><span class="title_thumb">Снежна плесен</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/diseases/Fusarium_culmorum.jpg" title="Базично гниене"><img src="../../img_pest/diseases/Fusarium_culmorum_thumb.png" alt="Fusarium culmorum" title="Fusarium culmorum"/><span class="title_thumb">Базично гниене</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/diseases/Monographella_nivalis.jpg" title="Снежна плесен"><img src="../../img_pest/diseases/Monographella_nivalis_thumb.png" alt="Monographella nivalis" title="Monographella nivalis"/><span class="title_thumb">Снежна плесен</span></a></li>
                 </ul>
             </div>
         </div>
@@ -515,7 +515,7 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Pyrenophora_graminea/Hordei_Pyrenophora_teres.jpg" title="Мрежести петна"><img src="../../img_pest/Pyrenophora_graminea/Hordei_Pyrenophora_teres_thumb.jpg" alt="Pyrenophora teres" title="Pyrenophora teres"/><span class="title_thumb">Мрежести петна</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/diseases/Hordei_Pyrenophora_teres.jpg" title="Мрежести петна"><img src="../../img_pest/diseases/Hordei_Pyrenophora_teres_thumb.jpg" alt="Pyrenophora teres" title="Pyrenophora teres"/><span class="title_thumb">Мрежести петна</span></a></li>
                 </ul>
             </div>
         </div>
@@ -596,8 +596,8 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Zabrus/Zabrus_tenebrioides.jpg" title="Обикновен житен бегач"><img src="../../img_pest/Zabrus/Zabrus_tenebrioides_thumb.png" alt="Zabrus tenebrioides Goeze" title="Обикновен житен бегач"/><span class="title_thumb">Обикновен житен бегач</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Zabrus/Zabrus_spinipes.jpg" title="Голям житен бегач"><img src="../../img_pest/Zabrus/Zabrus_spinipes_thumb.png" alt="Zabrus spinipes" title="Голям житен бегач"/><span class="title_thumb">Голям житен бегач</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/insects/Zabrus_tenebrioides.jpg" title="Обикновен житен бегач"><img src="../../img_pest/insects/Zabrus_tenebrioides_thumb.jpg" alt="Zabrus tenebrioides Goeze" title="Обикновен житен бегач"/><span class="title_thumb">Обикновен житен бегач</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/insects/Zabrus_spinipes.jpg" title="Голям житен бегач"><img src="../../img_pest/insects/Zabrus_spinipes_thumb.jpg" alt="Zabrus spinipes" title="Голям житен бегач"/><span class="title_thumb">Голям житен бегач</span></a></li>
                 </ul>
             </div>
         </div>
@@ -671,8 +671,8 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Sitobion/Sitobion_avenae.jpg" title="Овесена листна въшка"><img src="../../img_pest/Sitobion/Sitobion_avenae_thumb.png" alt="Sitobion avenae L." title="Овесена листна въшка"/><span class="title_thumb">Овесена листна въшка</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Sitobion/Schizaphis_graminum.jpg" title="Обикновена житна въшка"><img src="../../img_pest/Sitobion/Schizaphis_graminum_thumb.png" alt="Schizaphis graminum Rond" title="Обикновена житна въшка"/><span class="title_thumb">Обикновена житна въшка</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/insects/Sitobion_avenae.jpg" title="Овесена листна въшка"><img src="../../img_pest/insects/Sitobion_avenae_thumb.png" alt="Sitobion avenae L." title="Овесена листна въшка"/><span class="title_thumb">Овесена листна въшка</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/insects/Schizaphis_graminum.jpg" title="Обикновена житна въшка"><img src="../../img_pest/insects/Schizaphis_graminum_thumb.png" alt="Schizaphis graminum Rond" title="Обикновена житна въшка"/><span class="title_thumb">Обикновена житна въшка</span></a></li>
                 </ul>
             </div>
         </div>
@@ -745,8 +745,8 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Lema/Lema_melanopus.jpg" title="Обикновена житна пиявица"><img src="../../img_pest/Lema/Lema_melanopus_thumb.png" alt="Lema melanopus L" title="Обикновена житна пиявица"/><span class="title_thumb">Житна пиявица</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Lema/Lema_lichenis.jpg" title="Синя житна пиявица"><img src="../../img_pest/Lema/Lema_lichenis_thumb.png" alt="Lema lichenis Voet" title="Синя житна пиявица"/><span class="title_thumb">Синя житна пиявица</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/insects/Lema_melanopus.jpg" title="Обикновена житна пиявица"><img src="../../img_pest/insects/Lema_melanopus_thumb.jpg" alt="Lema melanopus L" title="Обикновена житна пиявица"/><span class="title_thumb">Житна пиявица</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/insects/Lema_lichenis.jpg" title="Синя житна пиявица"><img src="../../img_pest/insects/Lema_lichenis_thumb.png" alt="Lema lichenis Voet" title="Синя житна пиявица"/><span class="title_thumb">Синя житна пиявица</span></a></li>
                 </ul>
             </div>
         </div>
@@ -801,7 +801,7 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Oscinella/Oscinell_frit.jpg" title="Овесена шведска муха"><img src="../../img_pest/Oscinella/Oscinella_frit_thumb.jpg" alt="Oscinell_frit" title="Овесена шведска муха"/><span class="title_thumb">Овесена шведска муха</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/insects/Oscinell_frit.jpg" title="Овесена шведска муха"><img src="../../img_pest/insects/Oscinella_frit_thumb.jpg" alt="Oscinell_frit" title="Овесена шведска муха"/><span class="title_thumb">Овесена шведска муха</span></a></li>
                 </ul>
             </div>
         </div>
@@ -877,7 +877,7 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Haplothrips/Haplothrips_tritici.jpg" title="Пшеничен трипс"><img src="../../img_pest/Haplothrips/Haplothrips_tritici_thumb.png" alt="Haplothrips tritici Kurd" title="Пшеничен трипс"/><span class="title_thumb">Пшеничен трипс</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/insects/Haplothrips_tritici.jpg" title="Пшеничен трипс"><img src="../../img_pest/insects/Haplothrips_tritici_thumb.png" alt="Haplothrips tritici Kurd" title="Пшеничен трипс"/><span class="title_thumb">Пшеничен трипс</span></a></li>
                 </ul>
             </div>
         </div>
@@ -926,11 +926,6 @@
                 </p>
                 <h4 class="my_class_h4">Активни вещества</h4>
                 <p>България няма регистрирани инсектициди до настоящия момент.</p>
-            </div>
-            <div class="pest-image-container col-md-2 img-thumbnail" >
-                <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/Psammotettix/Psammotettix_provincialis.jpg" title="Житна цикада"><img src="../../img_pest/Psammotettix/Psammotettix_provincialis_thumb.png" alt="Psammotettix provincialis (Rib)" title="Ивичести житни цикади"/><span class="title_thumb">Житна цикада</span></a></li>
-                </ul>
             </div>
         </div>
         <div class="row">
@@ -1153,10 +1148,10 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 <ul class="products">
-                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Lamium_amplexicaule.jpg" title="Мъртва коприва"><img src="../../img_pest/Weed/Lamium_amplexicaule_thumb.jpg" alt="Lamium amplexicaule" title="Мъртва коприва"/><span class="title_thumb">Мъртва коприва</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Ranunculus_arvensis.jpg" title="Полско лютиче"><img src="../../img_pest/Weed/Ranunculus_arvensis_thumb.jpg" alt="Ranunculus arvensis" title="Полско лютиче"/><span class="title_thumb">Полско лютиче</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Sinapis_arvensis.jpg" title="Полски синап"><img src="../../img_pest/Weed/Sinapis_arvensis_thumb.jpg" alt="Sinapis arvensis" title="Полски синап"/><span class="title_thumb">Полски синап</span></a></li>
-                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Sorghum_halepensis.jpg" title="Балур"><img src="../../img_pest/Weed/Sorghum_halepensis_thumb.jpg" alt="Sorghum halepensis" title="Балур"/><span class="title_thumb">Балур</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Lamium_amplexicaule.jpg" title="Мъртва коприва"><img src="../../img_pest/weeds/Lamium_amplexicaule_thumb.jpg" alt="Lamium amplexicaule" title="Мъртва коприва"/><span class="title_thumb">Мъртва коприва</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Ranunculus_arvensis.jpg" title="Полско лютиче"><img src="../../img_pest/weeds/Ranunculus_arvensis_thumb.jpg" alt="Ranunculus arvensis" title="Полско лютиче"/><span class="title_thumb">Полско лютиче</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Sinapis_arvensis.jpg" title="Полски синап"><img src="../../img_pest/weeds/Sinapis_arvensis_thumb.jpg" alt="Sinapis arvensis" title="Полски синап"/><span class="title_thumb">Полски синап</span></a></li>
+                    <li><a class="fancybox-effects-a" href="../../img_pest/weeds/Sorghum_halepensis.jpg" title="Балур"><img src="../../img_pest/weeds/Sorghum_halepensis_thumb.jpg" alt="Sorghum halepensis" title="Балур"/><span class="title_thumb">Балур</span></a></li>
                 </ul>
             </div>
         </div>

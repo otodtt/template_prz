@@ -138,5 +138,24 @@ class TemplateController extends Controller
         $has_image = 2;
         return view('templates.pages.01_grain.hordeum', compact('has_image'));
     }
-
+    public function avena()
+    {
+        $has_image = 2;
+        return view('templates.pages.01_grain.avena', compact('has_image'));
+    }
+    public function secale()
+    {
+        $has_image = 2;
+        return view('templates.pages.01_grain.secale', compact('has_image'));
+    }
+    public function zea()
+    {
+        $has_image = 2;
+        return view('templates.pages.01_grain.zea', compact('has_image'));
+    }
+    public function rodentia()
+    {
+        $has_image = 2;
+        return view('templates.pages.01_grain.rodentia', compact('has_image'));
+    }
 }
