@@ -219,22 +219,22 @@
                                 <a class="list-group-item" href="{!!URL::to('/админ')!!}"><i class="fa fa-angle-double-right fa-fw"></i> БОБОВИ<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/users/create')!!}"><i class='fa fa-angle-right fa-fw'></i> Фасул</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/phaseolus-vulgaris')!!}"><i class='fa fa-angle-right fa-fw'></i> Фасул</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/users')!!}"><i class='fa fa-angle-right fa-fw'></i> Соя</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/glycine-max')!!}"><i class='fa fa-angle-right fa-fw'></i> Соя</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/users')!!}"><i class='fa fa-angle-right fa-fw'></i> Грах</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/pisum-sativum')!!}"><i class='fa fa-angle-right fa-fw'></i> Грах</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/users')!!}"><i class='fa fa-angle-right fa-fw'></i> Леща</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/lens-culinaris')!!}"><i class='fa fa-angle-right fa-fw'></i> Леща</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/users')!!}"><i class='fa fa-angle-right fa-fw'></i> Нахут</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/cicer-arietinum')!!}"><i class='fa fa-angle-right fa-fw'></i> Нахут</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/users')!!}"><i class='fa fa-angle-right fa-fw'></i> Люцерна</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/medicago-sativa')!!}"><i class='fa fa-angle-right fa-fw'></i> Люцерна</a>
                                     </li>
                                 </ul>
                             </li>
@@ -242,22 +242,22 @@
                                 <a class="list-group-item" href="{!!URL::to('/админ')!!}"><i class="fa fa-angle-double-right fa-fw"></i> ТЕХНИЧЕСКИ КУЛТУРИ<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/directors/create')!!}"><i class='fa fa-angle-right fa-fw'></i> Тютюн</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Тютюн</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/directors')!!}"><i class='fa fa-angle-right fa-fw'></i> Цвекло</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Цвекло</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/directors')!!}"><i class='fa fa-angle-right fa-fw'></i> Памук</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Памук</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/directors')!!}"><i class='fa fa-angle-right fa-fw'></i> Слънчоглед</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Слънчоглед</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/directors')!!}"><i class='fa fa-angle-right fa-fw'></i> Рапица</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Рапица</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/admin/directors')!!}"><i class='fa fa-angle-right fa-fw'></i> Фъстъци</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Фъстъци</a>
                                     </li>
                                 </ul>
                             </li>

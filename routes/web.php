@@ -39,8 +39,25 @@ Route::get('template-practices/secale-cereale','TemplateController@secale');
 Route::get('template-practices/zea-mays','TemplateController@zea');
 Route::get('template-practices/rodentia','TemplateController@rodentia');
 
+//////// БОБОВИ
+Route::get('template-practices/phaseolus-vulgaris','TemplateController@phaseolus');
+Route::get('template-practices/glycine-max','TemplateController@glycine');
+Route::get('template-practices/pisum-sativum','TemplateController@pisum');
+Route::get('template-practices/lens-culinaris','TemplateController@lens');
+Route::get('template-practices/cicer-arietinum','TemplateController@cicer');
+Route::get('template-practices/medicago-sativa','TemplateController@medicago');
+
+/////// ТЕХНИЧЕСКИ
+Route::get('template-practices/nicotiana-tabacum','TemplateController@nicotiana');
+
+
+
+
+
+
 //Route::resource('culture', 'CultureController');
 Route::get('culture', 'CultureController@index');
 Route::get('culture/create', 'CultureController@create');
 Route::post('culture/store', 'CultureController@store');
-Route::get('culture/edit', 'CultureController@edit');
+Route::get('culture/edit/{id}', 'CultureController@edit');
+Route::post('culture/update/{id}', 'CultureController@update');

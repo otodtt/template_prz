@@ -158,4 +158,43 @@ class TemplateController extends Controller
         $has_image = 2;
         return view('templates.pages.01_grain.rodentia', compact('has_image'));
     }
+
+    //////// БОБОВИ
+    public function phaseolus()
+    {
+        $has_image = 2;
+        return view('templates.pages.02_bean.phaseolus', compact('has_image'));
+    }
+    public function glycine()
+    {
+        $has_image = 2;
+        return view('templates.pages.02_bean.glycine', compact('has_image'));
+    }
+    public function pisum()
+    {
+        $has_image = 2;
+        return view('templates.pages.02_bean.pisum', compact('has_image'));
+    }
+    public function lens()
+    {
+        $has_image = 2;
+        return view('templates.pages.02_bean.lens', compact('has_image'));
+    }
+    public function cicer()
+    {
+        $has_image = 2;
+        return view('templates.pages.02_bean.cicer', compact('has_image'));
+    }
+    public function medicago()
+    {
+        $has_image = 2;
+        return view('templates.pages.02_bean.medicago', compact('has_image'));
+    }
+
+    /////// ТЕХНИЧЕСКИ
+    public function nicotiana()
+    {
+        $has_image = 2;
+        return view('templates.pages.03_technical.nicotiana', compact('has_image'));
+    }
 }

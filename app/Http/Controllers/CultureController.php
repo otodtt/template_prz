@@ -67,19 +67,31 @@ class CultureController extends Controller
      */
     public function edit($id)
     {
-        //
+        $culture = Culture::findOrFail($id);
+
+        return view('culture.edit', compact('culture'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\CultureRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CultureRequest $request, $id)
     {
-        //
+        $culture = Culture::findOrFail($id);
+        $data = ([
+            'group_id'=> $request['group_id'],
+            'name'=> $request['name'],
+            'latin_name'=> $request['latin_name'],
+        ]);
+
+        $culture->fill($data);
+        $culture->save();
+
+        return Redirect::to('/culture');
     }
 
     /**
