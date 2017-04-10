@@ -1,6 +1,7 @@
 @extends('layouts.practices')
 
 @section('content')
+
     <div class="col-md-12" id="wrap_lmenu_txt">
         <div class="col-md-12 text-center name-header">
             <h2 class="customfont">ТЕХНИЧЕСКИ КУЛТУРИ</h2>
@@ -18,17 +19,18 @@
             <img id="stamp" class="stamp" src="../../img/stamp_director.png" alt="печат и подпис на директор" />
         </div>
         <div class="row logo text-center">
-            <h1 id="good-practice">ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ТЮТЮН</h1>
+            <h1 id="good-practice">ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ЦВЕКЛО</h1>
         </div>
         <div class="row text-right">
-            <p class="number">№ на НСРЗ ДРЗП 2/031(1)</p>
-            <p class="number">№ на ЕРРО РР 2/15(1)</p>
+            <p class="number">№ на НСРЗ ДРЗП 2/032(1)</p>
+            <p class="number">№ на ЕРРО РР 2/12(1)</p>
         </div>
         <div class="row logo">
             <div class="col-lg-12" id="authors-wrap">
                 <p class=""><span class="bold authors">Авторски колектив :</span><br/>
-                    ст.н.с.I ст. д-р Атанас Димитров<br/>
-                    ст.н.с.II ст. д-р Христо Бозуков<br/>
+                    ст.н.с.II ст. д-р Върбан Върбанов<br/>
+                    ст.н.с.II ст. д-р Стоянка Върбанова<br/>
+                    н.с.I ст. д-р Красимира Танова<br/>
                     д-р Петър Николов – НСРЗ<br/>
                     Екатерина Томева - НСРЗ
                 </p>
@@ -38,7 +40,7 @@
             <strong class="year">СОФИЯ 2006 г.</strong>
         </div>
         <div class="row logo text-center">
-            <h2 id="h-good-practice">ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА (ДРЗП) ПРИ ЛЮЦЕРНА*</h2>
+            <h2 id="h-good-practice">ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА (ДРЗП) ПРИ ЦВЕКЛО*</h2>
         </div>
 
 
@@ -46,61 +48,58 @@
         <div class="row">
             <div class="col-md-12 text-justifysss text-indent">
                 <h3 class="my_class_h3">Специфична сфера на действие</h3>
-                <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при тютюн.</p>
+                <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при цвекло.</p>
                 <h3 class="my_class_h3">Специфично одобрение и поправка</h3>
                 <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
                 <br/>
 
                 <p >
-                    Тютюнът е ароматно-вкусов продукт, предназначен да задоволява не нужди от първа необходимост, а такива
-                    от своеобразни вкусови и физиологични усещания у човека. Оттук идва и своеобразният му начин на
-                    употреба: пушене, дъвчене, смучене и смъркане. В зависимост от начина на употреба тютюнът се предлага
-                    в различни тютюневи изделия, основна съставка на които са листата му.
+                    В условията на България значението на цвеклото и цвеклопроизводството като земеделски отрасъл се определя:
                 </p>
                 <p >
-                    Значението на културата за страната е многоаспектно - икономическо, търговско, фискално, социално и
-                    демографско.
+                    1. От количеството и качеството на суровината за производство на промишлен продукт, който задоволява
+                    консумативните нужди на населението и на хранително-вкусовата промишленост.
                 </p>
                 <p >
-                    В България се отглеждат три сортови групи тютюн - Ориенталски (дребнолистен), Виржиния и Бърлей
-                    (едролистни). Изискванията на различните сортови групи към почвено-климатичните условия на отглеждане
-                    и отношението им към отделните вредители се отличават съществено.
+                    2. От количеството на получената продукция от единица площ с оглед рационалното ползване на земята и
+                    ефективността на вложения труд и материални разходи.
                 </p>
                 <p >
-                    Тютюнът се развива успешно на всички почвени типове и разновидности при широк диапазон на почвена
-                    реакция (рН от 5 до 8.5). Висококачествена суровина от ори¬енталските тютюни се получава на леки,
-                    скелетни и топли почви с добра водопропу- скливост, аерация и съдържание на хумус до 1.5%. За тютюн
-                    Виржиния най-подходящи са леките, наносни песъчливо-глинести и глинесто-песъчливи почви със съдържание
-                    на физическа глина до 30-40% и хумус до 2.5%. За тютюн Бърлей са подходящи богати наносни и торфени
-                    площи. В сравнение с ориенталските едролистните тютюни имат по-високи изисквания към температурата,
-                    както и към почвената и въздушната влажност.
+                    3. От отношението му към проблема за фуражите и към развитието на животновъдството у нас.
                 </p>
                 <p >
-                    Макар и със сравнително къс вегетационен период, тютюнът се напада от голям брой вредители - в разсада
-                    и на полето. И тук, както при другите култури, радикалното средство за решаване на проблема с тях е
-                    създаването на устойчиви или толерантни сортове. Селекцията на устойчивост обаче е продължителен и
-                    труден процес, а създаването на комерсиални сортове с такива свойства го прави и пределно сложен.
-                    Поради това използването на продукти за растителна защита в тютюнопроизводството е все още широка
-                    практика. Те са съществена част от модерните агрокултурални системи - Добра земеделска практика и
-                    Интегрирана растителна защита. От друга страна, не може да се заложи изцяло на принципа за получаване
-                    на екологично чиста продукция само от неторени и нетретирани с продукти за растителна защита площи,
-                    защото това ще доведе до снижаване на добивите и качеството с 30 - 40%. При спазване от страна на
-                    производителите на ДРЗП, базирана на принципите на тези системи, може да се постигне максимална
-                    ефективност срещу вредителите при минимално негативно въздействие върху околната среда и здравето на човека.
-
+                    Редица отрасли на леката промишленост са свързани с производството на спирт, лимонена киселина, хлебна
+                    мая и други ценни артикули, които се получават от отпадъчните продукти на захарната промишленост.
+                    Мотат да се произвеждат още глицерин, тлутаминова киселина, бетаин, лецитинов клей, аминокиселинни
+                    амиди, витамини, етерични масла, фуражни пасти и др.
                 </p>
                 <p>
-                    Агротехническите мероприятия са важен фактор за намаляване популациите на редица вредители по тютюна.
-                    Препоръчва се 2-3-годишно сеитбообръщение с предшественици житни или бобови култури там, където
-                    условията го позволяват. Не се допуска включване в сеитбообръщенията на култури от семейство Картофови,
-                    които имат общи вредители с тютюна. Правилната и навременна почвообработка осигурява снижаване на
-                    плевелния състав в площите. Точното спазване на сеитбените (в разсадопроизводството) и посевни
-                    (на полето) норми създава неблагоприятни условия за развитие на пато- гените. Количеството и качеството
-                    на по- ливната вода са от значение за регулиране развитието на някои заболявания. От значение е
-                    балансираното торене на културата съобразно развитието и здравното й състояние, запасеността на почвата
-                    с хранителни вещества и т.н. Внимателните и редовни прегледи за здравното състояние на насажденията
-                    дават възможност да се избегнат значителен брой излишни третирания с продукти за растителна защита.
+                    Осигуряването на населението с всички видове висококачествени хранителни продукти изисква реализация
+                    на развитие за по¬нататъшния растеж на добивите и общото производство от продоволствените и фуражни
+                    селскостопански култури, за което има необходимите предпоставки.
                 </p>
+                <p>
+                    Съществено значение за доброто развитие на цвеклото има дълбочината на торния пласт и структурата на
+                    почвата. Силно уплътнените и песъчливи почви не са подходящи за отглеждането му.
+                </p>
+                <p>
+                    Решаваща роля за продуктивността на цвеклото има и съдържанието на хумус в почвата, а също и
+                    разпределението му в почвения слой. Хумусът подобрява и водния, и въздушния режим на почвата, както и
+                    въглеродното хранене на растенията, като оботатява приземния въздух с СО<sub>2</sub>. Цвеклото се развива
+                    най-добре на почва с реакция, близка до неутралната (рН от 6 до 8).
+                </p>
+                <p>
+                    Създадените и широкоразпространени високодобивни сортове са базата, на която може да се очаква значителен
+                    ръст на селскостопанска продукция. Реализирането на потенциалните възможности на сортовете обаче често
+                    се сблъсква с необходимостта от премахване на ограничаващите фактори като недостатъчно плодородие на
+                    почвата, несъответстваща агротехника и в най-голяма степен загуби на продукция в резултат на отрицателно
+                    въздействие на болести, неприятели и плевели. Последният фактор, ограничаващ увеличаването на добивите,
+                    е изключително важен, тъй като по многобройни данни скритите загуби от вредните организми в света
+                    представляват 30% от продукцията, а в някои случаи и повече. Във връзка с все по-широкото прилагане на
+                    промишлените методи за отглеждане на селскостопанските култури нарастват изискванията за провеждане на
+                    мерки, насочени към намаляване или дори изключване на загуби, предизвикани от болести, неприятели и плевели.
+                </p>
+                <p></p>
             </div>
         </div>
         <!--КРАЙ Специфична сфера на действие-->
@@ -112,90 +111,103 @@
         </div>
         <div class="row">
             <div id="pest_menu_links">
-                <h3 class="my_class_h3">Основните вредители при тютюна са:</h3>
+                <h3 class="my_class_h3">Основни вредители при цвеклото са:</h3>
                 <ul id="menu_a">
-                    <li><a class="back_link" href="#rhizoctonia-solani" target="_self" title="към текста">
+                    <li><a class="back_link" href="#cercospora-beticola" target="_self" title="към текста">
                             <i class="fa fa-angle-double-right fa-lg"></i>
-                            Сечене на тютюневия разсад - <span class="latin_name">Pythium debaryanum, Rhizoctonia solani</span>
+                            Церкоспороза (кръгли листни петна) - <span class="latin_name">Cercospora beticola Sacc.</span>
                         </a></li>
-                    <li><a class="back_link" href="#thielaviopsis-basicola" target="_self" title="към текста">
+                    <li><a class="back_link" href="#erysiphe-communis" target="_self" title="към текста">
                             <i class="fa fa-angle-double-right fa-lg"></i>
-                            Черно кореново гниене - <span class="latin_name">Thielaviopsis basicola</span>
+                            Брашнеста мана - <span class="latin_name">Erysiphe communis Grel.f.betae Yacz.</span>
                         </a></li>
-                    <li><a class="back_link" href="#peronospora-tabacina" target="_self" title="към текста">
+                    <li><a class="back_link" href="#peronospora-farinoas" target="_self" title="към текста">
                             <i class="fa fa-angle-double-right fa-lg"></i>
-                            Мана - <span class="latin_name">Peronospora tabacina</span>
+                            Пероноспора (мана) - <span class="latin_name">Peronospora farinoas Franc.</span>
                         </a></li>
-                    <li><a class="back_link" href="#phytophthora-parasitica" target="_self" title="към текста">
+                    <li><a class="back_link" href="#fusarium-ssp" target="_self" title="към текста">
                             <i class="fa fa-angle-double-right fa-lg"></i>
-                            Чернилка - <span class="latin_name">Phytophthora parasitica var. nicotianae</span>
+                            „Сечене“ на младите растения - <span class="latin_name">Fusarium ssp., Phoma betae Franis,
+                                Alternaria ssp., Aphanomyces ssp., Pythim ssp., Bacillus ssp.</span>
                         </a></li>
-                    <li><a class="back_link" href="#erysiphe-cichoracearum" target="_self" title="към текста">
+                    <li><a class="back_link" href="#rhizomania-solani" target="_self" title="към текста">
                             <i class="fa fa-angle-double-right fa-lg"></i>
-                            Брашнеста мана (пепелница) - <span class="latin_name">Erysiphe cichoracearum</span>
+                            Кореново гниене - <span class="latin_name">Rhizomania solani Kuhn, Fussarium ssp.,
+                                Sclerocium bataticola, Bacillus ssp.</span>
                         </a></li>
-                    <li><a class="back_link" href="#alternaria-spp" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Кафяви листни петна - <span class="latin_name">Alternaria spp.</span>
+                    <li><a class="back_link" href="#polimixa-betae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Ризомания - <span class="latin_name">BNWVV, Polimixa betae Keck.</span>
                         </a></li>
-                    <li><a class="back_link" href="#pseudomonas-syringae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Див огън - <span class="latin_name">Pseudomonas syringae p.v. tabaci</span>
+                    <li><a class="back_link" href="#viruses" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Вирусна мозайка - <span class="latin_name">Beet mosaic virus</span>
+                        </a></li>
+                    <li><a class="back_link" href="#viruses" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Вирусна жълтеница - <span class="latin_name">Beet yellows virus</span>
+                        </a></li>
+
+                    <li><a class="back_link" href="#sugar-beet" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Кърлитоп - <span class="latin_name">Sugar beet leaf curl</span>
+                        </a></li>
+                    <li><a class="back_link" href="#phoma-betae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Фомоза (концентрични листни петна)  - <span class="latin_name">Phoma betae Frank., Pleospora betae Bjor</span>
+                        </a></li>
+                    <li><a class="back_link" href="#uromyces-betae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Ръжда - <span class="latin_name">Uromyces betae Pers.</span>
                         </a></li>
 
 
-                    <li><a class="back_link" href="#thrips-tabaci" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Тютюнев трипс - <span class="latin_name">Thrips tabaci</span>
-                            и Пръстеновидна некроза - <span class="latin_name">TSWV</span>
+                    <li><a class="back_link" href="#elateridae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Телени и лъжетелени червеи - <span class="latin_name">сем. Elateridae, род Agriotes</span>
                         </a></li>
-                    <li><a class="back_link" href="#myzodes-persicae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Листни въшки - <span class="latin_name">Myzodes persicae, Myzodes nicotianae</span>
-                            <br/>Картофен ипсилон вирус - <span class="latin_name">PVY</span>
-                            и Краставична мозайка - <span class="latin_name">CMV</span>
+                    <li><a class="back_link" href="#agrostis" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Сиви червеи - <span class="latin_name">Scotia (Agrostis) Segetum Schif; Euxoa ternera Hb.; Scotia (Arostis) ipsilon Hufh</span>
                         </a></li>
-                    <li><a class="back_link" href="#epitrix-hirtipenis" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Тютюнева бълха - <span class="latin_name">Epitrix hirtipenis</span>
+                    <li><a class="back_link" href="#bothynoderes-punctiventus" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Хоботници – <span class="latin_name">Bothynoderes punctiventus G Tanymecus palliates F; Psalidium naxillosum F; Tanymecus dilaticollis Gyll</span>
                         </a></li>
-                    <li><a class="back_link" href="#trialeurodes-vaporariorum" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Оранжерийна белокрилка – <span class="latin_name">Trialeurodes vaporariorum</span>
+                    <li><a class="back_link" href="#ghaetohnema-concinna" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Бълхи – <span class="latin_name">Ghaetohnema concinna Marsh.; Ghaetohnema breviscula March.</span>
                         </a></li>
-                    <li><a class="back_link" href="#noctuidae-and-elateridae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Сиви червеи – <span class="latin_name">Noctuidae</span>
+                    <li><a class="back_link" href="#aphis-and-myzus" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Листни въшки - <span class="latin_name">Aphis fabae Scot.; Myzus persicae Sul.</span>
                         </a></li>
-                    <li><a class="back_link" href="#noctuidae-and-elateridae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Телени червеи - <span class="latin_name">Elateridae</span>
+                    <li><a class="back_link" href="#pemphigus-fuscicornis" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Коренова въшка (цвеклова) - <span class="latin_name">Pemphigus fuscicornis Koch.</span>
                         </a></li>
-                    <li><a class="back_link" href="#noctuidae-spp" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Памукова нощенка - <span class="latin_name">Chloridea obsolete</span>
+                    <li><a class="back_link" href="#gnorimoshema-ocellatella" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Цвеклов молец - <span class="latin_name">Gnorimoshema ocellatella Boyd.</span>
                         </a></li>
-                    <li><a class="back_link" href="#noctuidae-spp" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Зелева нощенка - <span class="latin_name">Barathra brassicae</span>
+                    <li><a class="back_link" href="#phytometra-gamma" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Листогризещи нощенки - <span class="latin_name">Phytometra (Plusid) gamma L.; Mamestra (Baruthera) brassi¬cae L.; Mamestra oleracea L.</span>
                         </a></li>
-
+                    <li><a class="back_link" href="#licsus-ascantii" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Листодръжкови хоботници - <span class="latin_name">Licsus (Licsus ascantii L.)</span>
+                        </a></li>
+                    <li><a class="back_link" href="#casida-nobilus" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Цвеклови щитовки (касиди) - <span class="latin_name">Casida nobilus L.; Casida nebulosa L.</span>
+                        </a></li>
                     <li><a class="back_link" href="#heteroderidae" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Галови нематоди - <span class="latin_name">Heteroderidae (Meloidogenydae)</span>
+                            Нематода - <span class="latin_name">Hetherodera shachtii Shuii dt.</span>
                         </a></li>
 
-                    <li><a class="back_link" href="#lasioderma-and-ephestia" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Тютюнев бръмбар - <span class="latin_name">Lasioderma serricorne</span>
-                        </a></li>
-                    <li><a class="back_link" href="#lasioderma-and-ephestia" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Тютюнев молец - <span class="latin_name">Ephestia ellutella</span>
-                        </a></li>
+                    <li><a class="back_link" href="#weed" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
+                            Плевели</a></li>
 
-                    <li><a class="back_link" href="#orobanche-and-cuscuta" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Синя китка - <span class="latin_name">Orobanche spp.</span>
-                        </a></li>
-                    <li><a class="back_link" href="#orobanche-and-cuscuta" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Кускута - <span class="latin_name">Cuscuta spp.</span>
-                        </a></li>
-                    <li><a class="back_link" href="#inflorescences" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i>
-                            Съцветия и филизи
-                        </a></li>
-                    <li><a class="back_link" href="#weed" title="към текста"><i class="fa fa-angle-double-right fa-lg"></i> Плевели</a></li>
+                    -------------- ДО ТУК ГОТОВО -----------
+                    <span class="latin_name"></span>
+                    <span class="active-substance"></span>
+                    <strong class="latin_name"></strong>
+
                 </ul>
 
             </div>
         </div>
         <!-- КРАЙ Избор на Вредител -->
+
+
+
+
+
 
         <!-- Сечене на тютюневия разсад -->
         <div class="aa-title" id="rhizoctonia-solani">
@@ -239,7 +251,7 @@
                 <h4 class="my_class_h4">Активни вещества</h4>
                 <p>
                     <span class="active-substance">Пропамокарб-хидрохлорид, меден хидроокис, тритиконазол + ипродион</span>
-                        (за обезза¬разяване на тютюневите семена)
+                    (за обезза¬разяване на тютюневите семена)
                 </p>
                 <p>
                     Продукти за растителна защита се внасят с градинска лейка чрез поливане на лехите с разсад при разход
@@ -249,11 +261,11 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 {{--<ul class="products">--}}
-                    {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Pseudopeziza_medicaginis.jpg"--}}
-                           {{--title="Черни петна">--}}
-                            {{--<img src="../../img_pest/diseases/Pseudopeziza_medicaginis_thumb.jpg" alt="Pseudopeziza medicaginis"--}}
-                                 {{--title="Черни петна"/><span class="title_thumb">Черни петна</span>--}}
-                        {{--</a></li>--}}
+                {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Pseudopeziza_medicaginis.jpg"--}}
+                {{--title="Черни петна">--}}
+                {{--<img src="../../img_pest/diseases/Pseudopeziza_medicaginis_thumb.jpg" alt="Pseudopeziza medicaginis"--}}
+                {{--title="Черни петна"/><span class="title_thumb">Черни петна</span>--}}
+                {{--</a></li>--}}
                 {{--</ul>--}}
             </div>
         </div>
@@ -314,11 +326,11 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 {{--<ul class="products">--}}
-                    {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Pseudopeziza_jonessi.jpg"  title="Жълти листни петна">--}}
-                            {{--<img src="../../img_pest/diseases/Pseudopeziza_jonessi_thumb.jpg"--}}
-                                 {{--alt="Pseudopeziza jonessis" title="Жълти листни петна"/>--}}
-                            {{--<span class="title_thumb">Жълти листни петна</span>--}}
-                        {{--</a></li>--}}
+                {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Pseudopeziza_jonessi.jpg"  title="Жълти листни петна">--}}
+                {{--<img src="../../img_pest/diseases/Pseudopeziza_jonessi_thumb.jpg"--}}
+                {{--alt="Pseudopeziza jonessis" title="Жълти листни петна"/>--}}
+                {{--<span class="title_thumb">Жълти листни петна</span>--}}
+                {{--</a></li>--}}
                 {{--</ul>--}}
             </div>
         </div>
@@ -395,17 +407,17 @@
                 </p>
                 <p>
                     Въпреки че вече има съобщения за резистентност на патогена към <span class="active-substance">металаксил</span>
-                        в някои страни (Мексико, Австралия и др.) у нас такава не е наблюдавана.
+                    в някои страни (Мексико, Австралия и др.) у нас такава не е наблюдавана.
                 </p>
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 {{--<ul class="products">--}}
-                    {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Ascochyta_imperfecta.jpg"--}}
-                           {{--title="Аскохитоза">--}}
-                            {{--<img src="../../img_pest/diseases/Ascochyta_imperfecta_thumb.jpg"--}}
-                                 {{--alt="Ascochyta imperfecta" title="Аскохитоза"/>--}}
-                            {{--<span class="title_thumb">Аскохитоза</span>--}}
-                        {{--</a></li>--}}
+                {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Ascochyta_imperfecta.jpg"--}}
+                {{--title="Аскохитоза">--}}
+                {{--<img src="../../img_pest/diseases/Ascochyta_imperfecta_thumb.jpg"--}}
+                {{--alt="Ascochyta imperfecta" title="Аскохитоза"/>--}}
+                {{--<span class="title_thumb">Аскохитоза</span>--}}
+                {{--</a></li>--}}
                 {{--</ul>--}}
             </div>
         </div>
@@ -493,11 +505,11 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 {{--<ul class="products">--}}
-                    {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Fusarium_oxysporum.jpg"--}}
-                           {{--title="Фузарийно увяхване">--}}
-                            {{--<img src="../../img_pest/diseases/Fusarium_oxysporum_thumb.jpg" alt="Fusarium oxysporum"--}}
-                                 {{--title="Fusarium oxysporum"/><span class="title_thumb">Фузарийно увяхване</span>--}}
-                        {{--</a></li>--}}
+                {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Fusarium_oxysporum.jpg"--}}
+                {{--title="Фузарийно увяхване">--}}
+                {{--<img src="../../img_pest/diseases/Fusarium_oxysporum_thumb.jpg" alt="Fusarium oxysporum"--}}
+                {{--title="Fusarium oxysporum"/><span class="title_thumb">Фузарийно увяхване</span>--}}
+                {{--</a></li>--}}
                 {{--</ul>--}}
             </div>
         </div>
@@ -548,11 +560,11 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 {{--<ul class="products">--}}
-                    {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Helicobasidium_purpureum.jpg"--}}
-                           {{--title="Виолетово кореново гниене">--}}
-                            {{--<img src="../../img_pest/diseases/Helicobasidium_purpureum_thumb.jpg" alt="Helicobasidium purpureum"--}}
-                                 {{--title="Helicobasidium purpureum"/><span class="title_thumb">Виолетово кореново гниене</span>--}}
-                        {{--</a></li>--}}
+                {{--<li><a class="fancybox-effects-a" href="../../img_pest/diseases/Helicobasidium_purpureum.jpg"--}}
+                {{--title="Виолетово кореново гниене">--}}
+                {{--<img src="../../img_pest/diseases/Helicobasidium_purpureum_thumb.jpg" alt="Helicobasidium purpureum"--}}
+                {{--title="Helicobasidium purpureum"/><span class="title_thumb">Виолетово кореново гниене</span>--}}
+                {{--</a></li>--}}
                 {{--</ul>--}}
             </div>
         </div>
@@ -741,11 +753,11 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 {{--<ul class="products">--}}
-                    {{--<li><a class="fancybox-effects-a" href="../../img_pest/insects/Phytonomus_variabilis.jpg"--}}
-                           {{--title="Малък люцернов хоботник">--}}
-                            {{--<img src="../../img_pest/insects/Phytonomus_variabilis_thumb.jpg" alt="Phytonomus variabilis"--}}
-                                 {{--title="Малък люцернов хоботник"/><span class="title_thumb">Малък люцернов хоботник</span>--}}
-                        {{--</a></li>--}}
+                {{--<li><a class="fancybox-effects-a" href="../../img_pest/insects/Phytonomus_variabilis.jpg"--}}
+                {{--title="Малък люцернов хоботник">--}}
+                {{--<img src="../../img_pest/insects/Phytonomus_variabilis_thumb.jpg" alt="Phytonomus variabilis"--}}
+                {{--title="Малък люцернов хоботник"/><span class="title_thumb">Малък люцернов хоботник</span>--}}
+                {{--</a></li>--}}
                 {{--</ul>--}}
             </div>
         </div>
@@ -888,11 +900,11 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 {{--<ul class="products">--}}
-                    {{--<li><a class="fancybox-effects-a" href="../../img_pest/insects/Phytodecta_fornicata.jpg"--}}
-                           {{--title="Люцернов листояд">--}}
-                            {{--<img src="../../img_pest/insects/Phytodecta_fornicata_thumb.jpg" alt="Phytodecta fornicata"--}}
-                                 {{--title="Люцернов листояд"/><span class="title_thumb">Люцернов листояд</span>--}}
-                        {{--</a></li>--}}
+                {{--<li><a class="fancybox-effects-a" href="../../img_pest/insects/Phytodecta_fornicata.jpg"--}}
+                {{--title="Люцернов листояд">--}}
+                {{--<img src="../../img_pest/insects/Phytodecta_fornicata_thumb.jpg" alt="Phytodecta fornicata"--}}
+                {{--title="Люцернов листояд"/><span class="title_thumb">Люцернов листояд</span>--}}
+                {{--</a></li>--}}
                 {{--</ul>--}}
             </div>
         </div>
@@ -1049,11 +1061,11 @@
             </div>
             <div class="pest-image-container col-md-2 img-thumbnail" >
                 {{--<ul class="products">--}}
-                    {{--<li><a class="fancybox-effects-a" href="../../img_pest/insects/Subcoccinella_vigintiquatuorpunctata.jpg"--}}
-                           {{--title="Двадесет и четири-точкова калинка">--}}
-                            {{--<img src="../../img_pest/insects/Subcoccinella_vigintiquatuorpunctata_thumb.jpg" alt="Subcoccinella vigintiquatuorpunctata"--}}
-                                 {{--title="Двадесет и четири-точкова калинка"/><span class="title_thumb">Двадесет и четири-точкова калинка</span>--}}
-                        {{--</a></li>--}}
+                {{--<li><a class="fancybox-effects-a" href="../../img_pest/insects/Subcoccinella_vigintiquatuorpunctata.jpg"--}}
+                {{--title="Двадесет и четири-точкова калинка">--}}
+                {{--<img src="../../img_pest/insects/Subcoccinella_vigintiquatuorpunctata_thumb.jpg" alt="Subcoccinella vigintiquatuorpunctata"--}}
+                {{--title="Двадесет и четири-точкова калинка"/><span class="title_thumb">Двадесет и четири-точкова калинка</span>--}}
+                {{--</a></li>--}}
                 {{--</ul>--}}
             </div>
         </div>
@@ -1415,4 +1427,5 @@
         </div>
         <!-- КРАЙ ПЛЕВЕЛИ -->
     </div>
+
 @endsection

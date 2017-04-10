@@ -245,19 +245,19 @@
                                         <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Тютюн</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Цвекло</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/beta-vulgaris')!!}"><i class='fa fa-angle-right fa-fw'></i> Цвекло</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Памук</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/gossypium')!!}"><i class='fa fa-angle-right fa-fw'></i> Памук</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Слънчоглед</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/helianthus-annuus')!!}"><i class='fa fa-angle-right fa-fw'></i> Слънчоглед</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Рапица</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/brassica-napus')!!}"><i class='fa fa-angle-right fa-fw'></i> Рапица</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="{!!URL::to('/template-practices/nicotiana-tabacum')!!}"><i class='fa fa-angle-right fa-fw'></i> Фъстъци</a>
+                                        <a class="list-group-item" href="{!!URL::to('/template-practices/arachis-hypogaea')!!}"><i class='fa fa-angle-right fa-fw'></i> Фъстъци</a>
                                     </li>
                                 </ul>
                             </li>

@@ -49,6 +49,7 @@ Route::get('template-practices/medicago-sativa','TemplateController@medicago');
 
 /////// ТЕХНИЧЕСКИ
 Route::get('template-practices/nicotiana-tabacum','TemplateController@nicotiana');
+Route::get('template-practices/beta-vulgaris','TemplateController@beta');
 
 
 
