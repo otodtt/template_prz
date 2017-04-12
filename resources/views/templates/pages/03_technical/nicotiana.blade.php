@@ -21,7 +21,7 @@
             <h1 id="good-practice">ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ТЮТЮН</h1>
         </div>
         <div class="row text-right">
-            <p class="number">№ на НСРЗ ДРЗП 2/031(1)</p>
+            <p class="number">№ на НСРЗ ДРЗП 1/031(1)</p>
             <p class="number">№ на ЕРРО РР 2/15(1)</p>
         </div>
         <div class="row logo">

@@ -202,4 +202,14 @@ class TemplateController extends Controller
         $has_image = 2;
         return view('templates.pages.03_technical.beta', compact('has_image'));
     }
+    public function gossypium()
+    {
+        $has_image = 2;
+        return view('templates.pages.03_technical.gossypium', compact('has_image'));
+    }
+    public function helianthus()
+    {
+        $has_image = 2;
+        return view('templates.pages.03_technical.helianthus', compact('has_image'));
+    }
 }

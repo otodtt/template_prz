@@ -50,6 +50,8 @@ Route::get('template-practices/medicago-sativa','TemplateController@medicago');
 /////// ТЕХНИЧЕСКИ
 Route::get('template-practices/nicotiana-tabacum','TemplateController@nicotiana');
 Route::get('template-practices/beta-vulgaris','TemplateController@beta');
+Route::get('template-practices/gossypium','TemplateController@gossypium');
+Route::get('template-practices/helianthus-annuus','TemplateController@helianthus');
 
 
 
