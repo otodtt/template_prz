@@ -212,14 +212,4 @@ class TemplateController extends Controller
         $has_image = 2;
         return view('templates.pages.03_technical.helianthus', compact('has_image'));
     }
-    public function brassica()
-    {
-        $has_image = 2;
-        return view('templates.pages.03_technical.brassica', compact('has_image'));
-    }
-    public function arachis()
-    {
-        $has_image = 2;
-        return view('templates.pages.03_technical.arachis', compact('has_image'));
-    }
 }

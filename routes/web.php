@@ -52,8 +52,6 @@ Route::get('template-practices/nicotiana-tabacum','TemplateController@nicotiana'
 Route::get('template-practices/beta-vulgaris','TemplateController@beta');
 Route::get('template-practices/gossypium','TemplateController@gossypium');
 Route::get('template-practices/helianthus-annuus','TemplateController@helianthus');
-Route::get('template-practices/brassica-napus','TemplateController@brassica');
-Route::get('template-practices/arachis-hypogaea','TemplateController@arachis');
 
 
 
