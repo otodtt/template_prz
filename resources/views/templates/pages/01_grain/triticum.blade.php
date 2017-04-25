@@ -304,6 +304,32 @@
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
             </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="td_latin">Брашнеста мана - <span class="latin_name">Erysiphe graminis</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>1-ви - 2-ри възел</td>
+                            <td rowspan="2">пустули</td>
+                            <td>10% нападната л. маса</td>
+                        </tr>
+                        <tr>
+                            <td>поява на флагелния лист - цъфтеж</td>
+                            <td>10% нападната листна маса под флагов лист</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!-- КРАЙ МАНА -->
 
@@ -389,6 +415,75 @@
         <div class="row">
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
+            </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="td_latin">Кафява ръжда - <span class="latin_name">Puccinia recondita</span></td>
+                        </tr>
+                        <tr>
+                            <td>1-ви - 2-ри възел</td>
+                            <td rowspan="2">сори</td>
+                            <td>5% нападната листна маса</td>
+                        </tr>
+                        <tr>
+                            <td>поява на флагелния лист - цъфтеж</td>
+                            <td>5% нападната листна маса под флагов лист</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tr_latin">
+                        <td colspan="3" class="td_latin">Жълта ръжда - <span class="latin_name">Puccinia striiformis</span></td>
+                    </tr>
+                    <tr>
+                        <td>1-ви - 2-ри възел</td>
+                        <td rowspan="2">сори</td>
+                        <td>5% нападната листна маса</td>
+                    </tr>
+                    <tr>
+                        <td>поява на флагелния лист - цъфтеж</td>
+                        <td>5% нападната листна маса под флагов лист</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="td_latin">Стъблена ръжда - <span class="latin_name">Puccinia graminis f. sp. tritici</span></td>
+                        </tr>
+                        <tr>
+                            <td>флагов лист - млечна зрялост</td>
+                            <td >сори</td>
+                            <td>1% нападната растения</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <!--КРАЙ РЪЖДИ -->
@@ -491,6 +586,27 @@
         <div class="row">
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
+            </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tr_latin">
+                        <td colspan="3" class="td_latin">Базично гниене - <span class="latin_name">(Rhizoctonia spp., Tapesia spp., Fusarium spp., Drechslera spp.) </span></td>
+                    </tr>
+                    <tr>
+                        <td>1-ви - 2-ри възел</td>
+                        <td >конидиоспори </td>
+                        <td>15% нападнати стъбла</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <!-- КРАЙ ГНИЕНЕ -->
@@ -646,6 +762,31 @@
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
             </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                    <tr>
+                        <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                        <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                        <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="td_latin">СЕПТОРИОЗИ род  - <span class="latin_name">Septoria</span></td>
+                        </tr>
+                        <tr>
+                            <td>1-ви - 2-ри възел</td>
+                            <td rowspan="2">пикнидии</td>
+                            <td>5% нападната листна маса</td>
+                        </tr>
+                    <tr>
+                        <td>поява на флагелен лист - изкласнване</td>
+                        <td>5% нападната листна маса под флагов лист</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
 
@@ -692,6 +833,31 @@
         <div class="row">
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
+            </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="td_latin">СЕПТОРИОЗИ род  - <span class="latin_name">Septoria</span></td>
+                        </tr>
+                        <tr>
+                            <td>1-ви - 2-ри възел</td>
+                            <td rowspan="2">пикнидии</td>
+                            <td>5% нападната листна маса</td>
+                        </tr>
+                    <tr>
+                        <td>поява на флагелен лист - изкласнване</td>
+                        <td>5% нападната листна маса под флагов лист</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <!-- КРАЙ ПЕТНОСВАНЕ НА КЛАСОВЕТЕ -->
@@ -940,6 +1106,44 @@
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
             </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="td_latin">ВРЕДНА ЖИТНА ДЪРВЕНИЦА <span class="latin_name">Eurygaster integrieeps</span></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">вретенене</td>
+                            <td rowspan="3">възрастни съотношение мъжки<i class="fa fa-mars" aria-hidden="true"></i>
+                                : женски<i class="fa fa-venus" aria-hidden="true"></i> 1:1
+                            </td>
+                            <td>2 бр./кв.м - суха и топла пролет, слаби и редки посеви</td>
+                        </tr>
+                        <tr>
+                            <td>4 бр./кв.м - нормална гъстота на посева</td>
+                        </tr>
+                        <tr>
+                            <td>1 бр./кв.м - семепроизводни посеви</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">млечна зрялост</td>
+                            <td rowspan="2">ларви-30% в III-та възраст</td>
+                            <td>2 бр./кв.м. - нормална гъстота на посева</td>
+                        </tr>
+                        <tr >
+                            <td>4 бр./кв.м - хладна пролет и гъсти посеви</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!-- КРАЙ ДЪРВЕНИЦИ -->
 
@@ -1015,6 +1219,30 @@
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
             </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tr_latin">
+                        <td colspan="3" class="tr_latin">ОБИКНОВЕН ЖИТЕН БЕГАЧ <span class="latin_name">Zabrus tenebrioides</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">поникване - братене</td>
+                        <td rowspan="2">ларви</td>
+                        <td>есен - 3 бр./кв.м или 3 бр. повредени растения /кв.м.</td>
+                    </tr>
+                    <tr >
+                        <td>пролет - 5 бр./кв.м или 5 бр. повредени растения /кв.м</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!-- КРАЙ БЕГАЧ -->
 
@@ -1072,6 +1300,36 @@
         <div class="row">
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
+            </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                    <tr>
+                        <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                        <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                        <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tr_latin">
+                        <td colspan="3" class="tr_latin">ПШЕНИЧЕН ТРИПС <span class="latin_name">Haplothrips tritici</span></td>
+                    </tr>
+                    <tr>
+                        <td >вретенене</td>
+                        <td >възрастни</td>
+                        <td>10 бр./стъбло</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">млечна зрялост</td>
+                        <td rowspan="2">ларви</td>
+                        <td>20 бр./клас - суха пролет</td>
+                    </tr>
+                    <tr >
+                        <td>30 бр./клас - влажна пролет</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <!-- КРАЙ ТРИПС -->
@@ -1143,6 +1401,35 @@
         <div class="row">
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
+            </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="tr_latin">ЛИСТНИ ВЪШКИ сем. <span class="latin_name">Aphididae</span></td>
+                        </tr>
+                        <tr>
+                            <td>поникване-братене (есен)</td>
+                            <td rowspan="3">ларви, нимфи, възрастни</td>
+                            <td>10% нападнати растения или 10 бр./растение</td>
+                        </tr>
+                        <tr>
+                            <td >вретенене-изкласяване</td>
+                            <td>15% нападнати растения или 10 бр./клас</td>
+                        </tr>
+                        <tr>
+                            <td>начало на млечна зрялост</td>
+                            <td>15% нападнати растения или 30-40 бр./клас</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <!-- КРАЙ ВЪШКИ -->
@@ -1359,6 +1646,31 @@
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
             </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="td_latin">ЖИТАРИ  <span class="latin_name">Anisoplia spp.</span></td>
+                        </tr>
+                        <tr>
+                            <td >цъфтеж - наливане на зърното</td>
+                            <td rowspan="2">възрастни</td>
+                            <td>3-5 бр./кв.м</td>
+                        </tr>
+                        <tr >
+                            <td>млечна и восъчна зрялост</td>
+                            <td>6-8 бр./кв.м</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!-- КРАЙ ЖИТАР -->
 
@@ -1426,6 +1738,39 @@
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
             </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                    <tr>
+                        <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                        <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                        <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tr_latin">
+                        <td colspan="3" class="td_latin">
+                            <p>ОБИКНОВЕННА ЖИТНА ПИЯВИЦА - <span class="latin_name">Oulema melanopus</span></p>
+                            <p>СИНЯ ЖИТНА ПИЯВИЦА - <span class="latin_name">Oulema gallaeciana(Syn.: Oulema lichenis)</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">вретенене</td>
+                        <td rowspan="2">възрастни</td>
+                        <td>30 бр./кв.м - редки посеви и суха пролет</td>
+                    </tr>
+                    <tr>
+                        <td >50 бр./кв.м - гъсти посеви и хладна пролет</td>
+                    </tr>
+
+                    <tr>
+                        <td>изкласнване - цъфтеж</td>
+                        <td>ларви</td>
+                        <td>1бр./флагов лист или 20% унищожена листна маса</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!-- КРАЙ Пиявица -->
 
@@ -1468,6 +1813,36 @@
         <div class="row">
             <div class="col-md-12 back_link_wrap" >
                 <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
+            </div>
+            <div class="col-md-12">
+                <table class="pib_table" style="width:100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr_latin">
+                            <td colspan="3" class="td_latin">Ивичести житни цикади - <span class="latin_name">Psammotettix sp.</span></td>
+                        </tr>
+                        <tr>
+                            <td>поникване – братене (есен)</td>
+                            <td >възрастни</td>
+                            <td>20-30 бр./кв.м</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">млечна зрялост</td>
+                            <td>възрастни</td>
+                            <td>40-50 бр./кв.м</td>
+                        </tr>
+                        <tr>
+                            <td>ларви</td>
+                            <td>100 бр./кв.м</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <!-- КРАЙ ЦИКАДИ -->
