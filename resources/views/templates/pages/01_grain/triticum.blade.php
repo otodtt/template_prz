@@ -301,35 +301,88 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 back_link_wrap" >
-                <a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели"><i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>
+            <div class="col-md-6">
+                <div class="panel panel-warning text-center" onclick="location.href='#pest_menu'">
+                    <div class="panel-heading " id="test-hover" style="cursor: pointer;">
+                            <a class="back_link_bottom"
+                               href="#pest_menu"
+                               target="_self"
+                               title="към всички неприятели">
+                                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                виж друг неприятел
+                            </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-success text-center" style="cursor: pointer;">
+                    <div class="panel-heading">
+                            ПИВ
+                    </div>
+                </div>
             </div>
             <div class="col-md-12">
-                <table class="pib_table" style="width:100%" border="1">
-                    <thead>
-                        <tr>
-                            <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
-                            <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="tr_latin">
-                            <td colspan="3" class="td_latin">Брашнеста мана - <span class="latin_name">Erysiphe graminis</span></td>
-                        </tr>
+                <div class="panel panel-success text-center">
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <table class="pib_table" style="width:100%" border="1">
+                                <thead>
+                                <tr>
+                                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                                    <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="tr_latin">
+                                    <td colspan="3" class="td_latin">Брашнеста мана - <span class="latin_name">Erysiphe graminis</span></td>
+                                </tr>
 
-                        <tr>
-                            <td>1-ви - 2-ри възел</td>
-                            <td rowspan="2">пустули</td>
-                            <td>10% нападната л. маса</td>
-                        </tr>
-                        <tr>
-                            <td>поява на флагелния лист - цъфтеж</td>
-                            <td>10% нападната листна маса под флагов лист</td>
-                        </tr>
-                    </tbody>
-                </table>
+                                <tr>
+                                    <td>1-ви - 2-ри възел</td>
+                                    <td rowspan="2">пустули</td>
+                                    <td>10% нападната л. маса</td>
+                                </tr>
+                                <tr>
+                                    <td>поява на флагелния лист - цъфтеж</td>
+                                    <td>10% нападната листна маса под флагов лист</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
+            {{--<div class="col-md-12 back_link_wrap" >--}}
+                {{--<a class="back_link_bottom" href="#pest_menu" target="_self" title="към всички неприятели">--}}
+                    {{--<i class="fa fa-angle-double-up" aria-hidden="true"></i> виж друг неприятел</a>--}}
+            {{--</div>--}}
+            {{--<div class="col-md-12">--}}
+                {{--<table class="pib_table" style="width:100%" border="1">--}}
+                    {{--<thead>--}}
+                        {{--<tr>--}}
+                            {{--<th>ФЕНОФАЗА НА КУЛТУРАТА</th>--}}
+                            {{--<th>ВРЕДИТЕЛ / СТАДИЙ</th>--}}
+                            {{--<th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>--}}
+                        {{--</tr>--}}
+                    {{--</thead>--}}
+                    {{--<tbody>--}}
+                        {{--<tr class="tr_latin">--}}
+                            {{--<td colspan="3" class="td_latin">Брашнеста мана - <span class="latin_name">Erysiphe graminis</span></td>--}}
+                        {{--</tr>--}}
+
+                        {{--<tr>--}}
+                            {{--<td>1-ви - 2-ри възел</td>--}}
+                            {{--<td rowspan="2">пустули</td>--}}
+                            {{--<td>10% нападната л. маса</td>--}}
+                        {{--</tr>--}}
+                        {{--<tr>--}}
+                            {{--<td>поява на флагелния лист - цъфтеж</td>--}}
+                            {{--<td>10% нападната листна маса под флагов лист</td>--}}
+                        {{--</tr>--}}
+                    {{--</tbody>--}}
+                {{--</table>--}}
+            {{--</div>--}}
         </div>
         <!-- КРАЙ МАНА -->
 

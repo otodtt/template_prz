@@ -43,6 +43,22 @@ body{
 #good-practice, #h-good-practice{
     color: #028102;
 }
+
+
+
+
+
+.panel-warning > .panel-heading {
+    color: #092c8a;
+    background-color: #fc291b;
+    border-color: #16fa2a;
+}
+
+
+
+
+
+
 /*==================
   КРАЙ Презаписване на темплейта
 ====================*/
@@ -258,6 +274,14 @@ h4.my_class_h4{
     border-left: 3px solid #2e353d;
     background-color: #2e353d;
 }
+
+
+
+.d {
+    background-color: #0000ff;
+}
+
+
 /*==================
  RESPONSIVE DESIGN
 ====================*/
@@ -629,6 +653,7 @@ h4.my_class_h4{
         margin-top: 20px;
     }
 }
+
 
 
 
