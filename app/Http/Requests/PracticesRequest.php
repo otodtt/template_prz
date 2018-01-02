@@ -25,7 +25,7 @@ class PracticesRequest extends FormRequest
     {
         return [
             'link_id'=> 'required|min:3|max:100|latin',
-            'name'=> 'required|min:3|max:100|cyrillic_with',
+            'name'=> 'required|min:3|max:100',
             'full_name'=> 'required|min:3|max:500',
         ];
     }
@@ -45,7 +45,7 @@ class PracticesRequest extends FormRequest
             'name.required' => 'Попълни името на Вредителя!',
             'name.min' => 'Минимален брой символи за името - 3!',
             'name.max' => 'Максимален брой символи за името - 100!',
-            'name.cyrillic_with' => 'За име на Вредителя пиши само на кирилица!',
+
 
             'full_name.required' => 'Попълни Целия линк!',
             'full_name.min' => 'Минимален брой символи за Целия линк - 3!',

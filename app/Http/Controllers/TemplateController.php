@@ -47,6 +47,7 @@ class TemplateController extends Controller
             'group_id'=> $request['group_id'],
             'culture_id'=> $request['culture_id'],
             'img_path'=> $request['img_path'],
+            'table_piv'=> $request['table_piv'],
         ]);
 
         return Redirect::to('template-practices/show-culture');
@@ -92,6 +93,7 @@ class TemplateController extends Controller
             'group_id'=> $request['group_id'],
             'culture_id'=> $request['culture_id'],
             'img_path'=> $request['img_path'],
+            'table_piv'=> $request['table_piv'],
         ]);
 
         $practices->fill($data);

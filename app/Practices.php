@@ -17,5 +17,5 @@ class Practices extends Model
      * Защитени колони в таблицата
      * @var array
      */
-    protected $fillable = ['link_id', 'name', 'full_name', 'text', 'group_id', 'culture_id', 'img_path'];
+    protected $fillable = ['link_id', 'name', 'full_name', 'text', 'group_id', 'culture_id', 'img_path', 'table_piv'];
 }

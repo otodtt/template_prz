@@ -80,6 +80,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="table_piv" class="col-lg-2 control-label">Таблица ПИВ</label>
+                        <div class="col-lg-10">
+                            {!! Form::textarea('table_piv', null, ['class'=>'form-control', 'id'=>'table_piv', 'rows'=>10 ]) !!}
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
