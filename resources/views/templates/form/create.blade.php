@@ -26,7 +26,7 @@
                             <div class="col-lg-10">
                                 <div class="radio">
                                     <label>
-                                        {!! Form::radio('group_id', 1, true) !!}
+                                        {!! Form::radio('groupId', 1, true) !!}
                                     </label>
                                 </div>
                             </div>
@@ -34,9 +34,9 @@
                         <div class="form-group">
                             <label for="select" class="col-lg-2 control-label">Култура</label>
                             <div class="col-lg-10">
-                                {!! Form::select('culture_id',
+                                {!! Form::select('cultureId',
                                    array(1 =>'Пшеница'),
-                                   null,['id' => 'culture_id', 'class'=>'form-control'])
+                                   null,['id' => 'cultureId', 'class'=>'form-control'])
                                !!}
                                 {{--{!! Form::select('culture_id',--}}
                                     {{--array('' => 'Избери!', 1 =>'Пшеница',2 => 'Ечемик', 3 => 'Овес',--}}
@@ -49,9 +49,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="link_id" class="col-lg-2 control-label">За линк към вредител</label>
+                            <label for="linkId" class="col-lg-2 control-label">За линк към вредител</label>
                             <div class="col-lg-10">
-                                {!! Form::text('link_id', null, ['class'=>'form-control', 'placeholder'=>'link_id', 'id'=>'link_id' ]) !!}
+                                {!! Form::text('inkId', null, ['class'=>'form-control', 'placeholder'=>'inkId', 'id'=>'inkId' ]) !!}
                             </div>
                         </div>
                         <div class="form-group">
@@ -61,9 +61,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="full_name" class="col-lg-2 control-label">Целия линк</label>
+                            <label for="fullName" class="col-lg-2 control-label">Целия линк</label>
                             <div class="col-lg-10">
-                                {!! Form::text('full_name', null, ['class'=>'form-control', 'placeholder'=>'Целия линк', 'id'=>'full_name' ]) !!}
+                                {!! Form::text('fullName', null, ['class'=>'form-control', 'placeholder'=>'Целия линк', 'id'=>'fullName' ]) !!}
                             </div>
                         </div>
                         <div class="form-group">
@@ -74,16 +74,16 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="img_path" class="col-lg-2 control-label">Снимки - ЛИНК</label>
+                            <label for="imgPath" class="col-lg-2 control-label">Снимки - ЛИНК</label>
                             <div class="col-lg-10">
-                                {!! Form::text('img_path', null, ['class'=>'form-control', 'placeholder'=>'Снимки - ЛИНК', 'id'=>'img_path' ]) !!}
+                                {!! Form::text('imgPath', null, ['class'=>'form-control', 'placeholder'=>'Снимки - ЛИНК', 'id'=>'imgPath' ]) !!}
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="table_piv" class="col-lg-2 control-label">Таблица ПИВ</label>
+                            <label for="tablePiv" class="col-lg-2 control-label">Таблица ПИВ</label>
                             <div class="col-lg-10">
-                                {!! Form::textarea('table_piv', null, ['class'=>'form-control', 'id'=>'table_piv', 'rows'=>10 ]) !!}
+                                {!! Form::textarea('tablePiv', null, ['class'=>'form-control', 'id'=>'tablePiv', 'rows'=>10 ]) !!}
                             </div>
                         </div>
                         <div class="form-group">

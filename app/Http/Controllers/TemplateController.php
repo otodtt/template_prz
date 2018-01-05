@@ -40,14 +40,14 @@ class TemplateController extends Controller
     public function store(PracticesRequest $request)
     {
         Practices::create([
-            'link_id'=> $request['link_id'],
+            'linkId'=> $request['linkId'],
             'name'=> $request['name'],
-            'full_name'=> $request['full_name'],
+            'fullName'=> $request['fullName'],
             'text'=> $request['text'],
-            'group_id'=> $request['group_id'],
-            'culture_id'=> $request['culture_id'],
-            'img_path'=> $request['img_path'],
-            'table_piv'=> $request['table_piv'],
+            'groupId'=> $request['groupId'],
+            'cultureId'=> $request['cultureId'],
+            'imgPath'=> $request['imgPath'],
+            'tablePiv'=> $request['tablePiv'],
         ]);
 
         return Redirect::to('template-practices/show-culture');
@@ -86,14 +86,14 @@ class TemplateController extends Controller
     {
         $practices = Practices::findOrFail($id);
         $data =([
-            'link_id'=> $request['link_id'],
+            'linkId'=> $request['linkId'],
             'name'=> $request['name'],
-            'full_name'=> $request['full_name'],
+            'fullName'=> $request['fullName'],
             'text'=> $request['text'],
-            'group_id'=> $request['group_id'],
-            'culture_id'=> $request['culture_id'],
-            'img_path'=> $request['img_path'],
-            'table_piv'=> $request['table_piv'],
+            'groupId'=> $request['groupId'],
+            'cultureId'=> $request['cultureId'],
+            'imgPath'=> $request['imgPath'],
+            'tablePiv'=> $request['tablePiv'],
         ]);
 
         $practices->fill($data);
