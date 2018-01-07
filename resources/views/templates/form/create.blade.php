@@ -51,7 +51,7 @@
                         <div class="form-group">
                             <label for="linkId" class="col-lg-2 control-label">За линк към вредител</label>
                             <div class="col-lg-10">
-                                {!! Form::text('inkId', null, ['class'=>'form-control', 'placeholder'=>'inkId', 'id'=>'inkId' ]) !!}
+                                {!! Form::text('linkId', null, ['class'=>'form-control', 'placeholder'=>'linkId', 'id'=>'linkId' ]) !!}
                             </div>
                         </div>
                         <div class="form-group">
@@ -74,18 +74,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="imgPath" class="col-lg-2 control-label">Снимки - ЛИНК</label>
-                            <div class="col-lg-10">
-                                {!! Form::text('imgPath', null, ['class'=>'form-control', 'placeholder'=>'Снимки - ЛИНК', 'id'=>'imgPath' ]) !!}
-                            </div>
-                        </div>
-
-                        <div class="form-group">
                             <label for="tablePiv" class="col-lg-2 control-label">Таблица ПИВ</label>
                             <div class="col-lg-10">
                                 {!! Form::textarea('tablePiv', null, ['class'=>'form-control', 'id'=>'tablePiv', 'rows'=>10 ]) !!}
                             </div>
                         </div>
+
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
                                 <button type="reset" class="btn btn-default">Cancel</button>

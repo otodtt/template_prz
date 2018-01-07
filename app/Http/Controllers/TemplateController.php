@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Culture;
 use App\Http\Requests\PracticesRequest;
+use App\Images;
 use App\Practices;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Input;
 
 class TemplateController extends Controller
 {
@@ -46,14 +48,12 @@ class TemplateController extends Controller
             'text'=> $request['text'],
             'groupId'=> $request['groupId'],
             'cultureId'=> $request['cultureId'],
-            'imgPath'=> $request['imgPath'],
             'tablePiv'=> $request['tablePiv'],
         ]);
 
+//        var_dump(Request::all());
         return Redirect::to('template-practices/show-culture');
     }
-
-
 
     /**
      * Display the specified resource.
@@ -92,8 +92,8 @@ class TemplateController extends Controller
             'text'=> $request['text'],
             'groupId'=> $request['groupId'],
             'cultureId'=> $request['cultureId'],
-            'imgPath'=> $request['imgPath'],
             'tablePiv'=> $request['tablePiv'],
+            'imgPath'=> $request['imgPath'],
         ]);
 
         $practices->fill($data);
@@ -110,7 +110,6 @@ class TemplateController extends Controller
      */
     public function destroy($id){}
 
-
     /**
      * Display a listing of the resource.
      *
@@ -120,14 +119,55 @@ class TemplateController extends Controller
     {
         $groups = array(1 =>'Зърненожитни',2 => 'Бобови', 3 => 'Технически', 4 => 'Зеленчуци',
                         5 => 'Зеленчуци в съоражения', 6 => 'Овощни', 7 => 'Ягодоплодни', 8 => 'Лоза');
-        $practices = Practices::get();
+
+        $practices = Practices::with('Images')->get();
         $cultures = Culture::get();
 
-        return view('templates.index', compact('practices', 'groups', 'cultures'));
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+
+        return view('templates.index', compact('practices', 'groups', 'cultures', 'json'));
+
     }
 
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create_image($id)
+    {
+        $practices = Practices::findOrFail($id);
+        return view('templates.form.add-image', compact('practices'));
+    }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param \App\Http\Requests\PracticesRequest  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store_image(Request $request, $id)
+    {
+        $practices = Practices::findOrFail($id);
+        $data = ([
+            'imgPath'=> $request['imgPath'],
+            'bgName'=> $request['bgName'],
+            'imgTitle'=> $request['imgTitle'],
+            'thumbPath'=> $request['thumbPath'],
+            'thumbAlt'=> $request['thumbAlt'],
+            'cultureId'=> $request['cultureId'],
+            'thumbTitle'=> $request['thumbTitle'],
+        ]);
+
+        $images = new Images($data);
+//        dd($practices->images());
+        $practices->images()->save($images);
+
+//        Session::flash('message', 'Снимака е добавна успешно!');
+        return Redirect::to('/template-practices/add_images/' . $practices->id);
+    }
 
 
     public function triticum()

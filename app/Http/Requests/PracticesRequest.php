@@ -24,9 +24,9 @@ class PracticesRequest extends FormRequest
     public function rules()
     {
         return [
-            'link_id'=> 'required|min:3|max:100|latin',
+//            'linkId'=> 'required|min:3|max:100|latin',
             'name'=> 'required|min:3|max:100',
-            'full_name'=> 'required|min:3|max:500',
+            'fullName'=> 'required|min:3|max:500',
         ];
     }
 
@@ -37,19 +37,19 @@ class PracticesRequest extends FormRequest
     public function messages()
     {
         return [
-            'link_id.required' => 'Попълни линка!',
-            'link_id.min' => 'Минимален брой символи за линка - 3!',
-            'link_id.max' => 'Максимален брой символи за линка - 100!',
-            'link_id.latin' => 'За линка пиши само на Латиница!',
+            'linkId.required' => 'Попълни линка!',
+            'linkId.min' => 'Минимален брой символи за линка - 3!',
+            'linkId.max' => 'Максимален брой символи за линка - 100!',
+            'linkId.latin' => 'За линка пиши само на Латиница!',
 
             'name.required' => 'Попълни името на Вредителя!',
             'name.min' => 'Минимален брой символи за името - 3!',
             'name.max' => 'Максимален брой символи за името - 100!',
 
 
-            'full_name.required' => 'Попълни Целия линк!',
-            'full_name.min' => 'Минимален брой символи за Целия линк - 3!',
-            'full_name.max' => 'Максимален брой символи за името - 500!',
+            'fullName.required' => 'Попълни Целия линк!',
+            'fullName.min' => 'Минимален брой символи за Целия линк - 3!',
+            'fullName.max' => 'Максимален брой символи за името - 500!',
         ];
     }
 }

@@ -1,11 +1,13 @@
 @extends('layouts.cultures')
-
+<?php
+//echo '<pre>',print_r($json, true),'</pre>';
+?>
 @section('content')
     @foreach($practices as $practice)
     @endforeach
    <?php
        foreach($groups as $k=>$v){
-           if($k == $practice->group_id){
+           if($k == $practice->groupId){
            ?>
            <div class="col-lg-12">
                <div class="bs-component">
@@ -15,25 +17,30 @@
                        </div>
                        <div class="panel-body">
                            @foreach($cultures as $culture)
-                               @if($culture->id == $practice->culture_id)
+                               @if($culture->id == $practice->cultureId)
                                    <div class="col-lg-12" style="background-color: gainsboro; margin-bottom: 10px">
                                        <h4>{{$culture->name}}</h4>
                                    </div>
                                    @foreach($practices as $pest)
-                                       @if($pest->group_id == $k && $pest->culture_id)
+                                       @if($pest->groupId == $k && $pest->cultureId)
                                            <div class="row">
-                                               <div class="col-lg-1"><p>{{$pest->id}}</p></div>
-                                               <div class="col-lg-4"><p>{{$pest->name}}</p></div>
+                                               {{--<div class=""><p></p></div>--}}
+                                               <div class="col-lg-3"><p>{{$pest->id}} {{$pest->name}}</p></div>
 
-                                               <div class="col-lg-4"><p>{{$pest->link_id}}</p></div>
+                                               <div class="col-lg-3"><p>{{$pest->linkId}}</p></div>
+                                               <div class="col-lg-3">
+                                                   @foreach($pest->images as $image)
+                                                    <p>{{$image->bgName}}</p>
+                                                   @endforeach
+                                               </div>
                                                <div class="col-lg-3">
                                                    <a href="{!!URL::to('/template-practices/edit/'.$pest->id)!!}"
                                                       class="fa fa-edit btn btn-xs btn-primary">
                                                       &nbsp;Редактирай!
                                                    </a>
-                                                   <a href="{!!URL::to('/culture/edit/'.$pest->id)!!}"
+                                                   <a href="{!!URL::to('/template-practices/add_images/'.$pest->id)!!}"
                                                       class="fa fa-edit btn btn-xs btn-success">
-                                                       &nbsp;Добави ПИВ
+                                                       &nbsp;Добави Снимка
                                                    </a>
                                                </div>
                                            </div>

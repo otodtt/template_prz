@@ -17,5 +17,12 @@ class Practices extends Model
      * Защитени колони в таблицата
      * @var array
      */
-    protected $fillable = ['linkId', 'name', 'fullName', 'text', 'groupId', 'cultureId', 'imgPath', 'tablePiv'];
+    protected $fillable = [
+        'groupId', 'cultureId', 'linkId', 'name', 'fullName', 'text', 'tablePiv',
+    ];
+
+
+    public function images(){
+        return $this->hasMany('App\Images');
+    }
 }

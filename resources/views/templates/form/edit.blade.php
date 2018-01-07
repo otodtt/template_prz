@@ -74,12 +74,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="imgPath" class="col-lg-2 control-label">Снимки - ЛИНК</label>
-                        <div class="col-lg-10">
-                            {!! Form::text('imgPath', null, ['class'=>'form-control', 'placeholder'=>'Снимки - ЛИНК', 'id'=>'imgPath' ]) !!}
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label for="tablePiv" class="col-lg-2 control-label">Таблица ПИВ</label>
                         <div class="col-lg-10">
                             {!! Form::textarea('tablePiv', null, ['class'=>'form-control', 'id'=>'tablePiv', 'rows'=>10 ]) !!}

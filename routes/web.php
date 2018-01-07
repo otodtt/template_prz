@@ -29,6 +29,12 @@ Route::post('template-practices/store', 'TemplateController@store');
 Route::get('template-practices/edit/{id}', 'TemplateController@edit');
 Route::post('template-practices/update/{id}', 'TemplateController@update');
 
+//Route::get('template-practices/view_imagess/{id}', 'TemplateController@view_images');
+Route::get('template-practices/add_images/{id}', 'TemplateController@create_image');
+Route::post('template-practices/store_image/{id}', 'TemplateController@store_image');
+
+
+
 ////////////////////
 Route::get('template-practices', 'TemplateController@index');
 Route::get('template-practices/introduction','TemplateController@index');
