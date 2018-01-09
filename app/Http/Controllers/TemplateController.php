@@ -131,6 +131,7 @@ class TemplateController extends Controller
     }
 
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -172,8 +173,10 @@ class TemplateController extends Controller
 
     public function triticum()
     {
-        $has_image = 1;
-        return view('templates.pages.01_grain.triticum', compact('has_image'));
+        $practices = Practices::with('Images')->get();
+        return view('templates.database', compact('practices'));
+//        $has_image = 1;
+//        return view('templates.pages.01_grain.triticum', compact('has_image'));
     }
     public function hordeum()
     {

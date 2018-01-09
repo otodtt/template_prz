@@ -36,6 +36,9 @@ Route::post('template-practices/store_image/{id}', 'TemplateController@store_ima
 
 
 ////////////////////
+Route::get('triticum','TemplateController@triticum');
+
+
 Route::get('template-practices', 'TemplateController@index');
 Route::get('template-practices/introduction','TemplateController@index');
 Route::get('template-practices/triticum-spp','TemplateController@triticum');
