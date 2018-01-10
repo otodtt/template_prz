@@ -172,20 +172,19 @@ class TemplateController extends Controller
 
     public function triticum()
     {
-        $practices = Practices::findOrFail(1)->with('Images')->get();
-//        $practices = Practices::with('Images')->get();
+        $practices = Practices::where('cultureId', 1)->with('Images')->get();
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
-
 //        dd($json);
+
         return view('templates.database', compact('practices'));
+//        $practices = Practices::findOrFail(1)->with('Images')->get();
+//        $practices = Practices::with('Images')->get();
     }
     public function hordeum()
     {
         $practices = Practices::where('cultureId', 2)->with('Images')->get();
-//        $practices = Practices::with('Images')->get();
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
-
-//        dd($practices);
+//        dd($json);
         return view('templates.database', compact('practices'));
     }
     public function avena()
