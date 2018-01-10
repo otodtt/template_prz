@@ -146,7 +146,7 @@ class TemplateController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \App\Http\Requests\PracticesRequest  $request
+     * @param \App\Http\Requests\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store_image(Request $request, $id)
@@ -166,22 +166,27 @@ class TemplateController extends Controller
 //        dd($practices->images());
         $practices->images()->save($images);
 
-//        Session::flash('message', 'Снимака е добавна успешно!');
         return Redirect::to('/template-practices/add_images/' . $practices->id);
     }
 
 
     public function triticum()
     {
-        $practices = Practices::with('Images')->get();
+        $practices = Practices::findOrFail(1)->with('Images')->get();
+//        $practices = Practices::with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+
+//        dd($json);
         return view('templates.database', compact('practices'));
-//        $has_image = 1;
-//        return view('templates.pages.01_grain.triticum', compact('has_image'));
     }
     public function hordeum()
     {
-        $has_image = 2;
-        return view('templates.pages.01_grain.hordeum', compact('has_image'));
+        $practices = Practices::where('cultureId', 2)->with('Images')->get();
+//        $practices = Practices::with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+
+//        dd($practices);
+        return view('templates.database', compact('practices'));
     }
     public function avena()
     {

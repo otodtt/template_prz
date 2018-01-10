@@ -37,12 +37,12 @@ Route::post('template-practices/store_image/{id}', 'TemplateController@store_ima
 
 ////////////////////
 Route::get('triticum','TemplateController@triticum');
-
+Route::get('hordeum','TemplateController@hordeum');
 
 Route::get('template-practices', 'TemplateController@index');
 Route::get('template-practices/introduction','TemplateController@index');
-Route::get('template-practices/triticum-spp','TemplateController@triticum');
-Route::get('template-practices/hordeum-vulgare','TemplateController@hordeum');
+//Route::get('template-practices/triticum-spp','TemplateController@triticum');
+//Route::get('template-practices/hordeum-vulgare','TemplateController@hordeum');
 Route::get('template-practices/avena-sativa','TemplateController@avena');
 Route::get('template-practices/secale-cereale','TemplateController@secale');
 Route::get('template-practices/zea-mays','TemplateController@zea');
