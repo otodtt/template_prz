@@ -203,8 +203,10 @@ class TemplateController extends Controller
     }
     public function zea()
     {
-        $has_image = 2;
-        return view('templates.pages.01_grain.zea', compact('has_image'));
+        $practices = Practices::where('cultureId', 5)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function rodentia()
     {

@@ -40,14 +40,16 @@ Route::get('triticum','TemplateController@triticum');
 Route::get('hordeum','TemplateController@hordeum');
 Route::get('avena','TemplateController@avena');
 Route::get('secale','TemplateController@secale');
+Route::get('zea','TemplateController@zea');
+
 
 Route::get('template-practices', 'TemplateController@index');
 Route::get('template-practices/introduction','TemplateController@index');
 //Route::get('template-practices/triticum-spp','TemplateController@triticum');
 //Route::get('template-practices/hordeum-vulgare','TemplateController@hordeum');
 //Route::get('template-practices/avena-sativa','TemplateController@avena');
-Route::get('template-practices/secale-cereale','TemplateController@secale');
-Route::get('template-practices/zea-mays','TemplateController@zea');
+//Route::get('template-practices/secale-cereale','TemplateController@secale');
+//Route::get('template-practices/zea-mays','TemplateController@zea');
 Route::get('template-practices/rodentia','TemplateController@rodentia');
 
 //////// БОБОВИ
