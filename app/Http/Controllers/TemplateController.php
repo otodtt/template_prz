@@ -189,13 +189,17 @@ class TemplateController extends Controller
     }
     public function avena()
     {
-        $has_image = 2;
-        return view('templates.pages.01_grain.avena', compact('has_image'));
+        $practices = Practices::where('cultureId', 3)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function secale()
     {
-        $has_image = 2;
-        return view('templates.pages.01_grain.secale', compact('has_image'));
+        $practices = Practices::where('cultureId', 4)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function zea()
     {

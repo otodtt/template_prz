@@ -17,36 +17,38 @@
                        </div>
                        <div class="panel-body">
                            @foreach($cultures as $culture)
-                               @if($culture->id == $practice->cultureId)
-                                   <div class="col-lg-12" style="background-color: gainsboro; margin-bottom: 10px">
-                                       <h4>{{$culture->name}}</h4>
-                                   </div>
-                                   @foreach($practices as $pest)
-                                       @if($pest->groupId == $k && $pest->cultureId)
-                                           <div class="row">
-                                               {{--<div class=""><p></p></div>--}}
-                                               <div class="col-lg-3"><p>{{$pest->id}} {{$pest->name}}</p></div>
+                               <div class="col-lg-12" style="background-color: gainsboro; margin-bottom: 10px">
+                                    <h4>{{$culture->name}}</h4>
+                               </div>
+                               @foreach($practices as $pest)
+                                   @if($culture->id === $pest->cultureId)
+                                           @if($pest->groupId == $k && $pest->cultureId)
+                                               <div class="row">
+                                                   {{--<div class=""><p></p></div>--}}
+                                                   <div class="col-lg-3"><p>{{$pest->id}} {{$pest->name}}</p></div>
 
-                                               <div class="col-lg-3"><p>{{$pest->linkId}}</p></div>
-                                               <div class="col-lg-3">
-                                                   @foreach($pest->images as $image)
-                                                    <p>{{$image->bgName}}</p>
-                                                   @endforeach
+                                                   <div class="col-lg-3"><p>{{$pest->linkId}}</p></div>
+                                                   <div class="col-lg-3">
+                                                       @foreach($pest->images as $image)
+                                                        <p>{{$image->bgName}}</p>
+                                                       @endforeach
+                                                   </div>
+                                                   <div class="col-lg-3">
+                                                       <a href="{!!URL::to('/template-practices/edit/'.$pest->id)!!}"
+                                                          class="fa fa-edit btn btn-xs btn-primary">
+                                                          &nbsp;Редактирай!
+                                                       </a>
+                                                       <a href="{!!URL::to('/template-practices/add_images/'.$pest->id)!!}"
+                                                          class="fa fa-edit btn btn-xs btn-success">
+                                                           &nbsp;Добави Снимка
+                                                       </a>
+                                                   </div>
                                                </div>
-                                               <div class="col-lg-3">
-                                                   <a href="{!!URL::to('/template-practices/edit/'.$pest->id)!!}"
-                                                      class="fa fa-edit btn btn-xs btn-primary">
-                                                      &nbsp;Редактирай!
-                                                   </a>
-                                                   <a href="{!!URL::to('/template-practices/add_images/'.$pest->id)!!}"
-                                                      class="fa fa-edit btn btn-xs btn-success">
-                                                       &nbsp;Добави Снимка
-                                                   </a>
-                                               </div>
-                                           </div>
-                                       @endif
-                                   @endforeach
-                               @endif
+                                           @endif
+                                    @endif
+                               @endforeach
+
+                               {{--@endif--}}
                            @endforeach
                        </div>
                    </div>
