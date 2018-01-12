@@ -172,7 +172,9 @@ class TemplateController extends Controller
 
     public function triticum()
     {
-        $practices = Practices::where('cultureId', 1)->with('Images')->get();
+//        $practices = Practices::where('cultureId', 1)->with('Images')->get();
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 1)->with('Images')->get();
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
 //        dd($json);
 
@@ -182,28 +184,36 @@ class TemplateController extends Controller
     }
     public function hordeum()
     {
-        $practices = Practices::where('cultureId', 2)->with('Images')->get();
+//        $practices = Practices::where('cultureId', 2)->with('Images')->get();
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 2)->with('Images')->get();
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
 //        dd($json);
         return view('templates.database', compact('practices'));
     }
     public function avena()
     {
-        $practices = Practices::where('cultureId', 3)->with('Images')->get();
+//        $practices = Practices::where('cultureId', 3)->with('Images')->get();
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 3)->with('Images')->get();
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
 //        dd($json);
         return view('templates.database', compact('practices'));
     }
     public function secale()
     {
-        $practices = Practices::where('cultureId', 4)->with('Images')->get();
+//        $practices = Practices::where('cultureId', 4)->with('Images')->get();
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 4)->with('Images')->get();
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
 //        dd($json);
         return view('templates.database', compact('practices'));
     }
     public function zea()
     {
-        $practices = Practices::where('cultureId', 5)->with('Images')->get();
+//        $practices = Practices::where('cultureId', 5)->with('Images')->get();
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 5)->with('Images')->get();
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
 //        dd($json);
         return view('templates.database', compact('practices'));
