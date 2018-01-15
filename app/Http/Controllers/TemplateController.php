@@ -227,18 +227,27 @@ class TemplateController extends Controller
     //////// БОБОВИ
     public function phaseolus()
     {
-        $has_image = 2;
-        return view('templates.pages.02_bean.phaseolus', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 6)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function glycine()
     {
-        $has_image = 2;
-        return view('templates.pages.02_bean.glycine', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 7)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function pisum()
     {
-        $has_image = 2;
-        return view('templates.pages.02_bean.pisum', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 8)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function lens()
     {

@@ -22,11 +22,11 @@
                     <fieldset>
                         <legend>ДОБАВЯНЕ НА НЕПРИЯТЕЛ</legend>
                         <div class="form-group">
-                            <label class="col-lg-2 control-label">Група - Зърненожитни</label>
+                            <label class="col-lg-2 control-label">Група - Бобови</label>
                             <div class="col-lg-10">
                                 <div class="radio">
                                     <label>
-                                        {!! Form::radio('groupId', 1, true) !!}
+                                        {!! Form::radio('groupId', 2, true) !!}
                                     </label>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                             <label for="select" class="col-lg-2 control-label">Култура</label>
                             <div class="col-lg-10">
                                 {!! Form::select('cultureId',
-                                   array(5 =>'Царевица'),
+                                   array(8 =>'Грах'),
                                    null,['id' => 'cultureId', 'class'=>'form-control'])
                                !!}
                                 {{--{!! Form::select('culture_id',--}}
