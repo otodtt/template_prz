@@ -45,6 +45,8 @@ Route::get('zea','TemplateController@zea');
 Route::get('phaseolus','TemplateController@phaseolus');
 Route::get('glycine','TemplateController@glycine');
 Route::get('pisum','TemplateController@pisum');
+Route::get('lens','TemplateController@lens');
+Route::get('cicer','TemplateController@cicer');
 
 
 Route::get('template-practices', 'TemplateController@index');
@@ -60,8 +62,8 @@ Route::get('template-practices/rodentia','TemplateController@rodentia');
 //Route::get('template-practices/phaseolus-vulgaris','TemplateController@phaseolus');
 //Route::get('template-practices/glycine-max','TemplateController@glycine');
 //Route::get('template-practices/pisum-sativum','TemplateController@pisum');
-Route::get('template-practices/lens-culinaris','TemplateController@lens');
-Route::get('template-practices/cicer-arietinum','TemplateController@cicer');
+//Route::get('template-practices/lens-culinaris','TemplateController@lens');
+//Route::get('template-practices/cicer-arietinum','TemplateController@cicer');
 Route::get('template-practices/medicago-sativa','TemplateController@medicago');
 
 /////// ТЕХНИЧЕСКИ

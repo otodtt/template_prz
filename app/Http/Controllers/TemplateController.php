@@ -251,13 +251,19 @@ class TemplateController extends Controller
     }
     public function lens()
     {
-        $has_image = 2;
-        return view('templates.pages.02_bean.lens', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 9)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function cicer()
     {
-        $has_image = 2;
-        return view('templates.pages.02_bean.cicer', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 10)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function medicago()
     {
