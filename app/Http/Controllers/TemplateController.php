@@ -267,29 +267,60 @@ class TemplateController extends Controller
     }
     public function medicago()
     {
-        $has_image = 2;
-        return view('templates.pages.02_bean.medicago', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 11)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
 
     /////// ТЕХНИЧЕСКИ
     public function nicotiana()
     {
-        $has_image = 2;
-        return view('templates.pages.03_technical.nicotiana', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 12)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function beta()
     {
-        $has_image = 2;
-        return view('templates.pages.03_technical.beta', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 13)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function gossypium()
     {
-        $has_image = 2;
-        return view('templates.pages.03_technical.gossypium', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 14)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
     public function helianthus()
     {
-        $has_image = 2;
-        return view('templates.pages.03_technical.helianthus', compact('has_image'));
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 15)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
+    }
+    public function brassica()
+    {
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 16)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
+    }
+    public function arachis()
+    {
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 17)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
     }
 }

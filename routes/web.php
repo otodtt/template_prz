@@ -34,19 +34,29 @@ Route::get('template-practices/add_images/{id}', 'TemplateController@create_imag
 Route::post('template-practices/store_image/{id}', 'TemplateController@store_image');
 
 
-
 ////////////////////
 Route::get('triticum','TemplateController@triticum');
 Route::get('hordeum','TemplateController@hordeum');
 Route::get('avena','TemplateController@avena');
 Route::get('secale','TemplateController@secale');
 Route::get('zea','TemplateController@zea');
+
 //////// БОБОВИ
 Route::get('phaseolus','TemplateController@phaseolus');
 Route::get('glycine','TemplateController@glycine');
 Route::get('pisum','TemplateController@pisum');
 Route::get('lens','TemplateController@lens');
 Route::get('cicer','TemplateController@cicer');
+Route::get('medicago','TemplateController@medicago');
+
+/////// ТЕХНИЧЕСКИ
+Route::get('nicotiana','TemplateController@nicotiana');
+Route::get('beta','TemplateController@beta');
+Route::get('gossypium','TemplateController@gossypium');
+Route::get('helianthus','TemplateController@helianthus');
+Route::get('brassica','TemplateController@brassica');
+Route::get('arachis','TemplateController@arachis');
+
 
 
 Route::get('template-practices', 'TemplateController@index');
@@ -64,13 +74,13 @@ Route::get('template-practices/rodentia','TemplateController@rodentia');
 //Route::get('template-practices/pisum-sativum','TemplateController@pisum');
 //Route::get('template-practices/lens-culinaris','TemplateController@lens');
 //Route::get('template-practices/cicer-arietinum','TemplateController@cicer');
-Route::get('template-practices/medicago-sativa','TemplateController@medicago');
+//Route::get('template-practices/medicago-sativa','TemplateController@medicago');
 
 /////// ТЕХНИЧЕСКИ
-Route::get('template-practices/nicotiana-tabacum','TemplateController@nicotiana');
-Route::get('template-practices/beta-vulgaris','TemplateController@beta');
-Route::get('template-practices/gossypium','TemplateController@gossypium');
-Route::get('template-practices/helianthus-annuus','TemplateController@helianthus');
+//Route::get('template-practices/nicotiana-tabacum','TemplateController@nicotiana');
+//Route::get('template-practices/beta-vulgaris','TemplateController@beta');
+//Route::get('template-practices/gossypium','TemplateController@gossypium');
+//Route::get('template-practices/helianthus-annuus','TemplateController@helianthus');
 
 
 
