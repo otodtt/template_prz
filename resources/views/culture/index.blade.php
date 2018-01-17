@@ -38,7 +38,7 @@
                             $group = 'Лоза';
                         }
                         ?>
-                    <div class="col-lg-3">{{$group}}</div>
+                    <div class="col-lg-3">{{$culture->id}}  {{$group}}</div>
                     <div class="col-lg-3">{{$culture -> name}}</div>
                     <div class="col-lg-3">{{$culture -> latin_name}}</div>
                     <a href="{!!URL::to('/culture/edit/'.$culture->id)!!}" class="fa fa-edit btn btn-primary">
