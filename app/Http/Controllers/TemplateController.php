@@ -323,4 +323,54 @@ class TemplateController extends Controller
 //        dd($json);
         return view('templates.database', compact('practices'));
     }
+
+    /////// ЗЕЛЕНЧУЦИ
+    public function vegetables()
+    {
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 18)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
+    }
+    public function potatoes()
+    {
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 19)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
+    }
+    public function onion()
+    {
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 20)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
+    }
+    public function cabbage()
+    {
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 21)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
+    }
+    public function pumpkin()
+    {
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 22)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
+    }
+    public function leafy()
+    {
+        $practices = Practices::select('id', 'groupId', 'cultureId', 'linkId', 'name', 'text', 'tablePiv'
+        )->where('cultureId', 23)->with('Images')->get();
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database', compact('practices'));
+    }
 }

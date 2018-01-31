@@ -57,6 +57,13 @@ Route::get('helianthus','TemplateController@helianthus');
 Route::get('brassica','TemplateController@brassica');
 Route::get('arachis','TemplateController@arachis');
 
+/////// ЗЕЛЕНЧУЦИ
+Route::get('vegetables','TemplateController@vegetables');
+Route::get('potatoes','TemplateController@potatoes');
+Route::get('onion','TemplateController@onion');
+Route::get('cabbage','TemplateController@cabbage');
+Route::get('pumpkin','TemplateController@pumpkin');
+Route::get('leafy','TemplateController@leafy');
 
 
 Route::get('template-practices', 'TemplateController@index');
