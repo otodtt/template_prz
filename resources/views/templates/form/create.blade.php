@@ -35,7 +35,7 @@
                             <label for="select" class="col-lg-2 control-label">Култура</label>
                             <div class="col-lg-10">
                                 {!! Form::select('cultureId',
-                                   array(20 =>'Лукови'),
+                                   array(23 =>'Листни'),
                                    null,['id' => 'cultureId', 'class'=>'form-control'])
                                !!}
                                 {{--{!! Form::select('culture_id',--}}
