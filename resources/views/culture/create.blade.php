@@ -27,7 +27,7 @@
                         <label for="select" class="col-lg-2 control-label">Група</label>
                         <div class="col-lg-10">
                             {!! Form::select('group_id',
-                                array(4 =>'Зеленчуци'),
+                                array(5 =>'Съоражения'),
                                 null,['id' => 'culture_id', 'class'=>'form-control'])
                             !!}
                             {{----}}
