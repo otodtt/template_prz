@@ -65,6 +65,13 @@ Route::get('cabbage','TemplateController@cabbage');
 Route::get('pumpkin','TemplateController@pumpkin');
 Route::get('leafy','TemplateController@leafy');
 
+/////// Съоражения
+Route::get('solanum','TemplateController@solanum');
+Route::get('cucurbitaceae','TemplateController@cucurbitaceae');
+Route::get('decorate','TemplateController@decorate');
+Route::get('capsicum','TemplateController@capsicum');
+Route::get('facilities','TemplateController@facilities');
+
 
 Route::get('template-practices', 'TemplateController@index');
 Route::get('template-practices/introduction','TemplateController@index');
