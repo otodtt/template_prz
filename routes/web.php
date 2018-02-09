@@ -72,6 +72,18 @@ Route::get('decorate','TemplateController@decorate');
 Route::get('capsicum','TemplateController@capsicum');
 Route::get('facilities','TemplateController@facilities');
 
+/////// Овощни
+Route::get('seed','TemplateController@seed');
+Route::get('stone','TemplateController@stone');
+
+/////// Ягодоплодни
+Route::get('fragaria','TemplateController@fragaria');
+Route::get('rubus','TemplateController@rubus');
+Route::get('nigrum','TemplateController@nigrum');
+
+/////// Лоза
+Route::get('vitis','TemplateController@vitis');
+
 
 Route::get('template-practices', 'TemplateController@index');
 Route::get('template-practices/introduction','TemplateController@index');

@@ -26,7 +26,7 @@
                             <div class="col-lg-10">
                                 <div class="radio">
                                     <label>
-                                        {!! Form::radio('groupId', 5, true) !!}
+                                        {!! Form::radio('groupId', 6, true) !!}
                                     </label>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                             <label for="select" class="col-lg-2 control-label">Култура</label>
                             <div class="col-lg-10">
                                 {!! Form::select('cultureId',
-                                   array(28 =>'Листни'),
+                                   array(29 =>'Семкови'),
                                    null,['id' => 'cultureId', 'class'=>'form-control'])
                                !!}
                                 {{--{!! Form::select('culture_id',--}}
