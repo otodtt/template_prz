@@ -87,7 +87,8 @@
                     <a href="{{ url('/template-practices') }}">ТЕМПЛЕТ-НАЧАЛО</a>
                     <a href="{{ url('/template-practices/show-culture') }}">ДОБАВИ ДРЗП</a>
                     <a href="{{ url('/culture') }}">Култури</a>
-                    <a href="{{ url('/practices') }}">ДРЗП</a>
+                    <a href="{{ url('/products') }}">Продукти</a>
+                    <a href="{{ url('/manufacturers') }}">Производители</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>

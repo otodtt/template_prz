@@ -85,31 +85,6 @@ Route::get('nigrum','TemplateController@nigrum');
 Route::get('vitis','TemplateController@vitis');
 
 
-Route::get('template-practices', 'TemplateController@index');
-Route::get('template-practices/introduction','TemplateController@index');
-//Route::get('template-practices/triticum-spp','TemplateController@triticum');
-//Route::get('template-practices/hordeum-vulgare','TemplateController@hordeum');
-//Route::get('template-practices/avena-sativa','TemplateController@avena');
-//Route::get('template-practices/secale-cereale','TemplateController@secale');
-//Route::get('template-practices/zea-mays','TemplateController@zea');
-Route::get('template-practices/rodentia','TemplateController@rodentia');
-
-//////// БОБОВИ
-//Route::get('template-practices/phaseolus-vulgaris','TemplateController@phaseolus');
-//Route::get('template-practices/glycine-max','TemplateController@glycine');
-//Route::get('template-practices/pisum-sativum','TemplateController@pisum');
-//Route::get('template-practices/lens-culinaris','TemplateController@lens');
-//Route::get('template-practices/cicer-arietinum','TemplateController@cicer');
-//Route::get('template-practices/medicago-sativa','TemplateController@medicago');
-
-/////// ТЕХНИЧЕСКИ
-//Route::get('template-practices/nicotiana-tabacum','TemplateController@nicotiana');
-//Route::get('template-practices/beta-vulgaris','TemplateController@beta');
-//Route::get('template-practices/gossypium','TemplateController@gossypium');
-//Route::get('template-practices/helianthus-annuus','TemplateController@helianthus');
-
-
-
 
 
 
@@ -119,3 +94,19 @@ Route::get('culture/create', 'CultureController@create');
 Route::post('culture/store', 'CultureController@store');
 Route::get('culture/edit/{id}', 'CultureController@edit');
 Route::post('culture/update/{id}', 'CultureController@update');
+
+
+
+Route::get('manufacturers', 'ManufacturersController@index');
+Route::get('manufacturers/create', 'ManufacturersController@create');
+Route::get('manufacturers/{id}', 'ManufacturersController@show');
+Route::post('manufacturers/store', 'ManufacturersController@store');
+
+
+
+Route::get('products', 'ProductsController@index');
+
+Route::get('acaricides', 'AcaricidesController@index');
+Route::get('acaricides/create', 'AcaricidesController@create');
+Route::post('acaricides/store', 'AcaricidesController@store');
+Route::get('acaricides/{id}', 'AcaricidesController@show');
