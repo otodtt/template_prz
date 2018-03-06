@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Acaricides extends Model
+class Pesticides extends Model
 {
     /**
      * Защитена таблица
      *
      * @var string
      */
-    protected $table = 'acaricides';
+    protected $table = 'pesticides';
 
     public $timestamps = false;
 
@@ -21,6 +21,7 @@ class Acaricides extends Model
      */
     protected $fillable = [
         'name', 'type', 'moreNames', 'secondName','manufacturersId', 'firmName', 'permission',
-        'valid', 'dateOrder', 'period', 'substance', 'lethal', 'category', 'alphabet',
+        'valid', 'dateOrder', 'period', 'substance', 'lethal', 'category', 'alphabet', 'pesticide',
+        'pesticideId'
     ];
 }

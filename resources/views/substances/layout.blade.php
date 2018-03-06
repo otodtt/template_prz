@@ -5,11 +5,6 @@
     <title>Неприятели</title>
 
     {!!Html::style("css/bootstrap.css" )!!}
-    <style>
-        .bold {
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
 
@@ -20,9 +15,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li><a href="{!!URL::to('/manufacturers/create')!!}">Добави Призводител</a></li>
+                <li><a href="{!!URL::to('/substances/create')!!}">Добави Активно Вещество</a></li>
             </ul>
-            <h3 style="margin-left: 500px">ПРОИЗВОДИТЕЛИ</h3>
+            <h3 style="margin-left: 500px">АТИВНИ ВЕЩЕСТВА</h3>
         </div>
     </div>
 </div>

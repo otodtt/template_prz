@@ -3,6 +3,9 @@
 @section('content')
     <div class="container">
         <div class="row">
+            <a href="{!!URL::to('/acaricides/edit/'.$acaricides->id)!!}" class="fa fa-edit btn btn-danger">
+                &nbsp;РЕДАКТИРАЙ!
+            </a>
             <a href="{!!URL::to('/acaricides/')!!}" class="fa fa-edit btn btn-primary">
                 &nbsp;ДОБАВИ А. В-ВО!
             </a>
@@ -21,6 +24,7 @@
             <p>{{$acaricides->dateOrder}}</p>
             <p>Категория на употреба: {{$acaricides->category}}</p>
             <p>ЛД: {{$acaricides->lethal}}</p>
+            <p>Забележка: {{$acaricides->period}}</p>
         </div>
     </div>
 @endsection

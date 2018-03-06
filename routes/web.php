@@ -104,9 +104,19 @@ Route::post('manufacturers/store', 'ManufacturersController@store');
 
 
 
-Route::get('products', 'ProductsController@index');
+Route::get('products', 'PesticidesController@index');
 
 Route::get('acaricides', 'AcaricidesController@index');
 Route::get('acaricides/create', 'AcaricidesController@create');
 Route::post('acaricides/store', 'AcaricidesController@store');
 Route::get('acaricides/{id}', 'AcaricidesController@show');
+Route::get('acaricides/edit/{id}', 'AcaricidesController@edit');
+Route::post('acaricides/store', 'AcaricidesController@store');
+Route::post('acaricides/update/{id}', 'AcaricidesController@update');
+
+Route::get('substances', 'SubstancesController@index');
+Route::get('substances/create', 'SubstancesController@create');
+Route::post('substances/store', 'SubstancesController@store');
+Route::get('substances/{id}', 'SubstancesController@show');
+Route::get('substances/add/{id}', 'SubstancesController@add');
+Route::post('substances/store_add/{id}', 'SubstancesController@store_add');

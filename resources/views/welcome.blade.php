@@ -89,7 +89,7 @@
                     <a href="{{ url('/culture') }}">Култури</a>
                     <a href="{{ url('/products') }}">Продукти</a>
                     <a href="{{ url('/manufacturers') }}">Производители</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ url('/substances') }}">А. Вещества</a>
                 </div>
             </div>
         </div>

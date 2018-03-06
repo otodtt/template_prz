@@ -1,11 +1,10 @@
-@extends('manufacturers.layout')
+@extends('substances.layout')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="row">
-                <a href="/">Начало</a>
-                <a href="/manufacturers">ПРОИЗВОДИТЕЛИ</a>
+                <a href="/substances">А. ВЕЩЕСТВА</a>
 
             </div>
             <div class="col-lg-12">
@@ -18,9 +17,9 @@
                         </ul>
                     </div>
                 @endif
-                {!! Form::open(['url'=>'manufacturers/store', 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+                {!! Form::open(['url'=>'substances/store', 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
                 <fieldset>
-                    <legend>ДОБАВЯНЕ НА ПРОИЗВОДИТЕЛ</legend>
+                    <legend>ДОБАВЯНЕ НА АКТИВНО ВЕЩЕСТВО</legend>
                     <div class="form-group">
                         <div class="col-lg-8">
                             <div class="col-lg-12">
@@ -30,8 +29,9 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="col-lg-12">
-                                <label for="country" class="control-label">Страна</label>
-                                {!! Form::text('country', null, ['class'=>'form-control', 'placeholder'=>'', 'id'=>'country' ]) !!}
+                                <p>Използва ли се в други продукти?</p>
+                                НЕ {{ Form::radio('moreUses', 0, true) }}
+                                ДА {{ Form::radio('moreUses', 1) }}
                             </div>
                         </div>
                     </div>

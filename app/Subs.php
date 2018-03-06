@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Manufacturer extends Model
+class Subs extends Model
 {
     /**
      * Защитена таблица
      *
      * @var string
      */
-    protected $table = 'manufacturers';
+    protected $table = 'subs';
 
     public $timestamps = false;
 
@@ -20,10 +20,11 @@ class Manufacturer extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'country', 'alphabet'
+        'name', 'idPest','firm' , 'firmId', 'alphabet', 'substance_id'
     ];
 
-    public function products(){
-        return $this->hasMany('App\Pesticides', 'manufacturersId');
-    }
+
+//    public function images(){
+//        return $this->hasMany('App\Images');
+//    }
 }

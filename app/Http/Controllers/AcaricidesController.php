@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Acaricides;
+use App\Pesticides;
 use App\Http\Requests\AcaricideRequest;
 use App\Manufacturer;
+use App\Subs;
 use Illuminate\Http\Request;
-//use Illuminate\Support\Facades\DB;
-use DB;
+
 use Illuminate\Support\Facades\Redirect;
 
 class AcaricidesController extends Controller
@@ -19,7 +19,8 @@ class AcaricidesController extends Controller
      */
     public function index()
     {
-        $acaricides = Acaricides::get();
+        $acaricides = Pesticides::where('pesticideId', 1)->get();
+//        dd($acaricides);
         return view('acaricides.index', compact('acaricides'));
     }
 
@@ -72,10 +73,12 @@ class AcaricidesController extends Controller
             'substance' => $request['substance'],
             'lethal' => $request['lethal'],
             'category' => $request['category'],
+            'pesticide' => 'акарицид',
+            'pesticideId' => 1,
             'alphabet' => $in
 
         ];
-        Acaricides::create($data);
+        Pesticides::create($data);
 //        dd($data);
 
 //        Session::flash('message', 'Сертификата е добавен успешно!');
@@ -90,7 +93,7 @@ class AcaricidesController extends Controller
      */
     public function show($id)
     {
-        $acaricides = Acaricides::findOrFail($id);
+        $acaricides = Pesticides::findOrFail($id);
 //        dd($acaricides);
         return view('acaricides.show', compact('acaricides'));
     }
@@ -103,7 +106,10 @@ class AcaricidesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $acaricides = Pesticides::findOrFail($id);
+        $firms = Manufacturer::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
+//        dd($acaricides);
+        return view('acaricides.form.edit', compact('acaricides', 'firms'));
     }
 
     /**
@@ -113,9 +119,60 @@ class AcaricidesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AcaricideRequest $request, $id)
     {
-        //
+        $firm = explode(', ', $request['manufacturersId'][0]);
+
+        $cyrillic= array(0=>'', 1=>'А', 2=>'Б', 3=>'В', 4=>'Г', 5=>'Д', 6=>'Е', 7=>'Ж', 8=>'З', 9=>'И', 10=>'Й',
+            11=>'К', 12=>'Л', 13=>'М', 14=>'Н', 15=>'О', 16=>'П', 17=>'Р', 18=>'С',	19=>'Т', 20=>'У',
+            21=>'Ф', 22=>'Х', 23=>'Ц', 24=>'Ч', 25=>'Ш', 26=>'Щ', 27=>'Ъ',	28=>'Ь', 29=>'Ю', 30=>'Я');
+
+        $abc= trim(preg_replace("/[0-9]/", "", $firm[1]));
+        $abc1= trim(preg_replace("/-/", "", $abc));
+        $abc2= trim(preg_replace("/.]/", "", $abc1));
+        $abc3 = mb_substr($abc2, 0, 1);
+        foreach ($cyrillic as $k=>$v){
+            if(preg_match("/$abc3/iu", "$v")){
+                $in=$k;
+            }
+        }
+
+        $data = [
+            'name' => $request['name'],
+            'type' => $request['type'],
+            'moreNames' => $request['moreNames'],
+            'secondName' => $request['secondName'],
+            'manufacturersId' => $firm[0],
+            'firmName' => trim($firm[1]),
+            'permission' => $request['permission'],
+            'valid' => $request['valid'],
+            'dateOrder' => $request['dateOrder'],
+            'period' => $request['period'],
+            'substance' => $request['substance'],
+            'lethal' => $request['lethal'],
+            'category' => $request['category'],
+            'pesticide' => 'акарицид',
+            'pesticideId' => 1,
+            'alphabet' => $in
+
+        ];
+
+        $acaricides = Pesticides::findOrFail($id);
+        $acaricides->update($data);
+
+        $dataSubs = [
+            'name' => $request['name'],
+            'firmId' => $firm[0],
+            'firm' => trim($firm[1]),
+            'alphabet' => $in
+        ];
+//        $substance = Subs::where('idPest', $id)->get();
+//        $substance->update($dataSubs);
+        $substance = Subs::where('idPest', $id)->update($dataSubs);
+//        dd($data);
+
+//        Session::flash('message', 'Сертификата е добавен успешно!');
+        return Redirect::to('/acaricides/'.$acaricides['id']);
     }
 
     /**

@@ -17,6 +17,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{!!URL::to('/acaricides/create')!!}">Добави Акарицид</a></li>
             </ul>
+            <h3 style="margin-left: 500px">АКАРИЦИДИ</h3>
         </div>
     </div>
 </div>

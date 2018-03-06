@@ -7,7 +7,7 @@
                 <tr>
                     <th>ID</th>
                     <th>ИМЕ ПРЗ</th>
-                    <th>ФИРМА</th>
+                    <th>ФИРМА - ID</th>
                     <th></th>
                 </tr>
             </thead>
@@ -17,7 +17,7 @@
                     <tr>
                         <td>{{$acar->id}}</td>
                         <td>{{$acar -> name}}</td>
-                        <td>{{$acar -> firmName}}</td>
+                        <td>{{$acar -> firmName}} - {{$acar -> manufacturersId}}</td>
                         <td>
                             <a href="{!!URL::to('/acaricides/'.$acar->id)!!}" class="fa fa-edit btn btn-primary">
                                 &nbsp;ВИЖ!
