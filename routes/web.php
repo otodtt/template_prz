@@ -113,6 +113,12 @@ Route::get('acaricides/{id}', 'AcaricidesController@show');
 Route::get('acaricides/edit/{id}', 'AcaricidesController@edit');
 Route::post('acaricides/store', 'AcaricidesController@store');
 Route::post('acaricides/update/{id}', 'AcaricidesController@update');
+Route::get('acaricides/substances/{id}', 'AcaricidesController@substances');
+Route::post('acaricides/subs_add/{id}', 'AcaricidesController@subs_add');
+Route::get('acaricides/dose/{id}', 'AcaricidesController@dose');
+Route::post('acaricides/dose_add/{id}', 'AcaricidesController@dose_add');
+
+
 
 Route::get('substances', 'SubstancesController@index');
 Route::get('substances/create', 'SubstancesController@create');

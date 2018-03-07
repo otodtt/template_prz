@@ -78,6 +78,40 @@ INSERT INTO `cultures` (`id`, `group_id`, `name`, `latin_name`, `created_at`, `u
 -- --------------------------------------------------------
 
 --
+-- Структура на таблица `doses`
+--
+
+CREATE TABLE `doses` (
+  `id` int(11) NOT NULL,
+  `pesticides_id` int(11) NOT NULL,
+  `dose` varchar(50) NOT NULL,
+  `secondDose` varchar(50) DEFAULT NULL,
+  `measure` varchar(50) NOT NULL,
+  `measureId` tinyint(2) NOT NULL,
+  `note` varchar(500) DEFAULT NULL,
+  `afterNote` varchar(500) DEFAULT NULL,
+  `crop` varchar(500) DEFAULT NULL,
+  `disease` varchar(1500) NOT NULL,
+  `quarantine` varchar(50) DEFAULT NULL,
+  `isCalc` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `doses`
+--
+
+INSERT INTO `doses` (`id`, `pesticides_id`, `dose`, `secondDose`, `measure`, `measureId`, `note`, `afterNote`, `crop`, `disease`, `quarantine`, `isCalc`) VALUES
+(1, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Домати:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', '3', 1),
+(2, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Лозя – винени сортове:', 'Жълт лозов акар (<span class="latin_name">Schizotetranychus viticola</span>)', '30', 0),
+(3, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Круши:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', '35', 1),
+(4, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Краставици:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
+(5, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Пъпеш:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
+(6, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Ягоди:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
+(7, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Малини:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '7', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Структура на таблица `images`
 --
 
@@ -584,6 +618,28 @@ CREATE TABLE `pesticides` (
 
 INSERT INTO `pesticides` (`id`, `name`, `type`, `moreNames`, `secondName`, `manufacturersId`, `firmName`, `permission`, `valid`, `dateOrder`, `period`, `substance`, `lethal`, `category`, `alphabet`, `pesticide`, `pesticideId`) VALUES
 (1, 'АПОЛО 50 СК', 'СК - суспензионен концентрат', NULL, NULL, 1, 'АДАМА Ирвита Н.В.', 'Разрешеине № 94- ПРЗ -3 / 07.06.2016г.', '30.04.2020 г.', NULL, '*Гратисен период 6 месеца за продажба и още 1 година за съхранение и употреба, считано от 30.04.2016 г. на ПРЗ -Удостоверение № 94/21.01.2004 г.', '500 г/л клофентезин', '3200', '2', 1, 'акарицид', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура на таблица `pestsubstance`
+--
+
+CREATE TABLE `pestsubstance` (
+  `name` varchar(500) NOT NULL,
+  `substanceId` int(11) NOT NULL,
+  `quantity` varchar(50) DEFAULT NULL,
+  `quantityAfter` varchar(50) DEFAULT NULL,
+  `pesticides_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `pestsubstance`
+--
+
+INSERT INTO `pestsubstance` (`name`, `substanceId`, `quantity`, `quantityAfter`, `pesticides_id`) VALUES
+('клофентезин', 1, '500 г/л', NULL, 1),
+('абамектин', 2, NULL, '18 г/л', 1);
 
 -- --------------------------------------------------------
 
@@ -1298,7 +1354,8 @@ CREATE TABLE `subs` (
 --
 
 INSERT INTO `subs` (`id`, `substance_id`, `name`, `idPest`, `firm`, `firmId`, `alphabet`) VALUES
-(1, 1, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1);
+(1, 1, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1),
+(2, 2, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1318,7 +1375,8 @@ CREATE TABLE `substances` (
 --
 
 INSERT INTO `substances` (`id`, `name`, `moreUses`, `alphabet`) VALUES
-(1, 'клофентезин', 0, 11);
+(1, 'клофентезин', 0, 11),
+(2, 'абамектин', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -1328,6 +1386,12 @@ INSERT INTO `substances` (`id`, `name`, `moreUses`, `alphabet`) VALUES
 -- Indexes for table `cultures`
 --
 ALTER TABLE `cultures`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `doses`
+--
+ALTER TABLE `doses`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1372,6 +1436,11 @@ ALTER TABLE `substances`
 ALTER TABLE `cultures`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
+-- AUTO_INCREMENT for table `doses`
+--
+ALTER TABLE `doses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
 -- AUTO_INCREMENT for table `manufacturers`
 --
 ALTER TABLE `manufacturers`
@@ -1390,12 +1459,12 @@ ALTER TABLE `practices`
 -- AUTO_INCREMENT for table `subs`
 --
 ALTER TABLE `subs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `substances`
 --
 ALTER TABLE `substances`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

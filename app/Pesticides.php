@@ -24,4 +24,12 @@ class Pesticides extends Model
         'valid', 'dateOrder', 'period', 'substance', 'lethal', 'category', 'alphabet', 'pesticide',
         'pesticideId'
     ];
+
+    public function pestsubstanse(){
+        return $this->hasMany('App\PestSubstance');
+    }
+
+    public function doses(){
+        return $this->hasMany('App\Dose');
+    }
 }

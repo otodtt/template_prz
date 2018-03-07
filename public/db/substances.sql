@@ -38,7 +38,8 @@ CREATE TABLE `substances` (
 --
 
 INSERT INTO `substances` (`id`, `name`, `moreUses`, `alphabet`) VALUES
-(1, 'клофентезин', 0, 11);
+(1, 'клофентезин', 0, 11),
+(2, 'абамектин', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -59,7 +60,7 @@ ALTER TABLE `substances`
 -- AUTO_INCREMENT for table `substances`
 --
 ALTER TABLE `substances`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Dose;
 use App\Pesticides;
 use App\Http\Requests\AcaricideRequest;
 use App\Manufacturer;
+use App\PestSubstance;
 use App\Subs;
+use App\Substance;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Redirect;
@@ -93,9 +96,10 @@ class AcaricidesController extends Controller
      */
     public function show($id)
     {
-        $acaricides = Pesticides::findOrFail($id);
-//        dd($acaricides);
-        return view('acaricides.show', compact('acaricides'));
+//        $acaricides = Pesticides::findOrFail($id);
+        $acaricide = Pesticides::where('id', $id)->with('Pestsubstanse')->with('Doses')->get()->toArray();
+//        dd($acaricide);
+        return view('acaricides.show', compact('acaricide'));
     }
 
     /**
@@ -174,6 +178,74 @@ class AcaricidesController extends Controller
 //        Session::flash('message', 'Сертификата е добавен успешно!');
         return Redirect::to('/acaricides/'.$acaricides['id']);
     }
+
+    public function substances($id)
+    {
+        $acaricides = Pesticides::findOrFail($id);
+        $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
+
+//        dd($substances);
+        return view('acaricides.form.substances', compact('acaricides', 'substances'));
+    }
+
+    public function subs_add(Request $request, $id)
+    {
+        $subs = explode(', ', $request['substanceId'][0]);
+        $data = [
+            'name' => trim($subs[1]),
+            'substanceId' => $subs[0],
+            'quantity' => $request['quantity'],
+            'quantityAfter' => $request['quantityAfter'],
+//            'pesticideId' => $id,
+        ];
+
+
+        $acaricides = Pesticides::findOrFail($id);
+        $substance = new PestSubstance($data);
+//        dd($acaricides);
+        $acaricides->pestsubstanse()->save($substance);
+
+
+//        Session::flash('message', 'Сертификата е добавен успешно!');
+        return Redirect::to('/acaricides/'.$acaricides['id']);
+    }
+
+
+    // DOZI ===========
+    public function dose($id)
+    {
+        $acaricides = Pesticides::findOrFail($id);
+        $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
+
+//        dd($substances);
+        return view('acaricides.form.dose', compact('acaricides', 'substances'));
+    }
+
+    public function dose_add(Request $request, $id)
+    {
+        $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
+        $measure = explode(', ', $request['measure']);
+        $data = [
+            "dose" => $request['dose'],
+            "measureId" => $measure[0],
+            "measure" => $measure[1],
+            "secondDose" => $request['secondDose'],
+            "note" => $request['note'],
+            "crop" => $request['crop'],
+            "disease" => $request['disease'],
+            "afterNote" => $request['afterNote'],
+            "quarantine" => $request['quarantine'],
+            "isCalc" => $request['isCalc'],
+        ];
+
+        $acaricides = Pesticides::findOrFail($id);
+        $dose = new Dose($data);
+//        dd($acaricides);
+        $acaricides->doses()->save($dose);
+
+        return view('acaricides.form.dose', compact('acaricides', 'substances'));
+    }
+
 
     /**
      * Remove the specified resource from storage.

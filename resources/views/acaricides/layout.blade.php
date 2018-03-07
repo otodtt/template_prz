@@ -5,6 +5,11 @@
     <title>Неприятели</title>
 
     {!!Html::style("css/bootstrap.css" )!!}
+    <style>
+        .latin_name {
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
 

@@ -41,7 +41,8 @@ CREATE TABLE `subs` (
 --
 
 INSERT INTO `subs` (`id`, `substance_id`, `name`, `idPest`, `firm`, `firmId`, `alphabet`) VALUES
-(1, 1, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1);
+(1, 1, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1),
+(2, 2, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +62,7 @@ ALTER TABLE `subs`
 -- AUTO_INCREMENT for table `subs`
 --
 ALTER TABLE `subs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
