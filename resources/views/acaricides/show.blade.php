@@ -22,7 +22,9 @@
             @foreach($acaricide[0]['pestsubstanse'] as $substance)
                 <p>Активно в-во: {{$substance['quantity']}}
                     <a href="{!!URL::to('/substances/'.$substance['substanceId'])!!}" >{{$substance['name']}}</a>
-                    {{$substance['quantityAfter']}}
+                    {{$substance['quantityAfter']}} -
+
+                    <a href="{!!URL::to('/acaricides/substances_edit/'.$substance['id'].'/'.$substance['pesticides_id'])!!}">Edit</a>
                 </p>
             @endforeach
             <p>{{$acaricide[0]['permission']}}</p>
@@ -40,7 +42,7 @@
                         <th>Вредител</th>
                         <th>Доза</th>
                         <th>Дни</th>
-                        <th></th>
+                        <th>Редактирай</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,10 +52,13 @@
                             <td>{!! $dose['disease'] !!}</td>
                             <td>{{$dose['dose']}} {{$dose['measure']}}</td>
                             <td>{{$dose['quarantine']}}</td>
-                            <td></td>
+                            <td>
+                                <a href="{!!URL::to('/acaricides/dose_edit/'.$dose['id'].'/'.$dose['pesticides_id'])!!}">Edit</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
+            </table>
             </table>
         </div>
     </div>

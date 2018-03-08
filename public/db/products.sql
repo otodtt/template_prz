@@ -626,6 +626,7 @@ INSERT INTO `pesticides` (`id`, `name`, `type`, `moreNames`, `secondName`, `manu
 --
 
 CREATE TABLE `pestsubstance` (
+  `id` int(11) NOT NULL,
   `name` varchar(500) NOT NULL,
   `substanceId` int(11) NOT NULL,
   `quantity` varchar(50) DEFAULT NULL,
@@ -637,9 +638,9 @@ CREATE TABLE `pestsubstance` (
 -- Схема на данните от таблица `pestsubstance`
 --
 
-INSERT INTO `pestsubstance` (`name`, `substanceId`, `quantity`, `quantityAfter`, `pesticides_id`) VALUES
-('клофентезин', 1, '500 г/л', NULL, 1),
-('абамектин', 2, NULL, '18 г/л', 1);
+INSERT INTO `pestsubstance` (`id`, `name`, `substanceId`, `quantity`, `quantityAfter`, `pesticides_id`) VALUES
+(1, 'клофентезин', 1, '500 г/л', NULL, 1),
+(2, 'абамектин', 2, NULL, '18 г/л', 1);
 
 -- --------------------------------------------------------
 
@@ -1408,6 +1409,12 @@ ALTER TABLE `pesticides`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pestsubstance`
+--
+ALTER TABLE `pestsubstance`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `practices`
 --
 ALTER TABLE `practices`
@@ -1450,6 +1457,11 @@ ALTER TABLE `manufacturers`
 --
 ALTER TABLE `pesticides`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `pestsubstance`
+--
+ALTER TABLE `pestsubstance`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `practices`
 --

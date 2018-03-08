@@ -115,9 +115,14 @@ Route::post('acaricides/store', 'AcaricidesController@store');
 Route::post('acaricides/update/{id}', 'AcaricidesController@update');
 Route::get('acaricides/substances/{id}', 'AcaricidesController@substances');
 Route::post('acaricides/subs_add/{id}', 'AcaricidesController@subs_add');
+
+Route::get('acaricides/substances_edit/{id}/{pest}', 'AcaricidesController@substances_edit');
+Route::post('acaricides/subs_update/{id}/{pest}', 'AcaricidesController@subs_update');
+
 Route::get('acaricides/dose/{id}', 'AcaricidesController@dose');
 Route::post('acaricides/dose_add/{id}', 'AcaricidesController@dose_add');
-
+Route::get('acaricides/dose_edit/{id}/{pest}', 'AcaricidesController@dose_edit');
+Route::post('acaricides/dose_update/{id}/{pest}', 'AcaricidesController@dose_update');
 
 
 Route::get('substances', 'SubstancesController@index');

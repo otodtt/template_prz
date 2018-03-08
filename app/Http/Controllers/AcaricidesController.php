@@ -179,6 +179,8 @@ class AcaricidesController extends Controller
         return Redirect::to('/acaricides/'.$acaricides['id']);
     }
 
+
+    // СУБСТАНЦИИ ===========
     public function substances($id)
     {
         $acaricides = Pesticides::findOrFail($id);
@@ -210,8 +212,33 @@ class AcaricidesController extends Controller
         return Redirect::to('/acaricides/'.$acaricides['id']);
     }
 
+    public function substances_edit($id, $pest)
+    {
+        $acaricides = Pesticides::findOrFail($pest);
+        $subs = PestSubstance::where('id', $id)->where('pesticides_id', $pest)->get()->toArray();
+        $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
 
-    // DOZI ===========
+//        dd($substances);
+        return view('acaricides.form.substances_edit', compact('subs', 'substances', 'acaricides'));
+    }
+
+    public function subs_update(Request $request, $id, $pest)
+    {
+        $subs = explode(', ', $request['substanceId'][0]);
+        $data = [
+            'name' => trim($subs[1]),
+            'substanceId' => $subs[0],
+            'quantity' => $request['quantity'],
+            'quantityAfter' => $request['quantityAfter'],
+        ];
+
+        PestSubstance::where('id', $id)->update($data);
+
+        return Redirect::to('/acaricides/'.$pest);
+    }
+
+
+    // ДОЗИ ===========
     public function dose($id)
     {
         $acaricides = Pesticides::findOrFail($id);
@@ -246,6 +273,36 @@ class AcaricidesController extends Controller
         return view('acaricides.form.dose', compact('acaricides', 'substances'));
     }
 
+    public function dose_edit($id, $pest)
+    {
+        $dose = Dose::where('id', $id)->where('pesticides_id', $pest)->get()->toArray();
+        $acaricides = Pesticides::findOrFail($pest);
+        $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
+
+//        dd($dose);
+        return view('acaricides.form.dose_edit', compact('dose', 'substances', 'acaricides'));
+    }
+
+    public function dose_update(Request $request, $id, $pest)
+    {
+        $measure = explode(', ', $request['measure']);
+        $data = [
+            "dose" => $request['dose'],
+            "measureId" => $measure[0],
+            "measure" => $measure[1],
+            "secondDose" => $request['secondDose'],
+            "note" => $request['note'],
+            "crop" => $request['crop'],
+            "disease" => $request['disease'],
+            "afterNote" => $request['afterNote'],
+            "quarantine" => $request['quarantine'],
+            "isCalc" => $request['isCalc'],
+        ];
+
+        Dose::where('id', $id)->update($data);
+
+        return Redirect::to('/acaricides/'.$pest);
+    }
 
     /**
      * Remove the specified resource from storage.
