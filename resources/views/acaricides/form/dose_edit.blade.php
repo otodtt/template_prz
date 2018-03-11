@@ -136,6 +136,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <label for="application" class="control-label">Приложение</label>
+                                {!! Form::textarea('application', null, ['class'=>'form-control', 'id'=>'application' ]) !!}
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="form-group">

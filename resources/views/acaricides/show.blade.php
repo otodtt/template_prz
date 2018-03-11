@@ -33,6 +33,7 @@
             <p>Категория на употреба: {{$acaricide[0]['category']}}</p>
             <p>ЛД: {{$acaricide[0]['lethal']}}</p>
             <p>Забележка: {{$acaricide[0]['period']}}</p>
+            <p>Description: {{$acaricide[0]['pestDescription']}}</p>
         </div>
         <div class="row">
             <table style="width: 100%">

@@ -2,10 +2,13 @@
 <html lang="bg">
 <head>
     <meta charset="utf-8">
-    <title>АКАРИЦИДИ</title>
+    <title>ПРЗ КУЛТУРИ</title>
 
     {!!Html::style("css/bootstrap.css" )!!}
     <style>
+        .bold {
+            font-weight: bold;
+        }
         .latin_name {
             font-style: italic;
         }
@@ -20,9 +23,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li><a href="{!!URL::to('/acaricides/create')!!}">Добави Акарицид</a></li>
+                <li><a href="{!!URL::to('crops/create')!!}">Добави КУЛТУРА</a></li>
             </ul>
-            <h3 style="margin-left: 500px">АКАРИЦИДИ</h3>
+            <h3 class="bold" style="margin-left: 500px; color: green">ПРЗ КУЛТУРИ</h3>
         </div>
     </div>
 </div>

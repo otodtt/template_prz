@@ -23,6 +23,83 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура на таблица `a_acaricides`
+--
+
+CREATE TABLE `a_acaricides` (
+  `id` int(11) NOT NULL,
+  `crop_id` int(11) NOT NULL,
+  `product` varchar(100) NOT NULL,
+  `productId` int(11) NOT NULL,
+  `dose` varchar(500) NOT NULL,
+  `note` varchar(500) DEFAULT NULL,
+  `afterNote` varchar(500) DEFAULT NULL,
+  `minimumUse` varchar(500) DEFAULT NULL,
+  `disease` varchar(1000) NOT NULL,
+  `quarantine` varchar(50) DEFAULT NULL,
+  `category` tinyint(1) NOT NULL,
+  `practices` mediumtext
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `a_acaricides`
+--
+
+INSERT INTO `a_acaricides` (`id`, `crop_id`, `product`, `productId`, `dose`, `note`, `afterNote`, `minimumUse`, `disease`, `quarantine`, `category`, `practices`) VALUES
+(1, 18, 'АПОЛО 50 СК', 1, '40 мл/дка', NULL, NULL, NULL, 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', '3', 2, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура на таблица `crops`
+--
+
+CREATE TABLE `crops` (
+  `id` int(11) NOT NULL,
+  `group_id` tinyint(4) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `latin_name` varchar(100) NOT NULL,
+  `cropDescription` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `crops`
+--
+
+INSERT INTO `crops` (`id`, `group_id`, `name`, `latin_name`, `cropDescription`) VALUES
+(1, 1, 'Пшеница', 'triticum-ssp', ''),
+(2, 1, 'Ечемик', 'hordeum-vulgare', ''),
+(3, 1, 'Овес', 'avena-sativa', ''),
+(4, 1, 'Ръж', 'secale-cereale', ''),
+(5, 1, 'Царевица', 'zea-mays', ''),
+(6, 2, 'Фасул', 'phaseolus-vulgaris', ''),
+(7, 2, 'Соя', 'glycine-max', ''),
+(8, 2, 'Грах', 'pisum-sativum', ''),
+(9, 2, 'Леща', 'lens-culinaris', ''),
+(10, 2, 'Нахут', 'cicer-arietinum', ''),
+(11, 2, 'Люцерна', 'medicago-sativa', ''),
+(12, 3, 'Тютюн', 'nicotiana-tabacum', ''),
+(13, 3, 'Цвекло', 'beta-vulgaris', ''),
+(14, 3, 'Памук', 'gossypium', ''),
+(15, 3, 'Слънчоглед', 'helianthus-annuus', ''),
+(16, 3, 'Рапица', 'brassica-napus', ''),
+(17, 3, 'Фъстъци', 'arachis-hypogaea', ''),
+(18, 4, 'Домати', 'solanum-lycopersicum', 'Продукти за растителна защита при домати. Препарати за растителна защита при домати . Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по домати.'),
+(19, 4, 'Пипер', 'capsicum-annuum', ''),
+(20, 4, 'Патладжан', 'solanum-melongena', ''),
+(21, 12, 'Лоза', 'vitis-vinifera', 'Продукти за растителна защита при лоза (винени и десертни сортове). Препарати за растителна защита при лоза винени и десертни сортове. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по лоза.'),
+(22, 9, 'Ябълка', 'мalus-domestica', 'Продукти за растителна защита при ябълка. Препарати за растителна защита при ябълка. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по ябълка.'),
+(23, 9, 'Круша', 'pyrus', 'Продукти за растителна защита при круша. Препарати за растителна защита при круша. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по круша.'),
+(24, 7, 'Kраставици и Корнишони', 'cucumis-sativus', 'Продукти за растителна защита при краставици и корнишони. Препарати за растителна защита при краставици и корнишони. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по краставици и корнишони.'),
+(25, 7, 'Тикви и Тиквички', 'cucurbita-pepo', 'Продукти за растителна защита при тикви и тиквички. Препарати за растителна защита при тикви и тиквички. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по тикви и тиквички.'),
+(26, 7, 'Пъпеши', 'cucumis-melo', 'Продукти за растителна защита при пъпеши. Препарати за растителна защита при пъпеши. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по пъпеши.'),
+(27, 7, 'Дини', 'citrullus-lanatus', 'Продукти за растителна защита при дини. Препарати за растителна защита при дини. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по дини.'),
+(28, 11, 'Ягода', 'fragaria', 'Продукти за растителна защита при ягода. Препарати за растителна защита при ягода. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по ягода.'),
+(29, 11, 'Малина', 'rubus-idaeus', 'Продукти за растителна защита при малина. Препарати за растителна защита при малина. Фунгициди, Инсектициди, Хербициди, Акарициди, Нематоциди, Десиканти, Растежни регулатори и др. при борба с болести и неприятели по малина.');
+
+-- --------------------------------------------------------
+
+--
 -- Структура на таблица `cultures`
 --
 
@@ -92,6 +169,7 @@ CREATE TABLE `doses` (
   `afterNote` varchar(500) DEFAULT NULL,
   `crop` varchar(500) DEFAULT NULL,
   `disease` varchar(1500) NOT NULL,
+  `application` mediumtext,
   `quarantine` varchar(50) DEFAULT NULL,
   `isCalc` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -100,14 +178,14 @@ CREATE TABLE `doses` (
 -- Схема на данните от таблица `doses`
 --
 
-INSERT INTO `doses` (`id`, `pesticides_id`, `dose`, `secondDose`, `measure`, `measureId`, `note`, `afterNote`, `crop`, `disease`, `quarantine`, `isCalc`) VALUES
-(1, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Домати:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', '3', 1),
-(2, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Лозя – винени сортове:', 'Жълт лозов акар (<span class="latin_name">Schizotetranychus viticola</span>)', '30', 0),
-(3, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Круши:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', '35', 1),
-(4, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Краставици:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
-(5, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Пъпеш:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
-(6, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Ягоди:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
-(7, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Малини:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '7', 0);
+INSERT INTO `doses` (`id`, `pesticides_id`, `dose`, `secondDose`, `measure`, `measureId`, `note`, `afterNote`, `crop`, `disease`, `application`, `quarantine`, `isCalc`) VALUES
+(1, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Домати:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 21 Видима поява на първо връхно разклонение До: Съобразно карантинния срок от 3 дни.', '3', 1),
+(2, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Лозя – винени сортове:', 'Жълт лозов акар (<span class="latin_name">Schizotetranychus viticola</span>)', 'От ВВСН 11 Първият лист е отворен и се разстила настрани от летораста До: съобразно карантинния срок от 35 дни.', '30', 0),
+(3, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Круши:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 00 Покой: листните пъпки и по-дебелите цветни пъпки са затворени и покрити с дебели тъмни люспи. До: съобразно карантинния срок от 35 дни.', '35', 1),
+(4, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Краставици:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 21 Поява на първо странично разклонение. До: съобразно карантинния срок', '3', 0),
+(5, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Пъпеш:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 21 Поява на първо странично разклонение. До: съобразно карантинния срок от 3 дни.', '3', 0),
+(6, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Ягоди:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 10 Поява на първи лист. До: съобразно карантинния срок от 3 дни.', '3', 0),
+(7, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Малини:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 15 Разтворен пети лист. До: съобразно карантинния срок от 7 дни.', '7', 0);
 
 -- --------------------------------------------------------
 
@@ -609,15 +687,16 @@ CREATE TABLE `pesticides` (
   `category` varchar(100) DEFAULT NULL,
   `alphabet` tinyint(3) NOT NULL,
   `pesticide` varchar(500) NOT NULL,
-  `pesticideId` int(11) NOT NULL
+  `pesticideId` int(11) NOT NULL,
+  `pestDescription` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Схема на данните от таблица `pesticides`
 --
 
-INSERT INTO `pesticides` (`id`, `name`, `type`, `moreNames`, `secondName`, `manufacturersId`, `firmName`, `permission`, `valid`, `dateOrder`, `period`, `substance`, `lethal`, `category`, `alphabet`, `pesticide`, `pesticideId`) VALUES
-(1, 'АПОЛО 50 СК', 'СК - суспензионен концентрат', NULL, NULL, 1, 'АДАМА Ирвита Н.В.', 'Разрешеине № 94- ПРЗ -3 / 07.06.2016г.', '30.04.2020 г.', NULL, '*Гратисен период 6 месеца за продажба и още 1 година за съхранение и употреба, считано от 30.04.2016 г. на ПРЗ -Удостоверение № 94/21.01.2004 г.', '500 г/л клофентезин', '3200', '2', 1, 'акарицид', 1);
+INSERT INTO `pesticides` (`id`, `name`, `type`, `moreNames`, `secondName`, `manufacturersId`, `firmName`, `permission`, `valid`, `dateOrder`, `period`, `substance`, `lethal`, `category`, `alphabet`, `pesticide`, `pesticideId`, `pestDescription`) VALUES
+(1, 'АПОЛО 50 СК', 'СК - суспензионен концентрат', NULL, NULL, 1, 'АДАМА Ирвита Н.В.', 'Разрешеине № 94- ПРЗ -3 / 07.06.2016 г.', '30.04.2020 г.', NULL, '*Гратисен период 6 месеца за продажба и още 1 година за съхранение и употреба, считано от 30.04.2016 г. на ПРЗ -Удостоверение № 94/21.01.2004 г.', '500 г/л клофентезин', '3200', '2', 1, 'акарицид', 1, 'АПОЛО 50 СК - Акарицид при Домати, Лозя, Круши, Краставици, Пъпеш, Ягоди и Малини срещу Обикновен паяжинообразуващ акар (Tetranychus urticae) и Жълт лозов акар (Schizotetranychus viticola)');
 
 -- --------------------------------------------------------
 
@@ -639,8 +718,7 @@ CREATE TABLE `pestsubstance` (
 --
 
 INSERT INTO `pestsubstance` (`id`, `name`, `substanceId`, `quantity`, `quantityAfter`, `pesticides_id`) VALUES
-(1, 'клофентезин', 1, '500 г/л', NULL, 1),
-(2, 'абамектин', 2, NULL, '18 г/л', 1);
+(1, 'клофентезин', 1, '500 г/л', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -1355,8 +1433,7 @@ CREATE TABLE `subs` (
 --
 
 INSERT INTO `subs` (`id`, `substance_id`, `name`, `idPest`, `firm`, `firmId`, `alphabet`) VALUES
-(1, 1, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1),
-(2, 2, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1);
+(1, 1, 'АПОЛО 50 СК', 1, 'АДАМА Ирвита Н.В.', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1376,12 +1453,23 @@ CREATE TABLE `substances` (
 --
 
 INSERT INTO `substances` (`id`, `name`, `moreUses`, `alphabet`) VALUES
-(1, 'клофентезин', 0, 11),
-(2, 'абамектин', 1, 1);
+(1, 'клофентезин', 0, 11);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `a_acaricides`
+--
+ALTER TABLE `a_acaricides`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `crops`
+--
+ALTER TABLE `crops`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `cultures`
@@ -1438,6 +1526,16 @@ ALTER TABLE `substances`
 --
 
 --
+-- AUTO_INCREMENT for table `a_acaricides`
+--
+ALTER TABLE `a_acaricides`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `crops`
+--
+ALTER TABLE `crops`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+--
 -- AUTO_INCREMENT for table `cultures`
 --
 ALTER TABLE `cultures`
@@ -1461,7 +1559,7 @@ ALTER TABLE `pesticides`
 -- AUTO_INCREMENT for table `pestsubstance`
 --
 ALTER TABLE `pestsubstance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `practices`
 --
@@ -1471,12 +1569,12 @@ ALTER TABLE `practices`
 -- AUTO_INCREMENT for table `subs`
 --
 ALTER TABLE `subs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `substances`
 --
 ALTER TABLE `substances`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

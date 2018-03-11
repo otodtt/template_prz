@@ -111,6 +111,14 @@
                             !!}
                         </div>
                     </div>
+                    <hr style="border: 0.5px solid black"/>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <label for="pestDescription" class="control-label">ОПИСАНИЕ ЗА description</label>
+                            {!! Form::textarea('pestDescription', null, ['class'=>'form-control', 'id'=>'pestDescription' ]) !!}
+                        </div>
+                    </div>
+                    <hr style="border: 0.5px solid black"/>
 
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">

@@ -13,8 +13,6 @@
         <li><a href="{!!URL::to('/pheromones')!!}">Феромони</a></li><br/>
         <li><a href="{!!URL::to('/herbicides')!!}">Хербициди</a></li><br/>
         <li><a href="{!!URL::to('/desiccants')!!}">Десиканти</a></li><br/>
-        <li><a href="{!!URL::to('/acaricides')!!}">Акарициди</a></li><br/>
         <li><a href="{!!URL::to('/regulators')!!}">Растежни регулатори</a></li>
-
     </ul>
 @endsection

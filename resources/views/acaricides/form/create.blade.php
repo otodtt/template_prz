@@ -112,61 +112,17 @@
                             !!}
                         </div>
                     </div>
+                    <hr style="border: 0.5px solid black"/>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <label for="pestDescription" class="control-label">ОПИСАНИЕ ЗА description</label>
+                            {!! Form::textarea('pestDescription', null, ['class'=>'form-control', 'id'=>'pestDescription' ]) !!}
+                        </div>
+                    </div>
+                    <hr style="border: 0.5px solid black"/>
 
 
 
-
-
-
-
-                    {{--<div class="form-group">--}}
-                        {{--<label for="select" class="col-lg-2 control-label">Култура</label>--}}
-                        {{--<div class="col-lg-10">--}}
-                            {{--{!! Form::select('cultureId',--}}
-                               {{--array(34 =>'Лоза'),--}}
-                               {{--null,['id' => 'cultureId', 'class'=>'form-control'])--}}
-                           {{--!!}--}}
-                            {{--{!! Form::select('culture_id',--}}
-                            {{--array('' => 'Избери!', 1 =>'Пшеница',2 => 'Ечемик', 3 => 'Овес',--}}
-                            {{--4 => 'Ръж', 5 => 'Царевица'),--}}
-                            {{--null,['id' => 'culture_id', 'class'=>'form-control'])--}}
-                            {{--!!}--}}
-
-                            {{--<br>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="form-group">--}}
-                        {{--<label for="linkId" class="col-lg-2 control-label">За линк към вредител</label>--}}
-                        {{--<div class="col-lg-10">--}}
-                            {{--{!! Form::text('linkId', null, ['class'=>'form-control', 'placeholder'=>'linkId', 'id'=>'linkId' ]) !!}--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label for="name" class="col-lg-2 control-label">Име на български</label>--}}
-                        {{--<div class="col-lg-10">--}}
-                            {{--{!! Form::text('name', null, ['class'=>'form-control', 'placeholder'=>'Име на български', 'id'=>'name' ]) !!}--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label for="fullName" class="col-lg-2 control-label">Целия линк</label>--}}
-                        {{--<div class="col-lg-10">--}}
-                            {{--{!! Form::text('fullName', null, ['class'=>'form-control', 'placeholder'=>'Целия линк', 'id'=>'fullName' ]) !!}--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label for="text" class="col-lg-2 control-label">Текст за Вредителя</label>--}}
-                        {{--<div class="col-lg-10">--}}
-                            {{--{!! Form::textarea('text', null, ['class'=>'form-control', 'id'=>'text', 'rows'=>10 ]) !!}--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="form-group">--}}
-                        {{--<label for="tablePiv" class="col-lg-2 control-label">Таблица ПИВ</label>--}}
-                        {{--<div class="col-lg-10">--}}
-                            {{--{!! Form::textarea('tablePiv', null, ['class'=>'form-control', 'id'=>'tablePiv', 'rows'=>10 ]) !!}--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
 
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">

@@ -22,7 +22,7 @@ class Pesticides extends Model
     protected $fillable = [
         'name', 'type', 'moreNames', 'secondName','manufacturersId', 'firmName', 'permission',
         'valid', 'dateOrder', 'period', 'substance', 'lethal', 'category', 'alphabet', 'pesticide',
-        'pesticideId'
+        'pesticideId', 'pestDescription'
     ];
 
     public function pestsubstanse(){

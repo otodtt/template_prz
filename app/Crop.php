@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Dose extends Model
+class Crop extends Model
 {
     /**
      * Защитена таблица
      *
      * @var string
      */
-    protected $table = 'doses';
+    protected $table = 'crops';
 
     public $timestamps = false;
 
@@ -20,7 +20,10 @@ class Dose extends Model
      * @var array
      */
     protected $fillable = [
-        'dose', 'secondDose', 'note', 'afterNote','crop', 'disease', 'quarantine',
-        'measure', 'measureId', 'isCalc', 'application'
+        'group_id', 'name', 'latin_name', 'cropDescription'
     ];
+
+    public function acaricides(){
+        return $this->hasMany('App\Acaricide');
+    }
 }

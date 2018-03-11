@@ -40,8 +40,7 @@ CREATE TABLE `pestsubstance` (
 --
 
 INSERT INTO `pestsubstance` (`id`, `name`, `substanceId`, `quantity`, `quantityAfter`, `pesticides_id`) VALUES
-(1, 'клофентезин', 1, '500 г/л', NULL, 1),
-(2, 'абамектин', 2, NULL, '18 г/л', 1);
+(1, 'клофентезин', 1, '500 г/л', NULL, 1);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +60,7 @@ ALTER TABLE `pestsubstance`
 -- AUTO_INCREMENT for table `pestsubstance`
 --
 ALTER TABLE `pestsubstance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -30,7 +30,8 @@ class AcaricideRequest extends FormRequest
             'permission'=> 'required|min:3|max:100',
             'valid'=> 'required|min:3|max:100',
 //            'dateOrder'=> 'required|min:3|max:100',
-            'category'=> 'required'
+            'category'=> 'required',
+            'pestDescription'=> 'required|min:3|max:300'
         ];
     }
 

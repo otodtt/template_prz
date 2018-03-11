@@ -84,12 +84,13 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/template-practices') }}">ТЕМПЛЕТ-НАЧАЛО</a>
+                    {{--<a href="{{ url('/template-practices') }}">ТЕМПЛЕТ-НАЧАЛО</a>--}}
                     <a href="{{ url('/template-practices/show-culture') }}">ДОБАВИ ДРЗП</a>
                     <a href="{{ url('/culture') }}">Култури</a>
                     <a href="{{ url('/products') }}">Продукти</a>
                     <a href="{{ url('/manufacturers') }}">Производители</a>
                     <a href="{{ url('/substances') }}">А. Вещества</a>
+                    <a href="{{ url('/crops') }}">ПРЗ Култури</a>
                 </div>
             </div>
         </div>

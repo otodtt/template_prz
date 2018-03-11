@@ -37,6 +37,7 @@ CREATE TABLE `doses` (
   `afterNote` varchar(500) DEFAULT NULL,
   `crop` varchar(500) DEFAULT NULL,
   `disease` varchar(1500) NOT NULL,
+  `application` mediumtext,
   `quarantine` varchar(50) DEFAULT NULL,
   `isCalc` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -45,14 +46,14 @@ CREATE TABLE `doses` (
 -- Схема на данните от таблица `doses`
 --
 
-INSERT INTO `doses` (`id`, `pesticides_id`, `dose`, `secondDose`, `measure`, `measureId`, `note`, `afterNote`, `crop`, `disease`, `quarantine`, `isCalc`) VALUES
-(1, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Домати:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', '3', 1),
-(2, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Лозя – винени сортове:', 'Жълт лозов акар (<span class="latin_name">Schizotetranychus viticola</span>)', '30', 0),
-(3, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Круши:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', '35', 1),
-(4, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Краставици:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
-(5, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Пъпеш:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
-(6, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Ягоди:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '3', 0),
-(7, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Малини:', 'Обикновен паяжинообразуващ акар (Tetranychus urticae)', '7', 0);
+INSERT INTO `doses` (`id`, `pesticides_id`, `dose`, `secondDose`, `measure`, `measureId`, `note`, `afterNote`, `crop`, `disease`, `application`, `quarantine`, `isCalc`) VALUES
+(1, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Домати:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 21 Видима поява на първо връхно разклонение До: Съобразно карантинния срок от 3 дни.', '3', 1),
+(2, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Лозя – винени сортове:', 'Жълт лозов акар (<span class="latin_name">Schizotetranychus viticola</span>)', 'От ВВСН 11 Първият лист е отворен и се разстила настрани от летораста До: съобразно карантинния срок от 35 дни.', '30', 0),
+(3, 1, '40', NULL, 'мл/дка', 1, NULL, NULL, 'Круши:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 00 Покой: листните пъпки и по-дебелите цветни пъпки са затворени и покрити с дебели тъмни люспи. До: съобразно карантинния срок от 35 дни.', '35', 1),
+(4, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Краставици:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 21 Поява на първо странично разклонение. До: съобразно карантинния срок', '3', 0),
+(5, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Пъпеш:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 21 Поява на първо странично разклонение. До: съобразно карантинния срок от 3 дни.', '3', 0),
+(6, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Ягоди:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 10 Поява на първи лист. До: съобразно карантинния срок от 3 дни.', '3', 0),
+(7, 1, '30-40', NULL, 'мл/дка', 1, NULL, NULL, 'Малини:', 'Обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)', 'От ВВСН 15 Разтворен пети лист. До: съобразно карантинния срок от 7 дни.', '7', 0);
 
 --
 -- Indexes for dumped tables

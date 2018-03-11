@@ -78,13 +78,13 @@ class AcaricidesController extends Controller
             'category' => $request['category'],
             'pesticide' => 'акарицид',
             'pesticideId' => 1,
-            'alphabet' => $in
+            'pestDescription' => $request['pestDescription'],
+            'alphabet' => $in,
+
 
         ];
         Pesticides::create($data);
 //        dd($data);
-
-//        Session::flash('message', 'Сертификата е добавен успешно!');
         return Redirect::to('/acaricides');
     }
 
@@ -157,6 +157,7 @@ class AcaricidesController extends Controller
             'category' => $request['category'],
             'pesticide' => 'акарицид',
             'pesticideId' => 1,
+            'pestDescription' => $request['pestDescription'],
             'alphabet' => $in
 
         ];
@@ -170,12 +171,7 @@ class AcaricidesController extends Controller
             'firm' => trim($firm[1]),
             'alphabet' => $in
         ];
-//        $substance = Subs::where('idPest', $id)->get();
-//        $substance->update($dataSubs);
-        $substance = Subs::where('idPest', $id)->update($dataSubs);
-//        dd($data);
 
-//        Session::flash('message', 'Сертификата е добавен успешно!');
         return Redirect::to('/acaricides/'.$acaricides['id']);
     }
 
@@ -263,6 +259,7 @@ class AcaricidesController extends Controller
             "afterNote" => $request['afterNote'],
             "quarantine" => $request['quarantine'],
             "isCalc" => $request['isCalc'],
+            "application" => $request['application'],
         ];
 
         $acaricides = Pesticides::findOrFail($id);
@@ -297,6 +294,7 @@ class AcaricidesController extends Controller
             "afterNote" => $request['afterNote'],
             "quarantine" => $request['quarantine'],
             "isCalc" => $request['isCalc'],
+            "application" => $request['application'],
         ];
 
         Dose::where('id', $id)->update($data);

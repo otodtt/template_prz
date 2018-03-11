@@ -86,16 +86,12 @@ Route::get('vitis','TemplateController@vitis');
 
 
 
-
-
 //Route::resource('culture', 'CultureController');
 Route::get('culture', 'CultureController@index');
 Route::get('culture/create', 'CultureController@create');
 Route::post('culture/store', 'CultureController@store');
 Route::get('culture/edit/{id}', 'CultureController@edit');
 Route::post('culture/update/{id}', 'CultureController@update');
-
-
 
 Route::get('manufacturers', 'ManufacturersController@index');
 Route::get('manufacturers/create', 'ManufacturersController@create');
@@ -131,3 +127,18 @@ Route::post('substances/store', 'SubstancesController@store');
 Route::get('substances/{id}', 'SubstancesController@show');
 Route::get('substances/add/{id}', 'SubstancesController@add');
 Route::post('substances/store_add/{id}', 'SubstancesController@store_add');
+
+
+// CROPS
+Route::get('crops', 'CropsController@index');
+Route::get('crops/create', 'CropsController@create');
+Route::post('crops/store', 'CropsController@store');
+Route::get('crops/show/{id}', 'CropsController@show');
+Route::get('crops/edit/{id}', 'CropsController@edit');
+Route::post('crops/update/{id}', 'CropsController@update');
+
+// ACARICIDES
+Route::get('crops/acaricides/{id}', 'CropsController@acaricides');
+Route::post('crops/acaricides_store/{id}', 'CropsController@acaricides_store');
+Route::get('crops/acaricides_edit/{id}/{crop}', 'CropsController@acaricides_edit');
+Route::post('crops/acaricides_update/{id}', 'CropsController@acaricides_update');
