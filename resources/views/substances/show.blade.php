@@ -17,7 +17,7 @@
                 @foreach($substances[0]['products'] as $products)
                     <li>
                         <?php
-                            if($products['idPest'] == 1) {
+                            if($products['typePest'] == 1) {
                                 $type = 'Акарицид';
                             }
                         ?>

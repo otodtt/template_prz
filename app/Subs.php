@@ -20,7 +20,7 @@ class Subs extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'idPest','firm' , 'firmId', 'alphabet', 'substance_id'
+        'name', 'idPest','firm' , 'firmId', 'alphabet', 'substance_id', 'typePest'
     ];
 
 

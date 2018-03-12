@@ -28,7 +28,7 @@ class AcaricideRequest extends FormRequest
             'manufacturersId'=> 'required',
 //            'firmName'=> 'required|min:3|max:500',
             'permission'=> 'required|min:3|max:100',
-            'valid'=> 'required|min:3|max:100',
+//            'valid'=> 'min:3|max:100',
 //            'dateOrder'=> 'required|min:3|max:100',
             'category'=> 'required',
             'pestDescription'=> 'required|min:3|max:300'
@@ -52,9 +52,9 @@ class AcaricideRequest extends FormRequest
             'permission.min' => 'Минимален брой символи за Разрешителното - 3!',
             'permission.max' => 'Максимален брой символи за Разрешителното - 100!',
 
-            'valid.required' => 'Попълни Валидно до!',
-            'valid.min' => 'Минимален брой символи за Валидно - 3!',
-            'valid.max' => 'Максимален брой символи за Валидно - 100!',
+//            'valid.required' => 'Попълни Валидно до!',
+//            'valid.min' => 'Минимален брой символи за Валидно - 3!',
+//            'valid.max' => 'Максимален брой символи за Валидно - 100!',
 
 //            'dateOrder.required' => 'Попълни Заповед!',
 //            'dateOrder.min' => 'Минимален брой символи за Заповед - 3!',

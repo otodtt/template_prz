@@ -70,10 +70,6 @@ class SubstancesController extends Controller
      */
     public function show($id)
     {
-//        $substances = Substance::findOrFail($id);
-//        $substances = Substance::select('id', 'name', 'moreUses')->where('id', $id)->get()->toArray();
-//        $subs = $substances->products;
-
         $substances = Substance::where('id', $id)->with('Products')->get()->toArray();
 //        dd($substances);
         return view('substances.show', compact('substances'));
@@ -112,9 +108,10 @@ class SubstancesController extends Controller
             'idPest'=> $request['idPest'],
             'firm'=> $request['firm'],
             'firmId'=> $request['firmId'],
+            'typePest'=> 1,
             'alphabet'=> $in,
         ]);
-//
+
         return Redirect::to('substances/'.$id);
     }
 

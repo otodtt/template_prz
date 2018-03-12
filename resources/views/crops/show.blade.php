@@ -24,7 +24,18 @@
                                 - {{$acaricide['productId']}}
                             </td>
                             <td>{{$acaricide['dose']}}</td>
-                            <td>{!! $acaricide['disease'] !!}</td>
+                            <?php
+                                if(strlen($acaricide['note'])  > 0) {
+                                    ?>
+                                        <td><span class="bold">{!! $acaricide['note'] !!} </span><br/>  - {!! $acaricide['disease'] !!}</td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td> - {!! $acaricide['disease'] !!}</td>
+                                    <?php
+                                }
+                            ?>
+
                             <td>{{$acaricide['quarantine']}}</td>
                             <td>{{$acaricide['category']}}</td>
                             <td>

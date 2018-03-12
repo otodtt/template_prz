@@ -36,7 +36,7 @@
             <p>Description: {{$acaricide[0]['pestDescription']}}</p>
         </div>
         <div class="row">
-            <table style="width: 100%">
+            <table class="table" style="width: 100%">
                 <thead>
                     <tr>
                         <th>Култура</th>
