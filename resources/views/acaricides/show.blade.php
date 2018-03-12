@@ -52,7 +52,10 @@
                             <td>{{$dose['crop']}}</td>
                             <td>{!! $dose['disease'] !!}</td>
                             <td>{{$dose['dose']}} {{$dose['measure']}}</td>
-                            <td>{{$dose['quarantine']}}</td>
+                            <td>
+                                <style>.ellipsis { text-overflow: ellipsis; }</style>
+                                <p class="overflow ellipsis">{{$dose['quarantine']}}</p>
+                            </td>
                             <td>
                                 <a href="{!!URL::to('/acaricides/dose_edit/'.$dose['id'].'/'.$dose['pesticides_id'])!!}">Edit</a>
                             </td>

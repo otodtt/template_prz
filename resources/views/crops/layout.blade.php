@@ -12,6 +12,13 @@
         .latin_name {
             font-style: italic;
         }
+        .overflow {
+            width: 10em;
+            outline: 1px solid rgba(0, 0, 0, 0);
+            margin: 0 0 2em 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>

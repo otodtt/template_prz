@@ -27,16 +27,19 @@
                             <?php
                                 if(strlen($acaricide['note'])  > 0) {
                                     ?>
-                                        <td><span class="bold">{!! $acaricide['note'] !!} </span><br/>  - {!! $acaricide['disease'] !!}</td>
+                                        <td><span class="bold">{!! $acaricide['note'] !!} </span><br/> {!! $acaricide['disease'] !!}</td>
                                     <?php
                                 } else {
                                     ?>
-                                        <td> - {!! $acaricide['disease'] !!}</td>
+                                        <td>{!! $acaricide['disease'] !!}</td>
                                     <?php
                                 }
                             ?>
 
-                            <td>{{$acaricide['quarantine']}}</td>
+                            <td>
+                                <style>.ellipsis { text-overflow: ellipsis; }</style>
+                                <p class="overflow ellipsis">{{$acaricide['quarantine']}}</p>
+                            </td>
                             <td>{{$acaricide['category']}}</td>
                             <td>
                                 <a href="{!!URL::to('/crops/acaricides_edit/'.$acaricide['id'].'/'.$crops->id)!!}" class="fa fa-edit btn btn-primary">
