@@ -50,7 +50,16 @@
                     @foreach($acaricide[0]['doses'] as $dose)
                         <tr>
                             <td>{{$dose['crop']}}</td>
-                            <td>{!! $dose['disease'] !!}</td>
+                            <td>
+                                {!! $dose['disease'] !!}
+                                <?php
+                                    if(strlen($dose['afterNote']) > 0) {
+                                        ?>
+                                            <br/><span class="bold">{{$dose['afterNote']}}</span>
+                                        <?php
+                                    }
+                                ?>
+                            </td>
                             <td>{{$dose['dose']}} {{$dose['measure']}}</td>
                             <td>
                                 <style>.ellipsis { text-overflow: ellipsis; }</style>

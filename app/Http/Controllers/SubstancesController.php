@@ -47,6 +47,7 @@ class SubstancesController extends Controller
         $abc1= trim(preg_replace("/-/", "", $abc));
         $abc2= trim(preg_replace("/.]/", "", $abc1));
         $abc3 = mb_substr($abc2, 0, 1);
+//        dd($cyrillic);
         foreach ($cyrillic as $k=>$v){
             if(preg_match("/$abc3/iu", "$v")){
                 $in=$k;
@@ -96,12 +97,13 @@ class SubstancesController extends Controller
         $abc1= trim(preg_replace("/-/", "", $abc));
         $abc2= trim(preg_replace("/.]/", "", $abc1));
         $abc3 = mb_substr($abc2, 0, 1);
+
         foreach ($cyrillic as $k=>$v){
             if(preg_match("/$abc3/iu", "$v")){
                 $in=$k;
             }
         }
-//        dd($request);
+
         Subs::create([
             'name'=> $request['name'],
             'substance_id'=> $id,

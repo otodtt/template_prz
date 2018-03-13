@@ -27,11 +27,30 @@
                             <?php
                                 if(strlen($acaricide['note'])  > 0) {
                                     ?>
-                                        <td><span class="bold">{!! $acaricide['note'] !!} </span><br/> {!! $acaricide['disease'] !!}</td>
+                                        <td>
+                                            <span class="bold">{!! $acaricide['note'] !!} </span><br/>
+                                            {!! $acaricide['disease'] !!}
+                                            <?php
+                                            if(strlen($acaricide['afterNote']) > 0) {
+                                                ?>
+                                                    <br/><span class="bold">{{$acaricide['afterNote']}}</span>
+                                                <?php
+                                            }
+                                            ?>
+                                        </td>
                                     <?php
                                 } else {
                                     ?>
-                                        <td>{!! $acaricide['disease'] !!}</td>
+                                        <td>
+                                            {!! $acaricide['disease'] !!}
+                                            <?php
+                                            if(strlen($acaricide['afterNote']) > 0) {
+                                                ?>
+                                                    <br/><span class="bold">{{$acaricide['afterNote']}}</span>
+                                                <?php
+                                            }
+                                            ?>
+                                        </td>
                                     <?php
                                 }
                             ?>

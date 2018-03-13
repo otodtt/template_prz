@@ -16,6 +16,9 @@
             white-space: nowrap;
             overflow: hidden;
         }
+        .bold {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
