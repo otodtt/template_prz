@@ -26,7 +26,7 @@
                                 {!! Form::text('dose', null, ['class'=>'form-control', 'placeholder'=>'Доза', 'id'=>'dose' ]) !!}
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-3">
                             <div class="col-lg-12">
                                 <label for="measure" class="control-label">Мерна Единица</label><br/>
                                 <?php
@@ -80,7 +80,12 @@
                             <div class="col-lg-12">
                                 <label for="secondDose" class="control-label">Втора Доза</label>
                                 {!! Form::text('secondDose', null, ['class'=>'form-control', 'placeholder'=>'Втора Доза ако има', 'id'=>'secondDose' ]) !!}
-
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <label for="doseNote" class="control-label">Бележка в дозата</label>
+                                {!! Form::text('doseNote', null, ['class'=>'form-control', 'placeholder'=>'Бележка в дозата', 'id'=>'doseNote' ]) !!}
                             </div>
                         </div>
                     </div>

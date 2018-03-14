@@ -16,8 +16,10 @@ class SubstancesController extends Controller
      */
     public function index()
     {
-        $substances = Substance::orderBy('alphabet', 'asc')->get();
+        $substances = Substance::orderBy('alphabet', 'asc')->with('Products')->get();
+//        $substances->Products->count();
 //        dd($substances);
+
         return view('substances.index', compact('substances'));
     }
 
@@ -53,7 +55,6 @@ class SubstancesController extends Controller
                 $in=$k;
             }
         }
-//        dd($request);
         Substance::create([
             'name'=> $request['name'],
             'moreUses'=> $request['moreUses'],
@@ -72,9 +73,9 @@ class SubstancesController extends Controller
     public function show($id)
     {
         $substances = Substance::where('id', $id)->with('Products')->get()->toArray();
-//        dd($substances);
         return view('substances.show', compact('substances'));
     }
+
     public function add($id)
     {
         $substances = Substance::findOrFail($id);

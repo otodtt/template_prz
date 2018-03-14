@@ -60,7 +60,7 @@ class CropsController extends Controller
     {
         $crops = Crop::findOrFail($id);
         $acaricides = Crop::where('id', $id)->with('Acaricides')->get()->toArray();
-
+//        dd($acaricides);
         return view('crops.show', compact('crops', 'acaricides'));
     }
 

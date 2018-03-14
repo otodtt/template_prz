@@ -60,7 +60,20 @@
                                     }
                                 ?>
                             </td>
-                            <td>{{$dose['dose']}} {{$dose['measure']}}</td>
+                            <td>
+                                <?php
+                                if(strlen($dose['doseNote']) > 0) {
+                                    ?>
+                                        {{$dose['dose']}} {{$dose['measure']}}<br/>
+                                        <span class="bold">{{$dose['doseNote']}}</span>
+                                    <?php
+                                } else {
+                                    ?>
+                                        {{$dose['dose']}} {{$dose['measure']}}
+                                    <?php
+                                }
+                                ?>
+                            </td>
                             <td>
                                 <style>.ellipsis { text-overflow: ellipsis; }</style>
                                 <p class="overflow ellipsis">{{$dose['quarantine']}}</p>

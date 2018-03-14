@@ -260,6 +260,7 @@ class AcaricidesController extends Controller
             "quarantine" => $request['quarantine'],
             "isCalc" => $request['isCalc'],
             "application" => $request['application'],
+            "doseNote" => $request['doseNote'],
         ];
 
         $acaricides = Pesticides::findOrFail($id);
@@ -295,6 +296,7 @@ class AcaricidesController extends Controller
             "quarantine" => $request['quarantine'],
             "isCalc" => $request['isCalc'],
             "application" => $request['application'],
+            "doseNote" => $request['doseNote'],
         ];
 
         Dose::where('id', $id)->update($data);
