@@ -19,6 +19,9 @@
         .bold {
             font-weight: bold;
         }
+        .underline {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>

@@ -20,21 +20,23 @@
                 <fieldset>
                     <legend style="color: green">ДОБАВЯНЕ НА ДОЗИ КЪМ {{$acaricides->name}}</legend>
                     <div class="form-group">
-                        <div class="col-lg-3">
+                        <div class="col-lg-2">
                             <div class="col-lg-12">
                                 <label for="dose" class="control-label">Доза</label>
                                 {!! Form::text('dose', null, ['class'=>'form-control', 'placeholder'=>'Доза', 'id'=>'dose' ]) !!}
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="col-lg-12">
                                 <label for="measure" class="control-label">Мерна Единица</label><br/>
                                 {{ Form::label('measure', 'мл/дка') }}
-                                {{ Form::radio('measure', '1, мл/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::radio('measure', '1, мл/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
                                 {{ Form::label('measure', 'г/дка') }}
-                                {{ Form::radio('measure', '2, г/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::radio('measure', '2, г/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
                                 {{ Form::label('measure', '%') }}
-                                {{ Form::radio('measure', '3, %' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::radio('measure', '3, %' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::label('measure', 'л/дка') }}
+                                {{ Form::radio('measure', '4, л/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
                         <div class="col-lg-3">

@@ -20,13 +20,13 @@
                 <fieldset>
                     <legend style="color: green">РЕДАКТИРАНЕ НА ДОЗА КЪМ {{$acaricides->name}}</legend>
                     <div class="form-group">
-                        <div class="col-lg-3">
+                        <div class="col-lg-2">
                             <div class="col-lg-12">
                                 <label for="dose" class="control-label">Доза</label>
                                 {!! Form::text('dose', null, ['class'=>'form-control', 'placeholder'=>'Доза', 'id'=>'dose' ]) !!}
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="col-lg-12">
                                 <label for="measure" class="control-label">Мерна Единица</label><br/>
                                 <?php
@@ -34,29 +34,47 @@
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
+                                    $value4 = '4, л/дка';
 
                                     $select1 = 'checked="checked"';
                                     $select2 = '';
                                     $select3 = '';
+                                    $select4 = '';
                                 }
                                 if($dose[0]['measureId'] == 2) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
+                                    $value4 = '4, л/дка';
 
                                     $select1 = '';
                                     $select2 = 'checked="checked"';
                                     $select3 = '';
+                                    $select4 = '';
                                 }
 
                                 if($dose[0]['measureId'] == 3) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
+                                    $value4 = '4, л/дка';
 
                                     $select1 = '';
                                     $select2 = '';
                                     $select3 = 'checked="checked"';
+                                    $select4 = '';
+                                }
+
+                                if($dose[0]['measureId'] == 4) {
+                                    $value1 = '1, мл/дка';
+                                    $value2 = '2, г/дка';
+                                    $value3 = '3, %';
+                                    $value4 = '4, л/дка';
+
+                                    $select1 = '';
+                                    $select2 = '';
+                                    $select3 = '';
+                                    $select4 = 'checked="checked"';
                                 }
 //                                var_dump($select3);
                                 ?>
@@ -74,6 +92,11 @@
 {{--                                {{ Form::radio('measure', '3, %' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
 {{--                                {{ Form::radio('measure', $value3, $select3 ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
                                 <input {{$select3}} name="measure" type="radio" value="{{$value3}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                {{ Form::label('measure', 'л/дка') }}
+                                {{--                                {{ Form::radio('measure', '3, %' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
+                                {{--                                {{ Form::radio('measure', $value3, $select3 ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
+                                <input {{$select4}} name="measure" type="radio" value="{{$value4}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
                         <div class="col-lg-3">

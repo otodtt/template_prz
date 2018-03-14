@@ -16,7 +16,7 @@ class SubstancesController extends Controller
      */
     public function index()
     {
-        $substances = Substance::orderBy('alphabet', 'asc')->with('Products')->get();
+        $substances = Substance::orderBy('alphabet', 'asc')->with('Products')->get()->toArray();
 //        $substances->Products->count();
 //        dd($substances);
 

@@ -203,8 +203,6 @@ class AcaricidesController extends Controller
 //        dd($acaricides);
         $acaricides->pestsubstanse()->save($substance);
 
-
-//        Session::flash('message', 'Сертификата е добавен успешно!');
         return Redirect::to('/acaricides/'.$acaricides['id']);
     }
 

@@ -51,6 +51,13 @@
                         <tr>
                             <td>{{$dose['crop']}}</td>
                             <td>
+                                <?php
+                                    if(strlen($dose['afterNote']) > 0) {
+                                        ?>
+                                            <span class="bold underline">{{$dose['note']}}</span><br/>
+                                        <?php
+                                    }
+                                ?>
                                 {!! $dose['disease'] !!}
                                 <?php
                                     if(strlen($dose['afterNote']) > 0) {
@@ -69,7 +76,7 @@
                                     <?php
                                 } else {
                                     ?>
-                                        {{$dose['dose']}} {{$dose['measure']}}
+                                        {{$dose['dose']}} {{$dose['measure']}} {{$dose['secondDose']}}
                                     <?php
                                 }
                                 ?>
