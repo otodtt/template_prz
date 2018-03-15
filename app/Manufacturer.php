@@ -23,7 +23,7 @@ class Manufacturer extends Model
         'name', 'country', 'alphabet'
     ];
 
-    public function products(){
+    public function pesticides(){
         return $this->hasMany('App\Pesticides', 'manufacturersId');
     }
 }

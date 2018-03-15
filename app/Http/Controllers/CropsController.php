@@ -119,6 +119,7 @@ class CropsController extends Controller
             'quarantine' => $request['quarantine'],
             'category' => $request['category'],
             'practices' => $request['practices'],
+            'isActive' => $request['isActive'],
         ];
 
         $crops = Crop::findOrFail($id);
@@ -149,6 +150,7 @@ class CropsController extends Controller
             'quarantine' => $request['quarantine'],
             'category' => $request['category'],
             'practices' => $request['practices'],
+            'isActive' => $request['isActive'],
         ];
 
         $acaricide = Acaricide::findOrFail($id);

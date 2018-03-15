@@ -21,6 +21,6 @@ class Acaricide extends Model
      */
     protected $fillable = [
         'product', 'productId', 'dose', 'note', 'afterNote', 'minimumUse',
-        'disease', 'quarantine', 'category', 'practices'
+        'disease', 'quarantine', 'category', 'practices', 'isActive'
     ];
 }

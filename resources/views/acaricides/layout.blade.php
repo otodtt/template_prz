@@ -22,6 +22,12 @@
         .underline {
             text-decoration: underline;
         }
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
     </style>
 </head>
 <body>

@@ -18,16 +18,31 @@
                 @foreach($acaricides[0]['acaricides'] as $acaricide)
                     {{--@if($culture->group_id == 1)--}}
                         <tr>
-                            <td>{{$acaricide['id']}}</td>
+                            <td>
+                                <?php
+                                    if($acaricide['isActive'] == 0) {
+                                        ?>
+                                            <span class="bold green">ДА</span>
+                                        <?php
+                                    } else {
+                                        ?>
+                                            <span class="bold red">НЕ</span>
+                                        <?php
+                                    }
+                                ?>
+{{--                                {{$acaricide['isActive']}}--}}
+                            </td>
+                            {{--<td>{{$acaricide['id']}}</td>--}}
                             <td>
                                 <a href="{!!URL::to('/acaricides/'.$acaricide['productId'])!!}">{{$acaricide['product']}}</a>
                                 - {{$acaricide['productId']}}
                             </td>
-                            <td>{{$acaricide['dose']}}</td>
+                            <td class="dose">{{$acaricide['dose']}}</td>
                             <?php
                                 if(strlen($acaricide['note'])  > 0) {
                                     ?>
                                         <td>
+                                            <span class="bold underline">{!! $acaricide['minimumUse'] !!} </span><br/>
                                             <span class="bold">{!! $acaricide['note'] !!} </span><br/>
                                             {!! $acaricide['disease'] !!}
                                             <?php
@@ -42,6 +57,7 @@
                                 } else {
                                     ?>
                                         <td>
+                                            <span class="bold underline">{!! $acaricide['minimumUse'] !!} </span><br/>
                                             {!! $acaricide['disease'] !!}
                                             <?php
                                             if(strlen($acaricide['afterNote']) > 0) {
@@ -55,14 +71,14 @@
                                 }
                             ?>
 
-                            <td>
+                            <td >
                                 <style>.ellipsis { text-overflow: ellipsis; }</style>
                                 <p class="overflow ellipsis">{{$acaricide['quarantine']}}</p>
                             </td>
-                            <td>{{$acaricide['category']}}</td>
+                            <td class="category">{{$acaricide['category']}}</td>
                             <td>
                                 <a href="{!!URL::to('/crops/acaricides_edit/'.$acaricide['id'].'/'.$crops->id)!!}" class="fa fa-edit btn btn-primary">
-                                    &nbsp;Редактирай!
+                                    &nbsp;Edit!
                                 </a>
                             </td>
                         </tr>

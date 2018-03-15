@@ -21,6 +21,6 @@ class Dose extends Model
      */
     protected $fillable = [
         'dose', 'secondDose', 'note', 'afterNote','crop', 'disease', 'quarantine',
-        'measure', 'measureId', 'isCalc', 'application', 'doseNote'
+        'measure', 'measureId', 'isCalc', 'application', 'doseNote', 'isActive'
     ];
 }

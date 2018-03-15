@@ -31,5 +31,6 @@ class Pesticides extends Model
 
     public function doses(){
         return $this->hasMany('App\Dose');
+//        return $this->hasMany('App\Dose')->where('isActive', '=', 0);
     }
 }

@@ -90,7 +90,16 @@
                                 {!! Form::textarea('practices', null, ['class'=>'form-control', 'id'=>'practices' ]) !!}
                             </div>
                         </div>
-
+                    </div>
+                    <hr style="border: 0.5px solid black"/>
+                    <div class="form-group">
+                        <div class="col-lg-6">
+                            <label for="isActive" class="control-label">АКТИВНА</label>
+                            {{ Form::label('isActive', 'ДА') }}
+                            {{ Form::radio('isActive', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            {{ Form::label('isActive', 'HE') }}
+                            {{ Form::radio('isActive', 1 ) }}
+                        </div>
                     </div>
                     <hr style="border: 0.5px solid black"/>
 

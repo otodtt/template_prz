@@ -13,11 +13,26 @@
             font-style: italic;
         }
         .overflow {
-            width: 10em;
+            width: 8em;
             outline: 1px solid rgba(0, 0, 0, 0);
             margin: 0 0 2em 0;
             white-space: nowrap;
             overflow: hidden;
+        }
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        .category {
+            width: 10px;
+        }
+        .dose {
+            width: 80px;
+        }
+        .underline {
+            text-decoration: underline;
         }
     </style>
 </head>

@@ -39,6 +39,7 @@
             <table class="table" style="width: 100%">
                 <thead>
                     <tr>
+                        <th>Актив</th>
                         <th>Култура</th>
                         <th>Вредител</th>
                         <th>Доза</th>
@@ -49,6 +50,19 @@
                 <tbody>
                     @foreach($acaricide[0]['doses'] as $dose)
                         <tr>
+                            <td>
+                                <?php
+                                    if($dose['isActive'] == 0) {
+                                        ?>
+                                            <span class="bold green">ДА</span>
+                                        <?php
+                                    } else {
+                                        ?>
+                                            <span class="bold red">НЕ</span>
+                                        <?php
+                                    }
+                                ?>
+                            </td>
                             <td>{{$dose['crop']}}</td>
                             <td>
                                 <?php

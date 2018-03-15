@@ -95,12 +95,19 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
                                 <label for="quantityAfter" class="control-label">КАЛКУЛАТОР</label><br/>
                                 {{ Form::label('isCalc', 'HE') }}
                                 {{ Form::radio('isCalc', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {{ Form::label('isCalc', 'DA') }}
+                                {{ Form::label('isCalc', 'ДА') }}
                                 {{ Form::radio('isCalc', 1 ) }}
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="isActive" class="control-label">АКТИВНА</label><br/>
+                                {{ Form::label('isActive', 'ДА') }}
+                                {{ Form::radio('isActive', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::label('isActive', 'HE') }}
+                                {{ Form::radio('isActive', 1 ) }}
                             </div>
                         </div>
                     </div>

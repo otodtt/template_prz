@@ -16,7 +16,8 @@ class ManufacturersController extends Controller
      */
     public function index()
     {
-        $firms = Manufacturer::orderBy('alphabet', 'asc')->get();
+        $firms = Manufacturer::orderBy('alphabet', 'asc')->with('Pesticides')->get()->toArray();
+//        dd($firms);
         return view('manufacturers.index', compact('firms'));
     }
 
@@ -69,13 +70,11 @@ class ManufacturersController extends Controller
      */
     public function show($id)
     {
-        $firms_all = Manufacturer::select('id', 'name', 'country')->where('id', $id)->with('Products')->get()->toArray();
+        $firms_all = Manufacturer::select('id', 'name', 'country')->where('id', $id)->with('Pesticides')->get()->toArray();
         $json = json_encode($firms_all, JSON_UNESCAPED_UNICODE);
 
         $firms = Manufacturer::findOrFail($id);
         $acaricides = Pesticides::where('manufacturersId', $id)->where('pesticideId', 1)->get()->toArray();
-
-//        dd($firms);
 
         return view('manufacturers.show', compact('firms', 'acaricides'));
     }

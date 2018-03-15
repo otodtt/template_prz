@@ -22,7 +22,7 @@ class AcaricidesController extends Controller
      */
     public function index()
     {
-        $acaricides = Pesticides::where('pesticideId', 1)->get();
+        $acaricides = Pesticides::where('pesticideId', 1)->orderBy('id', 'desc')->get();
 //        dd($acaricides);
         return view('acaricides.index', compact('acaricides'));
     }
@@ -259,6 +259,7 @@ class AcaricidesController extends Controller
             "isCalc" => $request['isCalc'],
             "application" => $request['application'],
             "doseNote" => $request['doseNote'],
+            "isActive" => $request['isActive'],
         ];
 
         $acaricides = Pesticides::findOrFail($id);
@@ -295,6 +296,7 @@ class AcaricidesController extends Controller
             "isCalc" => $request['isCalc'],
             "application" => $request['application'],
             "doseNote" => $request['doseNote'],
+            "isActive" => $request['isActive'],
         ];
 
         Dose::where('id', $id)->update($data);
