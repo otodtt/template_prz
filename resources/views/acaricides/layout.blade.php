@@ -28,6 +28,9 @@
         .red {
             color: red;
         }
+        .dose {
+            width: 80px;
+        }
     </style>
 </head>
 <body>

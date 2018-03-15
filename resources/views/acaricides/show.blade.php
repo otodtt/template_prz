@@ -42,7 +42,7 @@
                         <th>Актив</th>
                         <th>Култура</th>
                         <th>Вредител</th>
-                        <th>Доза</th>
+                        <th class="dose">Доза</th>
                         <th>Дни</th>
                         <th>Редактирай</th>
                     </tr>
@@ -81,7 +81,7 @@
                                     }
                                 ?>
                             </td>
-                            <td>
+                            <td class="dose">
                                 <?php
                                 if(strlen($dose['doseNote']) > 0) {
                                     ?>
