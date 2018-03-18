@@ -23,6 +23,7 @@ class AcaricidesController extends Controller
     public function index()
     {
         $acaricides = Pesticides::where('pesticideId', 1)->orderBy('id', 'desc')->get();
+//        $acaricides = Pesticides::where('pesticideId', 1)->orderBy('alphabet', 'asc')->get();
 //        dd($acaricides);
         return view('acaricides.index', compact('acaricides'));
     }
@@ -52,7 +53,7 @@ class AcaricidesController extends Controller
             11=>'К', 12=>'Л', 13=>'М', 14=>'Н', 15=>'О', 16=>'П', 17=>'Р', 18=>'С',	19=>'Т', 20=>'У',
             21=>'Ф', 22=>'Х', 23=>'Ц', 24=>'Ч', 25=>'Ш', 26=>'Щ', 27=>'Ъ',	28=>'Ь', 29=>'Ю', 30=>'Я');
 
-        $abc= trim(preg_replace("/[0-9]/", "", $firm[1]));
+        $abc= trim(preg_replace("/[0-9]/", "", $request['name']));
         $abc1= trim(preg_replace("/-/", "", $abc));
         $abc2= trim(preg_replace("/.]/", "", $abc1));
         $abc3 = mb_substr($abc2, 0, 1);
@@ -131,7 +132,7 @@ class AcaricidesController extends Controller
             11=>'К', 12=>'Л', 13=>'М', 14=>'Н', 15=>'О', 16=>'П', 17=>'Р', 18=>'С',	19=>'Т', 20=>'У',
             21=>'Ф', 22=>'Х', 23=>'Ц', 24=>'Ч', 25=>'Ш', 26=>'Щ', 27=>'Ъ',	28=>'Ь', 29=>'Ю', 30=>'Я');
 
-        $abc= trim(preg_replace("/[0-9]/", "", $firm[1]));
+        $abc= trim(preg_replace("/[0-9]/", "", $request['name']));
         $abc1= trim(preg_replace("/-/", "", $abc));
         $abc2= trim(preg_replace("/.]/", "", $abc1));
         $abc3 = mb_substr($abc2, 0, 1);

@@ -84,6 +84,9 @@ Route::get('nigrum','TemplateController@nigrum');
 /////// Лоза
 Route::get('vitis','TemplateController@vitis');
 
+////// Препарати
+Route::get('products/acaricides{sort?}{order?}','GetProductsController@acaricides');
+
 
 
 //Route::resource('culture', 'CultureController');
