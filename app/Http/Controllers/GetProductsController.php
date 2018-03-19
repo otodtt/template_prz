@@ -19,8 +19,11 @@ class GetProductsController extends Controller
         $order_input = Input::get('order');
         $page = Input::get('page');
 
-        if (isset($sort_input) && ($sort_input = 'undefined' || $sort_input = 'name')) {
+        if (isset($sort_input) && ($sort_input == 'undefined' || $sort_input == 'name')) {
             $sort = 'alphabet';
+        }
+        elseif ($sort_input == 'category') {
+            $sort = 'category';
         } else {
             $sort = 'alphabet';
         }
@@ -30,6 +33,7 @@ class GetProductsController extends Controller
         } else {
             $order = 'asc';
         }
+//        dd($sort);
 //        $acaricides = Pesticides::where('pesticideId', 1)->orderBy('id', 'desc')->get();
 //        $practices = Pesticides::where('pesticideId', 1)->orderBy('alphabet', 'asc')->with('Pestsubstanse')->with('Doses')->get()->toArray();
         $practices = Pesticides::where('pesticideId', 1)->orderBy($sort, $order)
