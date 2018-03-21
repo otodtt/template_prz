@@ -127,7 +127,9 @@
                             <div class="col-lg-12">
                                 <label for="crop" class="control-label">КУЛТУРА</label>
                                 {!! Form::text('crop', null, ['class'=>'form-control', 'placeholder'=>'Култура при която се прилага', 'id'=>'crop' ]) !!}
-                                &lt;span class="latin_name"&gt;&lt;/span&gt;
+                                &lt;span style="font-style: italic"&gt;&lt;/span&gt;<br/>
+                                style="font-style: italic"
+
                             </div>
                         </div>
                         <div class="col-lg-7">

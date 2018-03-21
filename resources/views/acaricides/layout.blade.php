@@ -6,9 +6,9 @@
 
     {!!Html::style("css/bootstrap.css" )!!}
     <style>
-        .latin_name {
-            font-style: italic;
-        }
+        /*.latin_name {*/
+            /*font-style: italic;*/
+        /*}*/
         .overflow {
             width: 10em;
             outline: 1px solid rgba(0, 0, 0, 0);
