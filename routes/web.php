@@ -85,7 +85,9 @@ Route::get('nigrum','TemplateController@nigrum');
 Route::get('vitis','TemplateController@vitis');
 
 ////// Препарати
-Route::get('products/acaricides{sort?}{order?}','GetProductsController@acaricides');
+//Route::get('products/acaricides{sort?}{order?}','GetProductsController@acaricides');
+Route::get('products/acaricides','GetProductsController@acaricides');
+Route::get('products/acaricides/{id}','GetProductsController@show_acaricide');
 
 
 
