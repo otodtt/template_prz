@@ -85,7 +85,8 @@ Route::get('nigrum','TemplateController@nigrum');
 Route::get('vitis','TemplateController@vitis');
 
 ////// Препарати
-Route::get('products/acaricides{sort?}{order?}','GetProductsController@acaricides');
+Route::get('products/acaricides','GetProductsController@acaricides');
+Route::get('products/acaricides/{id}','GetProductsController@show_acaricide');
 
 
 
@@ -145,3 +146,7 @@ Route::get('crops/acaricides/{id}', 'CropsController@acaricides');
 Route::post('crops/acaricides_store/{id}', 'CropsController@acaricides_store');
 Route::get('crops/acaricides_edit/{id}/{crop}', 'CropsController@acaricides_edit');
 Route::post('crops/acaricides_update/{id}', 'CropsController@acaricides_update');
+
+// PARALLEL
+Route::get('parallel', 'ParallelController@index');
+Route::get('parallel/create', 'ParallelController@create');

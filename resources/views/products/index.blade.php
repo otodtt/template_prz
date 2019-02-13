@@ -13,6 +13,7 @@
         <li><a href="{!!URL::to('/pheromones')!!}">Феромони</a></li><br/>
         <li><a href="{!!URL::to('/herbicides')!!}">Хербициди</a></li><br/>
         <li><a href="{!!URL::to('/desiccants')!!}">Десиканти</a></li><br/>
-        <li><a href="{!!URL::to('/regulators')!!}">Растежни регулатори</a></li>
+        <li><a href="{!!URL::to('/regulators')!!}">Растежни регулатори</a></li><br/>
+        <li><a href="{!!URL::to('/parallel')!!}">Паралелна търговия</a></li><br/>
     </ul>
 @endsection
