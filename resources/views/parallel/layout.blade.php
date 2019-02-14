@@ -31,6 +31,15 @@
         .dose {
             width: 80px;
         }
+        #exampleTable {
+            border: 1px solid gray;
+        }
+        td, th {
+            border: 1px solid gray;
+        }
+        #exampleTable > thead > tr > th {
+            border: 2px solid gray;
+        }
     </style>
 </head>
 <body>

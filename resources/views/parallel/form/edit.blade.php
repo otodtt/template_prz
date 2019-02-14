@@ -17,9 +17,9 @@
                         </ul>
                     </div>
                 @endif
-                {!! Form::open(['url'=>'parallel/store', 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+                {!! Form::model($parallels, ['url'=>'parallel/update/'.$parallels['id'], 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
                 <fieldset>
-                    <legend>ДОБАВЯНЕ НА ПРОДУКТ ЗА ПАРАЛЕЛНА ТЪРГОВИЯ</legend>
+                    <legend>РЕДАКТИРАНЕ НА ПРОДУКТ ЗА ПАРАЛЕЛНА ТЪРГОВИЯ</legend>
                     <div class="form-group">
                         <div class="col-lg-12" style="margin-bottom: 20px">
                             <div class="col-lg-12">
@@ -80,36 +80,36 @@
                         </div>
                         <div class="col-lg-4">
                             <label for="typeId" class="control-label">Вид на ПРЗ-то</label>
-                            <select name="typeId" id="typeId">
-                                <option value="" >Избери</option>
-                                <option value="1 | fungicides" >Фунгицид</option>
-                                <option value="2 | insecticides" >Инсектицид</option>
-                                <option value="3 | acaricides" >Акарицид</option>
-                                <option value="4 | nematocides" >Нематоцид</option>
-                                <option value="5 | rodenticides" >Родентицид</option>
-                                <option value="6 | limatsides" >Лимацид</option>
-                                <option value="7 | repellents" >Репелент</option>
-                                <option value="8 | pheromones" >Феромон</option>
-                                <option value="9 | herbicides" >Хербицид</option>
-                                <option value="10 | desiccants" >Десикант</option>
-                                <option value="11 | regulators" >Растежен регулатор</option>
-                            </select>
-                            {{--{!! Form::select('typeId',--}}
-                                {{--array('' => 'Избери!',--}}
-                                    {{--1 => 'Фунгицид',--}}
-                                    {{--2 => 'Инсектицид',--}}
-                                    {{--3 => 'Акарицид',--}}
-                                    {{--4 => 'Нематоцид',--}}
-                                    {{--5 => 'Родентицид',--}}
-                                    {{--6 => 'Лимацид',--}}
-                                    {{--7 => 'Репелент',--}}
-                                    {{--8 => 'Феромон',--}}
-                                    {{--9 => 'Хербицид',--}}
-                                    {{--10 => 'Десикант',--}}
-                                    {{--11 => 'Растежни регулатори',--}}
-                                {{--),--}}
-                                {{--null,['id' => 'typeId', 'class'=>'form-control'])--}}
-                            {{--!!}--}}
+                            {{--<select name="typeId" id="typeId">--}}
+                                {{--<option value="" >Избери</option>--}}
+                                {{--<option value="1 | fungicide" >Фунгицид</option>--}}
+                                {{--<option value="2 | insecticide" >Инсектицид</option>--}}
+                                {{--<option value="3 | acaricide" >Акарицид</option>--}}
+                                {{--<option value="4 | nematocide" >Нематоцид</option>--}}
+                                {{--<option value="5 | rodenticide" >Родентицид</option>--}}
+                                {{--<option value="6 | limatsid" >Лимацид</option>--}}
+                                {{--<option value="7 | repellent" >Репелент</option>--}}
+                                {{--<option value="8 | pheromone" >Феромон</option>--}}
+                                {{--<option value="9 | herbicide" >Хербицид</option>--}}
+                                {{--<option value="10 | desiccant" >Десикант</option>--}}
+                                {{--<option value="11 | regulators" >Растежен регулатор</option>--}}
+                            {{--</select>--}}
+                            {!! Form::select('typeId',
+                                array('' => 'Избери!',
+                                    1 => 'Фунгицид',
+                                    2 => 'Инсектицид',
+                                    3 => 'Акарицид',
+                                    4 => 'Нематоцид',
+                                    5 => 'Родентицид',
+                                    6 => 'Лимацид',
+                                    7 => 'Репелент',
+                                    8 => 'Феромон',
+                                    9 => 'Хербицид',
+                                    10 => 'Десикант',
+                                    11 => 'Растежни регулатори',
+                                ),
+                                $parallels-> typeId,['id' => 'typeId', 'class'=>'form-control'])
+                            !!}
                         </div>
                         <div class="col-lg-4">
                             <label for="isActive" class="control-label">АКТИВНА</label><br/>

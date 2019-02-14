@@ -150,5 +150,9 @@ Route::post('crops/acaricides_update/{id}', 'CropsController@acaricides_update')
 // PARALLEL
 Route::get('parallel', 'ParallelController@index');
 Route::get('parallel/create', 'ParallelController@create');
+Route::post('parallel/store', 'ParallelController@store');
+Route::get('parallel/edit/{id}', 'ParallelController@edit');
+Route::post('parallel/update/{id}', 'ParallelController@update');
 
-//
+
+

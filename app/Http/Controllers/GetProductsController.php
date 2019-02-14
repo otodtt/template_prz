@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Pesticides;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Contracts\Support\JsonableInterface;
-
-
 
 class GetProductsController extends Controller
 {
