@@ -33,7 +33,6 @@ class ParallelRequest extends FormRequest
             'parallelTrade'=> 'required|min:3|max:500',
             'validParallelTrade'=> 'required|min:3|max:500',
             'typeId'=> 'min:1',
-            'note'=> 'required|min:3|max:500',
         ];
     }
 }

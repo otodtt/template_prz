@@ -11,7 +11,7 @@ class ParallelController extends Controller
 {
     public function index()
     {
-        $parallels = Parallel::where('isActive', 0)->orderBy('id', 'desc')->get();
+        $parallels = Parallel::where('isActive', 0)->orderBy('id', 'asc')->get();
         return view('parallel.index', compact('parallels'));
     }
 
