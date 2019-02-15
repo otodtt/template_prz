@@ -33,7 +33,7 @@ class GetProductsController extends Controller
             ->toArray();
 
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
-//        dd($json);
+        dd($json);
 //        dd($practices);
         return view('templates.database_products', compact('practices', 'json'));
     }

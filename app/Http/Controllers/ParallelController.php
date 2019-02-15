@@ -61,7 +61,6 @@ class ParallelController extends Controller
         return Redirect::to('/parallel');
     }
 
-
     public function edit($id)
     {
         $parallels = Parallel::findOrFail($id);
@@ -144,6 +143,17 @@ class ParallelController extends Controller
         $parallels->update($data);
 
         return Redirect::to('/parallel');
+    }
+
+    public function get_parallel(Request $request)
+    {
+//        $practices = Pesticides::where('pesticideId', 1)->orderBy('name', 'asc')
+        $practices = Parallel::where('isActive', 0)->orderBy('id', 'asc')->get()->toArray();
+
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+        dd($json);
+//        dd($practices);
+        return view('templates.database_products', compact('practices', 'json'));
     }
 
 }

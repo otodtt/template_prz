@@ -153,6 +153,7 @@ Route::get('parallel/create', 'ParallelController@create');
 Route::post('parallel/store', 'ParallelController@store');
 Route::get('parallel/edit/{id}', 'ParallelController@edit');
 Route::post('parallel/update/{id}', 'ParallelController@update');
+Route::get('products/parallel','ParallelController@get_parallel');
 
 
 

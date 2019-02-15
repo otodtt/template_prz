@@ -31,7 +31,7 @@ class ParallelRequest extends FormRequest
             'manufacturer'=> 'required|min:3|max:500',
             'validReferenceProduct'=> 'required|min:3|max:500',
             'parallelTrade'=> 'required|min:3|max:500',
-            'validParallelTrade'=> 'required|min:3|max:500',
+            'validParallelTrade'=> 'required|min:1|max:500',
             'typeId'=> 'min:1',
         ];
     }
