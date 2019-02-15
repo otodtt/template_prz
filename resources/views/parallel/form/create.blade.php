@@ -82,16 +82,16 @@
                             <label for="typeId" class="control-label">Вид на ПРЗ-то</label>
                             <select name="typeId" id="typeId">
                                 <option value="" >Избери</option>
-                                <option value="1 | fungicides" >Фунгицид</option>
-                                <option value="2 | insecticides" >Инсектицид</option>
-                                <option value="3 | acaricides" >Акарицид</option>
-                                <option value="4 | nematocides" >Нематоцид</option>
-                                <option value="5 | rodenticides" >Родентицид</option>
-                                <option value="6 | limatsides" >Лимацид</option>
-                                <option value="7 | repellents" >Репелент</option>
-                                <option value="8 | pheromones" >Феромон</option>
-                                <option value="9 | herbicides" >Хербицид</option>
-                                <option value="10 | desiccants" >Десикант</option>
+                                <option value="1 | fungicide" >Фунгицид</option>
+                                <option value="2 | insecticide" >Инсектицид</option>
+                                <option value="3 | acaricide" >Акарицид</option>
+                                <option value="4 | nematocide" >Нематоцид</option>
+                                <option value="5 | rodenticide" >Родентицид</option>
+                                <option value="6 | limatside" >Лимацид</option>
+                                <option value="7 | repellent" >Репелент</option>
+                                <option value="8 | pheromone" >Феромон</option>
+                                <option value="9 | herbicide" >Хербицид</option>
+                                <option value="10 | desiccant" >Десикант</option>
                                 <option value="11 | regulators" >Растежен регулатор</option>
                             </select>
                             {{--{!! Form::select('typeId',--}}

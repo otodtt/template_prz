@@ -71,34 +71,34 @@ class ParallelController extends Controller
     {
         switch ($request['typeId']) {
             case 1:
-                $type = 'fungicides';
+                $type = 'fungicide';
                 break;
             case 2:
-                $type = 'insecticides';
+                $type = 'insecticide';
                 break;
             case 3:
-                $type = 'acaricides';
+                $type = 'acaricide';
                 break;
             case 4:
-                $type = 'nematocides';
+                $type = 'nematocide';
                 break;
             case 5:
-                $type = 'rodenticides';
+                $type = 'rodenticide';
                 break;
             case 6:
-                $type = 'limatsides';
+                $type = 'limatside';
                 break;
             case 7:
-                $type = 'repellents';
+                $type = 'repellent';
                 break;
             case 8:
-                $type = 'pheromones';
+                $type = 'pheromone';
                 break;
             case 9:
-                $type = 'herbicides';
+                $type = 'herbicide';
                 break;
             case 10:
-                $type = 'desiccants';
+                $type = 'desiccant';
                 break;
             case 11:
                 $type = 'regulators';
