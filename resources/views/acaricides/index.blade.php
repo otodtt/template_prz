@@ -5,6 +5,8 @@
         <table  id="example" class="table">
             <thead>
                 <tr>
+                    <th>N</th>
+                    {{--<th>Активен</th>--}}
                     <th>ID</th>
                     <th>ИМЕ ПРЗ</th>
                     <th>ФИРМА - ID</th>
@@ -15,6 +17,14 @@
                 <?php $n = 1; ?>
                 @foreach($acaricides as $acar)
                     <tr>
+                        <td><?php echo $n ++ ?></td>
+                        {{--<td>--}}
+                            {{--@if($acar -> isActive === 0)--}}
+                                {{--<span style="color: green"> ДА</span>--}}
+                            {{--@else--}}
+                                {{--<span style="color: red"> НЕ</span>--}}
+                            {{--@endif--}}
+                        {{--</td>--}}
                         <td>{{$acar->id}}</td>
                         <td>{{$acar -> name}}</td>
                         <td>{{$acar -> firmName}} - {{$acar -> manufacturersId}}</td>
@@ -23,6 +33,7 @@
                                 &nbsp;ВИЖ!
                             </a>
                         </td>
+
                     </tr>
                 @endforeach
             </tbody>

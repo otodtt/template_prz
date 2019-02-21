@@ -99,7 +99,7 @@
                     <hr style="border: 0.5px solid black"/>
 
                     <div class="form-group">
-                        <div class="col-lg-4">
+                        <div class="col-lg-2">
                             <label for="lethal" class="control-label">Летална доза</label>
                             {!! Form::text('lethal', null, ['class'=>'form-control', 'placeholder'=>'Летална доза', 'id'=>'lethal' ]) !!}
                         </div>
@@ -111,8 +111,42 @@
                                 null,['id' => 'category', 'class'=>'form-control'])
                             !!}
                         </div>
+                        <div class="col-lg-6">
+                            <label for="categoryNote" class="control-label">Забележка след категорията</label>
+                            {!! Form::text('categoryNote', null, ['class'=>'form-control', 'placeholder'=>'Забележка след категорията', 'id'=>'categoryNote' ]) !!}
+                        </div>
                     </div>
                     <hr style="border: 0.5px solid black"/>
+
+
+                    <div class="form-group">
+                        <div class="col-lg-3">
+                            <label for="min" class="control-label">Минимална доза</label>
+                            {!! Form::text('min', null, ['class'=>'form-control', 'placeholder'=>'Минимална доза', 'id'=>'min' ]) !!}
+                        </div>
+                        <div class="col-lg-3">
+                            <label for="max" class="control-label">Максимална доза</label>
+                            {!! Form::text('max', null, ['class'=>'form-control', 'placeholder'=>'Максимална доза', 'id'=>'max' ]) !!}
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-12">
+                                <label for="measure" class="control-label">Мерна Единица</label><br/>
+                                {{ Form::label('measure', 'мл/дка') }}
+                                {{ Form::radio('measure', '1, мл/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::label('measure', 'г/дка') }}
+                                {{ Form::radio('measure', '2, г/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::label('measure', '%') }}
+                                {{ Form::radio('measure', '3, %' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::label('measure', 'л/дка') }}
+                                {{ Form::radio('measure', '4, л/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::label('measure', 'кг/дка') }}
+                                {{ Form::radio('measure', '5, кг/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="border: 0.5px solid black"/>
+
                     <div class="form-group">
                         <div class="col-lg-12">
                             <label for="pestDescription" class="control-label">ОПИСАНИЕ ЗА description</label>

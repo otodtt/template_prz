@@ -20,13 +20,13 @@
                 <fieldset>
                     <legend style="color: green">ДОБАВЯНЕ НА ДОЗИ КЪМ {{$acaricides->name}}</legend>
                     <div class="form-group">
-                        <div class="col-lg-2">
+                        <div class="col-lg-4">
                             <div class="col-lg-12">
                                 <label for="dose" class="control-label">Доза</label>
                                 {!! Form::text('dose', null, ['class'=>'form-control', 'placeholder'=>'Доза', 'id'=>'dose' ]) !!}
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             <div class="col-lg-12">
                                 <label for="measure" class="control-label">Мерна Единица</label><br/>
                                 {{ Form::label('measure', 'мл/дка') }}
@@ -37,22 +37,34 @@
                                 {{ Form::radio('measure', '3, %' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
                                 {{ Form::label('measure', 'л/дка') }}
                                 {{ Form::radio('measure', '4, л/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::label('measure', 'кг/дка') }}
+                                {{ Form::radio('measure', '5, кг/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                    </div>
+                    <hr style="border: 0.5px solid black"/>
+                    <div class="form-group">
+                        <div class="col-lg-4">
                             <div class="col-lg-12">
                                 <label for="secondDose" class="control-label">Втора Доза</label>
                                 {!! Form::text('secondDose', null, ['class'=>'form-control', 'placeholder'=>'Втора Доза ако има', 'id'=>'secondDose' ]) !!}
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="col-lg-12">
                                 <label for="doseNote" class="control-label">Бележка в дозата</label>
                                 {!! Form::text('doseNote', null, ['class'=>'form-control', 'placeholder'=>'Бележка в дозата', 'id'=>'doseNote' ]) !!}
                             </div>
                         </div>
+
                     </div>
                     <hr style="border: 0.5px solid black"/>
+
+
+
+
+
+
                     <div class="form-group">
                         <div class="col-lg-6">
                             <div class="col-lg-12">
@@ -95,13 +107,13 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="col-lg-6">
-                                <label for="quantityAfter" class="control-label">КАЛКУЛАТОР</label><br/>
-                                {{ Form::label('isCalc', 'HE') }}
-                                {{ Form::radio('isCalc', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {{ Form::label('isCalc', 'ДА') }}
-                                {{ Form::radio('isCalc', 1 ) }}
-                            </div>
+                            {{--<div class="col-lg-6">--}}
+                                {{--<label for="quantityAfter" class="control-label">КАЛКУЛАТОР</label><br/>--}}
+                                {{--{{ Form::label('isCalc', 'HE') }}--}}
+                                {{--{{ Form::radio('isCalc', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
+                                {{--{{ Form::label('isCalc', 'ДА') }}--}}
+                                {{--{{ Form::radio('isCalc', 1 ) }}--}}
+                            {{--</div>--}}
                             <div class="col-lg-6">
                                 <label for="isActive" class="control-label">АКТИВНА</label><br/>
                                 {{ Form::label('isActive', 'ДА') }}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pesticides;
 
 class PesticidesController extends Controller
 {
@@ -15,6 +16,19 @@ class PesticidesController extends Controller
     {
         return view('products.index');
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function deactivated()
+    {
+        $pesticides = Pesticides::where('id', '>', 0)->where('isActive', 1)->orderBy('alphabet', 'asc')->get();
+//        dd($pesticides);
+        return view('products.deactivated', compact('pesticides'));
+    }
+
 
     /**
      * Show the form for creating a new resource.

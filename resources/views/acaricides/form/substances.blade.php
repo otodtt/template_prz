@@ -28,9 +28,9 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="col-lg-12">
-                                <label for="substanceId" class="control-label">Име на А. ВЕЩЕСТВО</label>
+                                <label for="substance_id" class="control-label">Име на А. ВЕЩЕСТВО</label>
 {{--                                {!! Form::text('name', null, ['class'=>'form-control', 'placeholder'=>'име', 'id'=>'name' ]) !!}--}}
-                                <select name="substanceId[]" class="form-control">
+                                <select name="substance_id[]" class="form-control">
                                     <option value="" >Избери</option>
                                     <?php
                                     foreach($substances as $value=>$name) {

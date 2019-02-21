@@ -106,6 +106,7 @@ class CropsController extends Controller
         $crops = Crop::findOrFail($id);
         return view('crops.pests.acaricides', compact('crops'));
     }
+
     public function acaricides_store(AddPestRequest $request, $id)
     {
         $data = [

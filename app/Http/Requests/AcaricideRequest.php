@@ -31,7 +31,10 @@ class AcaricideRequest extends FormRequest
 //            'valid'=> 'min:3|max:100',
 //            'dateOrder'=> 'required|min:3|max:100',
             'category'=> 'required',
-            'pestDescription'=> 'required|min:3|max:300'
+            'pestDescription'=> 'required|min:3|max:300',
+            'min' => 'required',
+            'max' => 'required',
+            'measure' => 'required',
         ];
     }
 
@@ -61,6 +64,9 @@ class AcaricideRequest extends FormRequest
 //            'dateOrder.max' => 'Максимален брой символи за Заповед - 100!',
 
             'category.required' => 'Избери Категорията на употреба!',
+            'min.required' => 'Минмална доза!',
+            'max.required' => 'Максимална доза!',
+            'measure.required' => 'Маркирай мерна единица!',
         ];
     }
 }

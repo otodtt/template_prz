@@ -11,6 +11,7 @@ class Acaricide extends Model
      *
      * @var string
      */
+//    protected $table = 'old_a_acaricides';
     protected $table = 'a_acaricides';
 
     public $timestamps = false;
@@ -20,7 +21,7 @@ class Acaricide extends Model
      * @var array
      */
     protected $fillable = [
-        'product', 'productId', 'dose', 'note', 'afterNote', 'minimumUse',
-        'disease', 'quarantine', 'category', 'practices', 'isActive'
+        'crop_id', 'product', 'productId', 'dose', 'doseId', 'note', 'afterNote', 'application',
+        'minimumUse', 'disease', 'quarantine', 'category', 'practices', 'isActive'
     ];
 }

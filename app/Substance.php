@@ -23,8 +23,11 @@ class Substance extends Model
         'name', 'moreUses', 'alphabet'
     ];
 
+//    public function products(){
+//        return $this->hasMany('App\Subs');
+//    }
 
     public function products(){
-        return $this->hasMany('App\Subs');
+        return $this->hasMany('App\PestSubstance')->where('isActive', 0);
     }
 }

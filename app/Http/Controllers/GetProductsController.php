@@ -13,7 +13,7 @@ class GetProductsController extends Controller
     public function acaricides(Request $request)
     {
 //        $practices = Pesticides::where('pesticideId', 1)->orderBy('name', 'asc')
-        $practices = Pesticides::where('pesticideId', 1)->orderBy('id', 'asc')
+        $practices = Pesticides::where('pesticideId', 3)->orderBy('id', 'asc')
                     ->with('Pestsubstanse')->with('Doses')
                     ->get()
                     ->toArray();

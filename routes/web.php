@@ -105,6 +105,7 @@ Route::post('manufacturers/store', 'ManufacturersController@store');
 
 
 Route::get('products', 'PesticidesController@index');
+Route::get('deactivated', 'PesticidesController@deactivated');
 
 Route::get('acaricides', 'AcaricidesController@index');
 Route::get('acaricides/create', 'AcaricidesController@create');
@@ -132,6 +133,18 @@ Route::get('substances/{id}', 'SubstancesController@show');
 Route::get('substances/add/{id}', 'SubstancesController@add');
 Route::post('substances/store_add/{id}', 'SubstancesController@store_add');
 
+/////// Добавяне на дози към култури //////
+Route::get('acaricides/dose_crop/{id}/{pest}', 'AcaricidesController@dose_crop');
+Route::post('acaricides/crop_dose_store/{id}/{pest}', 'AcaricidesController@dose_crop_store');
+
+/// Деактивиране на една доза
+Route::get('acaricides/deactivate_one_dose/{dose}/{pest}', 'AcaricidesController@deactivate_one');
+Route::post('acaricides/deactivate_one_store/{dose}/{pest}', 'AcaricidesController@deactivate_one_store');
+Route::get('acaricides/deactivate/{id}', 'AcaricidesController@deactivate');
+Route::post('acaricides/deactivate_store/{id}', 'AcaricidesController@deactivate_store');
+
+/////// Добавяне на дози към култури //////
+
 
 // CROPS
 Route::get('crops', 'CropsController@index');
@@ -143,7 +156,7 @@ Route::post('crops/update/{id}', 'CropsController@update');
 
 // ACARICIDES
 Route::get('crops/acaricides/{id}', 'CropsController@acaricides');
-Route::post('crops/acaricides_store/{id}', 'CropsController@acaricides_store');
+//Route::post('crops/acaricides_store/{id}', 'CropsController@acaricides_store');
 Route::get('crops/acaricides_edit/{id}/{crop}', 'CropsController@acaricides_edit');
 Route::post('crops/acaricides_update/{id}', 'CropsController@acaricides_update');
 

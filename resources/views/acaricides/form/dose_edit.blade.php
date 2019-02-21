@@ -20,13 +20,13 @@
                 <fieldset>
                     <legend style="color: green">РЕДАКТИРАНЕ НА ДОЗА КЪМ {{$acaricides->name}}</legend>
                     <div class="form-group">
-                        <div class="col-lg-2">
+                        <div class="col-lg-4">
                             <div class="col-lg-12">
                                 <label for="dose" class="control-label">Доза</label>
                                 {!! Form::text('dose', null, ['class'=>'form-control', 'placeholder'=>'Доза', 'id'=>'dose' ]) !!}
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             <div class="col-lg-12">
                                 <label for="measure" class="control-label">Мерна Единица</label><br/>
                                 <?php
@@ -35,22 +35,26 @@
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
+                                    $value5 = '5, кг/дка';
 
                                     $select1 = 'checked="checked"';
                                     $select2 = '';
                                     $select3 = '';
                                     $select4 = '';
+                                    $select5 = '';
                                 }
                                 if($dose[0]['measureId'] == 2) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
+                                    $value5 = '5, кг/дка';
 
                                     $select1 = '';
                                     $select2 = 'checked="checked"';
                                     $select3 = '';
                                     $select4 = '';
+                                    $select5 = '';
                                 }
 
                                 if($dose[0]['measureId'] == 3) {
@@ -58,11 +62,13 @@
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
+                                    $value5 = '5, кг/дка';
 
                                     $select1 = '';
                                     $select2 = '';
                                     $select3 = 'checked="checked"';
                                     $select4 = '';
+                                    $select5 = '';
                                 }
 
                                 if($dose[0]['measureId'] == 4) {
@@ -70,42 +76,57 @@
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
+                                    $value5 = '5, кг/дка';
 
                                     $select1 = '';
                                     $select2 = '';
                                     $select3 = '';
                                     $select4 = 'checked="checked"';
+                                    $select5 = '';
+                                }
+
+                                if($dose[0]['measureId'] == 5) {
+                                    $value1 = '1, мл/дка';
+                                    $value2 = '2, г/дка';
+                                    $value3 = '3, %';
+                                    $value4 = '4, л/дка';
+                                    $value5 = '5, кг/дка';
+
+                                    $select1 = '';
+                                    $select2 = '';
+                                    $select3 = '';
+                                    $select4 = '';
+                                    $select5 = 'checked="checked"';
                                 }
 //                                var_dump($select3);
                                 ?>
                                 {{ Form::label('measure', 'мл/дка') }}
-{{--                                {{ Form::radio('measure', '1, мл/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
-{{--                                {{ Form::radio('measure', $value1, $select1 ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
                                 <input {{$select1}} name="measure" type="radio" value="{{$value1}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                 {{ Form::label('measure', 'г/дка') }}
-{{--                                {{ Form::radio('measure', '2, г/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
-{{--                                {{ Form::radio('measure', $value2, $select2 ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
                                 <input {{$select2}} name="measure" type="radio" value="{{$value2}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                 {{ Form::label('measure', '%') }}
-{{--                                {{ Form::radio('measure', '3, %' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
-{{--                                {{ Form::radio('measure', $value3, $select3 ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
                                 <input {{$select3}} name="measure" type="radio" value="{{$value3}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                 {{ Form::label('measure', 'л/дка') }}
-                                {{--                                {{ Form::radio('measure', '3, %' ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
-                                {{--                                {{ Form::radio('measure', $value3, $select3 ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
                                 <input {{$select4}} name="measure" type="radio" value="{{$value4}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                {{ Form::label('measure', 'кг/дка') }}
+                                <input {{$select5}} name="measure" type="radio" value="{{$value5}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
-                        <div class="col-lg-3">
+
+                    </div>
+                    <hr style="border: 0.5px solid black"/>
+                    <div class="form-group">
+                        <div class="col-lg-4">
                             <div class="col-lg-12">
                                 <label for="secondDose" class="control-label">Втора Доза</label>
                                 {!! Form::text('secondDose', null, ['class'=>'form-control', 'placeholder'=>'Втора Доза ако има', 'id'=>'secondDose' ]) !!}
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="col-lg-12">
                                 <label for="doseNote" class="control-label">Бележка в дозата</label>
                                 {!! Form::text('doseNote', null, ['class'=>'form-control', 'placeholder'=>'Бележка в дозата', 'id'=>'doseNote' ]) !!}
@@ -156,22 +177,22 @@
                                 {!! Form::text('quarantine', null, ['class'=>'form-control', 'placeholder'=>'Карантинен период', 'id'=>'quarantine' ]) !!}
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="col-lg-6">
-                                <label for="quantityAfter" class="control-label">КАЛКУЛАТОР</label><br/>
-                                {{ Form::label('isCalc', 'HE') }}
-                                {{ Form::radio('isCalc', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {{ Form::label('isCalc', 'ДА') }}
-                                {{ Form::radio('isCalc', 1 ) }}
-                            </div>
-                            <div class="col-lg-6">
-                                <label for="isActive" class="control-label">АКТИВНА</label><br/>
-                                {{ Form::label('isActive', 'ДА') }}
-                                {{ Form::radio('isActive', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {{ Form::label('isActive', 'HE') }}
-                                {{ Form::radio('isActive', 1 ) }}
-                            </div>
-                        </div>
+                        {{--<div class="col-lg-6">--}}
+                            {{--<div class="col-lg-6">--}}
+                                {{--<label for="quantityAfter" class="control-label">КАЛКУЛАТОР</label><br/>--}}
+                                {{--{{ Form::label('isCalc', 'HE') }}--}}
+                                {{--{{ Form::radio('isCalc', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
+                                {{--{{ Form::label('isCalc', 'ДА') }}--}}
+                                {{--{{ Form::radio('isCalc', 1 ) }}--}}
+                            {{--</div>--}}
+                            {{--<div class="col-lg-6">--}}
+                                {{--<label for="isActive" class="control-label">АКТИВНА</label><br/>--}}
+                                {{--{{ Form::label('isActive', 'ДА') }}--}}
+                                {{--{{ Form::radio('isActive', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
+                                {{--{{ Form::label('isActive', 'HE') }}--}}
+                                {{--{{ Form::radio('isActive', 1 ) }}--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                     </div>
                     <div class="form-group">
                         <div class="col-lg-12">

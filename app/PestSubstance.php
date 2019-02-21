@@ -20,6 +20,7 @@ class PestSubstance extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'substanceId', 'quantity', 'quantityAfter'
+        'name', 'substance_id', 'quantity', 'quantityAfter', 'pesticide_name', 'pesticide_type',
+        'manufacturersId', 'firmName', 'isActive'
     ];
 }

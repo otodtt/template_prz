@@ -6,7 +6,7 @@
         <tr>
             <th>ID</th>
             <th>ИМЕ НА А. ВЕЩЕСТВО</th>
-            <th>С други</th>
+            {{--<th>С други</th>--}}
             <th>Брой ПРЗ</th>
             <th></th>
         </tr>
@@ -17,7 +17,7 @@
             <tr>
                 <td>{{$subs['id']}}</td>
                 <td>{{$subs['name']}}</td>
-                <td>{{$subs['moreUses']}}</td>
+                {{--<td>{{$subs['moreUses']}}</td>--}}
                 <td>{{ count($subs['products']) }}</td>
                 <td>
                     <a href="{!!URL::to('/substances/'.$subs['id'])!!}" class="fa fa-edit btn btn-primary">

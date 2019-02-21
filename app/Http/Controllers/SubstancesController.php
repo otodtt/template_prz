@@ -16,7 +16,7 @@ class SubstancesController extends Controller
      */
     public function index()
     {
-        $substances = Substance::orderBy('alphabet', 'asc')->with('Products')->get()->toArray();
+        $substances = Substance::orderBy('alphabet', 'asc')->with('products')->get()->toArray();
 //        $substances->Products->count();
 //        dd($substances);
 
@@ -72,7 +72,8 @@ class SubstancesController extends Controller
      */
     public function show($id)
     {
-        $substances = Substance::where('id', $id)->with('Products')->get()->toArray();
+        $substances = Substance::where('id', $id)->with('products')->get()->toArray();
+//        dd($substances);
         return view('substances.show', compact('substances'));
     }
 

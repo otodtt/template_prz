@@ -6,11 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Manufacturer extends Model
 {
-    /**
-     * Защитена таблица
-     *
-     * @var string
-     */
     protected $table = 'manufacturers';
 
     public $timestamps = false;
@@ -24,6 +19,6 @@ class Manufacturer extends Model
     ];
 
     public function pesticides(){
-        return $this->hasMany('App\Pesticides', 'manufacturersId');
+        return $this->hasMany('App\Pesticides', 'manufacturersId')->where('isActive', 0);
     }
 }

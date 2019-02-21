@@ -24,6 +24,6 @@ class Crop extends Model
     ];
 
     public function acaricides(){
-        return $this->hasMany('App\Acaricide');
+        return $this->hasMany('App\Acaricide')->where('isActive', '=', 0);
     }
 }
