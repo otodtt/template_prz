@@ -71,34 +71,34 @@ class ParallelController extends Controller
     {
         switch ($request['typeId']) {
             case 1:
-                $type = 'fungicide';
+                $type = 'fungicides';
                 break;
             case 2:
-                $type = 'insecticide';
+                $type = 'insecticides';
                 break;
             case 3:
-                $type = 'acaricide';
+                $type = 'acaricides';
                 break;
             case 4:
-                $type = 'nematocide';
+                $type = 'nematocides';
                 break;
             case 5:
-                $type = 'rodenticide';
+                $type = 'rodenticides';
                 break;
             case 6:
-                $type = 'limatside';
+                $type = 'limatsides';
                 break;
             case 7:
-                $type = 'repellent';
+                $type = 'repellents';
                 break;
             case 8:
-                $type = 'pheromone';
+                $type = 'pheromones';
                 break;
             case 9:
-                $type = 'herbicide';
+                $type = 'herbicides';
                 break;
             case 10:
-                $type = 'desiccant';
+                $type = 'desiccants';
                 break;
             case 11:
                 $type = 'regulators';
@@ -151,9 +151,9 @@ class ParallelController extends Controller
         $practices = Parallel::where('isActive', 0)->orderBy('id', 'asc')->get()->toArray();
 
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
-        dd($json);
+//        dd($json);
 //        dd($practices);
-        return view('templates.database_products', compact('practices', 'json'));
+        return view('templates.database_products', compact('practices'));
     }
 
 }

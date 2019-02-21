@@ -19,11 +19,6 @@ use Illuminate\Support\Facades\Validator;
 
 class AcaricidesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
 //        $acaricides = Pesticides::where('pesticideId', 3)->get();
@@ -33,11 +28,6 @@ class AcaricidesController extends Controller
         return view('acaricides.index', compact('acaricides'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $firms = Manufacturer::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
@@ -79,7 +69,7 @@ class AcaricidesController extends Controller
             'lethal' => $request['lethal'],
             'category' => $request['category'],
             'categoryNote' => $request['categoryNote'],
-            'pesticide' => 'acaricide',
+            'pesticide' => 'acaricides',
             'pesticideId' => 3,
             'pestDescription' => $request['pestDescription'],
             'min' => $request['min'],
@@ -146,7 +136,7 @@ class AcaricidesController extends Controller
             'lethal' => $request['lethal'],
             'category' => $request['category'],
             'categoryNote' => $request['categoryNote'],
-            'pesticide' => 'acaricide',
+            'pesticide' => 'acaricides',
             'pesticideId' => 3,
             'pestDescription' => $request['pestDescription'],
             'min' => $request['min'],

@@ -19,22 +19,22 @@ class GetProductsController extends Controller
                     ->toArray();
 
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
-        dd($json);
+//        dd($json);
 //        dd($practices);
-        return view('templates.database_products', compact('practices', 'json'));
+        return view('templates.database_products', compact('practices'));
     }
 
     public function show_acaricide ($id)
     {
-        $practices = Pesticides::where('pesticideId', 1)
+        $practices = Pesticides::where('pesticideId', 3)
             ->where('id', '=', $id)
             ->with('Pestsubstanse')->with('Doses')
             ->get()
             ->toArray();
 
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
-        dd($json);
+//        dd($json);
 //        dd($practices);
-        return view('templates.database_products', compact('practices', 'json'));
+        return view('templates.database_products', compact('practices'));
     }
 }
