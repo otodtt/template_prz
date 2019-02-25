@@ -5,7 +5,7 @@
         <li><a href="{!!URL::to('/fungicides')!!}">Фунгициди</a></li><br/>
         <li><a href="{!!URL::to('/insecticides')!!}">Инсектициди</a></li><br/>
         <li><a href="{!!URL::to('/acaricides')!!}">Акарициди</a></li><br/>
-        <li><a href="{!!URL::to('/nematicides')!!}">Нематоциди</a></li><br/>
+        <li><a href="{!!URL::to('/nematocides')!!}">Нематоциди</a></li><br/>
         <li><a href="{!!URL::to('/regulation')!!}">Регламент II</a></li><br/>
         <li><a href="{!!URL::to('/rodenticides')!!}">Родентициди</a></li><br/>
         <li><a href="{!!URL::to('/limacides')!!}">Лимациди</a></li><br/>

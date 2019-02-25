@@ -2,7 +2,7 @@
 <html lang="bg">
 <head>
     <meta charset="utf-8">
-    <title>АКАРИЦИДИ</title>
+    <title>НЕМАТОЦИДИ</title>
 
     {!!Html::style("css/bootstrap.css" )!!}
     <style>
@@ -46,9 +46,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li><a href="{!!URL::to('/acaricides/create')!!}">Добави Акарицид</a></li>
+                <li><a href="{!!URL::to('/nematocides/create')!!}">Добави Нематоцид</a></li>
             </ul>
-            <h3 style="margin-left: 500px">АКАРИЦИДИ</h3>
+            <h3 style="margin-left: 500px">НЕМАТОЦИДИ</h3>
         </div>
     </div>
 </div>

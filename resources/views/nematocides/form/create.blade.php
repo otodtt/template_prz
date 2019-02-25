@@ -1,10 +1,10 @@
-@extends('acaricides.layout')
+@extends('nematocides.layout')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="row">
-                <a href="/acaricides">АКАРИЦИДИ</a>
+                <a href="/nematocides">НЕМАТОЦИДИ</a>
 
             </div>
             <div class="col-lg-12">
@@ -17,9 +17,9 @@
                         </ul>
                     </div>
                 @endif
-                {!! Form::open(['url'=>'acaricides/store', 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+                {!! Form::open(['url'=>'nematocides/store', 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
                 <fieldset>
-                    <legend>ДОБАВЯНЕ НА АКАРИЦИД</legend>
+                    <legend>ДОБАВЯНЕ НА НЕМАТОЦИДИ</legend>
                     <div class="form-group">
                         <div class="col-lg-8">
                             <div class="col-lg-12">
@@ -59,12 +59,7 @@
                                     }
                                 ?>
                             </select>
-
                         </div>
-                        {{--<div class="col-lg-6">--}}
-                            {{--<label for="firmName" class="control-label">ИМЕ Фирма Производител</label>--}}
-                            {{--{!! Form::text('firmName', null, ['class'=>'form-control', 'placeholder'=>'ИМЕ Фирма', 'id'=>'firmName' ]) !!}--}}
-                        {{--</div>--}}
                     </div>
 
                     <hr style="border: 0.5px solid black"/>

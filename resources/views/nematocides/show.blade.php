@@ -1,28 +1,28 @@
-@extends('acaricides.layout')
+@extends('nematocides.layout')
 
 @section('content')
     <div class="container">
         <div class="row">
-            <a href="{!!URL::to('/acaricides/edit/'.$acaricide[0]['id'])!!}" class="fa fa-edit btn btn-danger">
+            <a href="{!!URL::to('/acaricides/edit/'.$nematocide[0]['id'])!!}" class="fa fa-edit btn btn-danger">
                 &nbsp;РЕДАКТИРАЙ!
             </a>
-            <a href="{!!URL::to('/acaricides/substances/'.$acaricide[0]['id'])!!}" class="fa fa-edit btn btn-primary">
+            <a href="{!!URL::to('/acaricides/substances/'.$nematocide[0]['id'])!!}" class="fa fa-edit btn btn-primary">
                 &nbsp;ДОБАВИ А. В-ВО!
             </a>
-            <a href="{!!URL::to('/acaricides/dose/'.$acaricide[0]['id'])!!}" class="fa fa-edit btn btn-success">
+            <a href="{!!URL::to('/acaricides/dose/'.$nematocide[0]['id'])!!}" class="fa fa-edit btn btn-success">
                 &nbsp;ДОБАВИ ДОЗА!
             </a>
-            <a style="float: right" href="{!!URL::to('/acaricides/deactivate/'.$acaricide[0]['id'])!!}" class="fa fa-cut btn btn-danger">
+            <a style="float: right" href="{!!URL::to('/acaricides/deactivate/'.$nematocide[0]['id'])!!}" class="fa fa-cut btn btn-danger">
                 &nbsp;Деактивирай!
             </a>
         </div>
         <hr/>
         <div class="row">
-            <h3>{{$acaricide[0]['name']}}</h3>
-            <p>Фирма Производител: {{$acaricide[0]['firmName']}}</p>
-            <p>Формулация: {{$acaricide[0]['type']}}</p>
-            <p>Активно в-во: {{$acaricide[0]['substance']}}</p>
-            @foreach($acaricide[0]['pestsubstanse'] as $substance)
+            <h3>{{$nematocide[0]['name']}}</h3>
+            <p>Фирма Производител: {{$nematocide[0]['firmName']}}</p>
+            <p>Формулация: {{$nematocide[0]['type']}}</p>
+            <p>Активно в-во: {{$nematocide[0]['substance']}}</p>
+            @foreach($nematocide[0]['pestsubstanse'] as $substance)
                 <p>Активно в-во: {{$substance['quantity']}}
                     <a href="{!!URL::to('/substances/'.$substance['substance_id'])!!}" >{{$substance['name']}}</a>
                     {{$substance['quantityAfter']}} -
@@ -30,19 +30,19 @@
                     <a href="{!!URL::to('/acaricides/substances_edit/'.$substance['id'].'/'.$substance['pesticides_id'])!!}">Edit</a>
                 </p>
             @endforeach
-            <p>{{$acaricide[0]['permission']}}</p>
-            <p>Валидно до: {{$acaricide[0]['valid']}}</p>
-            <p>{{$acaricide[0]['dateOrder']}}</p>
-            <p>Категория на употреба: {{$acaricide[0]['category']}}</p>
-            <p>Забележка след категорията: {{$acaricide[0]['categoryNote']}}</p>
-            <p>ЛД: {{$acaricide[0]['lethal']}}</p>
-            <p>Забележка: {{$acaricide[0]['period']}}</p>
-            <p>Description: {{$acaricide[0]['pestDescription']}}</p>
-            <p>Доза min: {{$acaricide[0]['min']}} / Доза max: {{$acaricide[0]['max']}} - {{$acaricide[0]['measure']}} ({{$acaricide[0]['measureId']}} )</p>
+            <p>{{$nematocide[0]['permission']}}</p>
+            <p>Валидно до: {{$nematocide[0]['valid']}}</p>
+            <p>{{$nematocide[0]['dateOrder']}}</p>
+            <p>Категория на употреба: {{$nematocide[0]['category']}}</p>
+            <p>Забележка след категорията: {{$nematocide[0]['categoryNote']}}</p>
+            <p>ЛД: {{$nematocide[0]['lethal']}}</p>
+            <p>Забележка: {{$nematocide[0]['period']}}</p>
+            <p>Description: {{$nematocide[0]['pestDescription']}}</p>
+            <p>Доза min: {{$nematocide[0]['min']}} / Доза max: {{$nematocide[0]['max']}} - {{$nematocide[0]['measure']}} ({{$nematocide[0]['measureId']}} )</p>
         </div>
         <div class="row">
             <p style="font-weight: bold">Забележка:</p>
-            <p>{!! $acaricide[0]['totalNoteAfterDose'] !!}</p>
+            <p>{!! $nematocide[0]['totalNoteAfterDose'] !!}</p>
         </div>
         <?php
 //            var_dump($acaricide[0]['doses']);
@@ -63,7 +63,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($acaricide[0]['doses'] as $dose)
+                    @foreach($nematocide[0]['doses'] as $dose)
                         <tr>
                             <td>
                                 <a href="{!!URL::to('/acaricides/deactivate_one_dose/'.$dose['id'].'/'.$dose['pesticides_id'])!!}" class="btn btn-danger"><i class="fas fa-cut"></i></a>

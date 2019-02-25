@@ -1,4 +1,4 @@
-@extends('acaricides.layout')
+@extends('nematocides.layout')
 
 @section('content')
     {{--@foreach($scaricides as $scar)--}}
@@ -15,21 +15,14 @@
             </thead>
             <tbody>
                 <?php $n = 1; ?>
-                @foreach($acaricides as $acar)
+                @foreach($nematocides as $acar)
                     <tr>
                         <td><?php echo $n ++ ?></td>
-                        {{--<td>--}}
-                            {{--@if($acar -> isActive === 0)--}}
-                                {{--<span style="color: green"> ДА</span>--}}
-                            {{--@else--}}
-                                {{--<span style="color: red"> НЕ</span>--}}
-                            {{--@endif--}}
-                        {{--</td>--}}
                         <td>{{$acar->id}}</td>
                         <td>{{$acar -> name}}</td>
                         <td>{{$acar -> firmName}} - {{$acar -> manufacturersId}}</td>
                         <td>
-                            <a href="{!!URL::to('/acaricides/'.$acar->id)!!}" class="fa fa-edit btn btn-primary">
+                            <a href="{!!URL::to('/nematocides/'.$acar->id)!!}" class="fa fa-edit btn btn-primary">
                                 &nbsp;ВИЖ!
                             </a>
                         </td>

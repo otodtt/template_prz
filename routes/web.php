@@ -169,4 +169,7 @@ Route::post('parallel/update/{id}', 'ParallelController@update');
 Route::get('products/parallel','ParallelController@get_parallel');
 
 // НЕМАТОЦИДИ
-Route::get('nematicides', 'NematocidesController@index');
+Route::get('nematocides', 'NematocidesController@index');
+Route::get('nematocides/create', 'NematocidesController@create');
+Route::post('nematocides/store', 'NematocidesController@store');
+Route::get('nematocides/{id}', 'NematocidesController@show');
