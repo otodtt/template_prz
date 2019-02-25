@@ -26,4 +26,8 @@ class Crop extends Model
     public function acaricides(){
         return $this->hasMany('App\Acaricide')->where('isActive', '=', 0);
     }
+
+    public function nematocides(){
+        return $this->hasMany('App\Nematocides')->where('isActive', '=', 0);
+    }
 }
