@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="row">
-                <a href="{!!URL::to('/acaricides/'.$acaricides->id)!!}"><- {{$acaricides->name}}</a>
+                <a href="{!!URL::to('/nematocides/'.$nematocide->id)!!}"><- {{$nematocide->name}}</a>
             </div>
             <div class="col-lg-12">
                 @if(count($errors)>0)
@@ -16,9 +16,9 @@
                         </ul>
                     </div>
                 @endif
-                {!! Form::model($subs, ['url'=>'acaricides/subs_update/'.$subs[0]['id'].'/'.$subs[0]['pesticides_id'] , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+                {!! Form::model($subs, ['url'=>'nematocides/subs_update/'.$subs[0]['id'].'/'.$subs[0]['pesticides_id'] , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
                 <fieldset>
-                    <legend style="color: blue">РЕДАКТИРАНЕ НА АКТИВНО ВЕЩЕСТВО КЪМ {{$acaricides->name}}</legend>
+                    <legend style="color: blue">РЕДАКТИРАНЕ НА АКТИВНО ВЕЩЕСТВО КЪМ {{$nematocide->name}}</legend>
                     <div class="form-group">
                         <div class="col-lg-3">
                             <div class="col-lg-12">

@@ -61,7 +61,12 @@ class ManufacturersController extends Controller
                                 ->where('isActive', 0)
                                 ->get()->toArray();
 
-        return view('manufacturers.show', compact('firms', 'acaricides'));
+        $nematocides = Pesticides::where('manufacturersId', $id)
+            ->where('pesticideId', 4)
+            ->where('isActive', 0)
+            ->get()->toArray();
+
+        return view('manufacturers.show', compact('firms', 'acaricides', 'nematocides'));
     }
 
     public function edit($id)

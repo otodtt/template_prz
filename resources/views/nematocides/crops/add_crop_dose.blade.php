@@ -1,12 +1,12 @@
-@extends('acaricides.layout')
+@extends('nematocides.layout')
 
 @section('content')
     <div class="container">
         <div class="row">
-            <a href="{!!URL::to('/acaricides/'.$acaricides->id)!!}"><- {{$acaricides->name}}</a>
+            <a href="{!!URL::to('/nematocides/'.$nematocide->id)!!}"><- {{$nematocide->name}}</a>
         </div>
         <div class="row" style="text-align: center; color: green">
-            <h4>ДОБАВЯНЕ НА ДОЗИ ЗА КУЛТУРИ ОТ ПРЗ  {{$acaricides->name}}</h4>
+            <h4>ДОБАВЯНЕ НА ДОЗИ ЗА КУЛТУРИ ОТ ПРЗ  {{$nematocide->name}}</h4>
         </div>
         <div class="col-lg-12">
             @if(count($errors)>0)
@@ -18,14 +18,13 @@
                     </ul>
                 </div>
             @endif
-            {!! Form::open(['url'=>'acaricides/crop_dose_store/'.$acaricides->id.'/'.$doses[0]['id'] , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+            {!! Form::open(['url'=>'nematocides/crop_dose_store/'.$nematocide->id.'/'.$doses[0]['id'] , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
             <fieldset>
                 <legend style="color: green"></legend>
                 <div class="form-group">
                     <div class="col-lg-12">
                         <p style="color: red; font-weight: bold">ВНИМАНИЕ</p>
                         <p>Тряба да се избера една от следните култури/ култура</p>
-                        {{--<p style="font-weight: bold">{{ $doses[0]['crop'] }}</p>--}}
                     </div>
                 </div>
                 <hr style="border: 0.5px solid black"/>
@@ -60,7 +59,7 @@
 
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <a href="{!!URL::to('/acaricides/'.$acaricides->id)!!}" class="btn btn-success">Назат</a>
+                        <a href="{!!URL::to('/acaricides/'.$nematocide->id)!!}" class="btn btn-success">Назат</a>
                         <button type="submit" class="btn btn-primary">ДОБАВИ</button>
                     </div>
                 </div>

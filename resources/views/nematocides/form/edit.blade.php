@@ -1,10 +1,10 @@
-@extends('acaricides.layout')
+@extends('nematocides.layout')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="row">
-                <a href="{!!URL::to('/acaricides/'.$acaricides['id'])!!}" >НАЗАД</a>
+                <a href="{!!URL::to('/nematocides/'.$nematocides['id'])!!}" >НАЗАД</a>
             </div>
             <div class="col-lg-12">
                 @if(count($errors)>0)
@@ -16,9 +16,9 @@
                         </ul>
                     </div>
                 @endif
-                {!! Form::model($acaricides, ['url'=>'acaricides/update/'.$acaricides['id'], 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+                {!! Form::model($nematocides, ['url'=>'nematocides/update/'.$nematocides['id'], 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
                 <fieldset>
-                    <legend>ДОБАВЯНЕ НА АКАРИЦИД</legend>
+                    <legend>РЕДАКТИРАНЕ НА НЕМАТОЦИД</legend>
                     <div class="form-group">
                         <div class="col-lg-8">
                             <div class="col-lg-12">
@@ -53,7 +53,7 @@
                             <select name="manufacturersId[]" class="form-control">
                                 <?php
                                 foreach($firms as $value=>$name) {
-                                    if($acaricides['manufacturersId'] == $value) {
+                                    if($nematocides['manufacturersId'] == $value) {
                                         echo '<option value="'.$value.', '.$name.'" selected>'.$name.'</option>';
                                     }
                                     else {
@@ -142,7 +142,7 @@
                                 {{--<label for="measure" class="control-label">Мерна Единица</label><br/>--}}
                                 <?php
 //                                var_dump($acaricides['measureId']);
-                                if($acaricides['measureId'] == 0) {
+                                if($nematocides['measureId'] == 0) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
@@ -155,7 +155,7 @@
                                     $select4 = '';
                                     $select5 = '';
                                 }
-                                if($acaricides['measureId'] == 1) {
+                                if($nematocides['measureId'] == 1) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
@@ -168,7 +168,7 @@
                                     $select4 = '';
                                     $select5 = '';
                                 }
-                                if($acaricides['measureId'] == 2) {
+                                if($nematocides['measureId'] == 2) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
@@ -182,7 +182,7 @@
                                     $select5 = '';
                                 }
 
-                                if($acaricides['measureId'] == 3) {
+                                if($nematocides['measureId'] == 3) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
@@ -196,7 +196,7 @@
                                     $select5 = '';
                                 }
 
-                                if($acaricides['measureId'] == 4) {
+                                if($nematocides['measureId'] == 4) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
@@ -210,7 +210,7 @@
                                     $select5 = '';
                                 }
 
-                                if($acaricides['measureId'] == 5) {
+                                if($nematocides['measureId'] == 5) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';

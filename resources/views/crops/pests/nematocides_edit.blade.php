@@ -16,9 +16,9 @@
                         </ul>
                     </div>
                 @endif
-                {!! Form::open(['url'=>'crops/acaricides_store/'.$crops->id , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+                {!! Form::model($nematocide, ['url'=>'crops/nematocides_update/'.$nematocide->id , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
                 <fieldset>
-                    <legend style="color: blue">ДОБАВЯНЕ НА АКАРИЦИД ЗА {{$crops->name}}</legend>
+                    <legend style="color: blue">РЕДАКТИРАНЕ НА НЕМАТОЦИД ЗА {{$crops->name}}</legend>
                     <div class="form-group">
                         <div class="col-lg-6">
                             <div class="col-lg-12">
@@ -84,19 +84,17 @@
                                 !!}
                             </div>
                         </div>
-
                         <div class="col-lg-6">
                             <div class="col-lg-12">
                                 <label for="practices" class="control-label">ДРЗП</label>
                                 {!! Form::textarea('practices', null, ['class'=>'form-control', 'id'=>'practices' ]) !!}
                             </div>
                         </div>
-
                     </div>
                     <hr style="border: 0.5px solid black"/>
                     <div class="form-group">
                         <div class="col-lg-6">
-                            <label for="quantityAfter" class="control-label">АКТИВНА</label>
+                            <label for="isActive" class="control-label">АКТИВНА</label>
                             {{ Form::label('isActive', 'ДА') }}
                             {{ Form::radio('isActive', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             {{ Form::label('isActive', 'HE') }}

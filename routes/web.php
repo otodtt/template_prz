@@ -142,7 +142,6 @@ Route::get('acaricides/deactivate_one_dose/{dose}/{pest}', 'AcaricidesController
 Route::post('acaricides/deactivate_one_store/{dose}/{pest}', 'AcaricidesController@deactivate_one_store');
 Route::get('acaricides/deactivate/{id}', 'AcaricidesController@deactivate');
 Route::post('acaricides/deactivate_store/{id}', 'AcaricidesController@deactivate_store');
-
 /////// Добавяне на дози към култури //////
 
 
@@ -160,6 +159,9 @@ Route::get('crops/acaricides/{id}', 'CropsController@acaricides');
 Route::get('crops/acaricides_edit/{id}/{crop}', 'CropsController@acaricides_edit');
 Route::post('crops/acaricides_update/{id}', 'CropsController@acaricides_update');
 
+Route::get('crops/nematocides_edit/{id}/{crop}', 'CropsController@nematocides_edit');
+Route::post('crops/nematocides_update/{id}', 'CropsController@nematocides_update');
+
 // PARALLEL
 Route::get('parallel', 'ParallelController@index');
 Route::get('parallel/create', 'ParallelController@create');
@@ -173,3 +175,28 @@ Route::get('nematocides', 'NematocidesController@index');
 Route::get('nematocides/create', 'NematocidesController@create');
 Route::post('nematocides/store', 'NematocidesController@store');
 Route::get('nematocides/{id}', 'NematocidesController@show');
+Route::get('nematocides/edit/{id}', 'NematocidesController@edit');
+Route::post('nematocides/update/{id}', 'NematocidesController@update');
+
+Route::get('nematocides/substances/{id}', 'NematocidesController@substances');
+Route::post('nematocides/subs_add/{id}', 'NematocidesController@subs_add');
+Route::get('nematocides/substances_edit/{id}/{pest}', 'NematocidesController@substances_edit');
+Route::post('nematocides/subs_update/{id}/{pest}', 'NematocidesController@subs_update');
+
+Route::get('nematocides/dose/{id}', 'NematocidesController@dose');
+Route::post('nematocides/dose_add/{id}', 'NematocidesController@dose_add');
+Route::get('nematocides/dose_edit/{id}/{pest}', 'NematocidesController@dose_edit');
+Route::post('nematocides/dose_update/{id}/{pest}', 'NematocidesController@dose_update');
+
+/////// Добавяне на дози към култури //////
+Route::get('nematocides/dose_crop/{id}/{pest}', 'NematocidesController@dose_crop');
+Route::post('nematocides/crop_dose_store/{id}/{pest}', 'NematocidesController@dose_crop_store');
+
+/// Деактивиране на една доза
+Route::get('nematocides/deactivate_one_dose/{dose}/{pest}', 'NematocidesController@deactivate_one');
+Route::post('nematocides/deactivate_one_store/{dose}/{pest}', 'NematocidesController@deactivate_one_store');
+Route::get('nematocides/deactivate/{id}', 'NematocidesController@deactivate');
+Route::post('nematocides/deactivate_store/{id}', 'NematocidesController@deactivate_store');
+/////// Добавяне на дози към култури //////
+
+

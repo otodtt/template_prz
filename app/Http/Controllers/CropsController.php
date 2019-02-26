@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Acaricide;
 use App\Crop;
 use App\Http\Requests\AddPestRequest;
+use App\Nematocides;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -59,7 +60,10 @@ class CropsController extends Controller
     public function show($id)
     {
         $crops = Crop::findOrFail($id);
-        $acaricides = Crop::where('id', $id)->with('Acaricides')->get()->toArray();
+        $acaricides = Crop::where('id', $id)
+                        ->with('Acaricides')
+                        ->with('Nematocides')
+                        ->get()->toArray();
 //        dd($acaricides);
         return view('crops.show', compact('crops', 'acaricides'));
     }
@@ -100,44 +104,14 @@ class CropsController extends Controller
         return Redirect::to('/crops');
     }
 
-
-    public function acaricides($id)
-    {
-        $crops = Crop::findOrFail($id);
-        return view('crops.pests.acaricides', compact('crops'));
-    }
-
-    public function acaricides_store(AddPestRequest $request, $id)
-    {
-        $data = [
-            'product' => $request['product'],
-            'productId' => $request['productId'],
-            'dose' => $request['dose'],
-            'note' => $request['note'],
-            'minimumUse' => $request['minimumUse'],
-            'disease' => $request['disease'],
-            'afterNote' => $request['afterNote'],
-            'quarantine' => $request['quarantine'],
-            'category' => $request['category'],
-            'practices' => $request['practices'],
-            'isActive' => $request['isActive'],
-        ];
-
-        $crops = Crop::findOrFail($id);
-        $acaricide = new Acaricide($data);
-//        dd($acaricide);
-        $crops->acaricides()->save($acaricide);
-//        dd($crops);
-
-        return Redirect::to('/crops/show/'.$id);
-    }
-
+    // ACARICIDES
     public function acaricides_edit($id, $crop)
     {
         $crops = Crop::findOrFail($crop);
         $acaricide = Acaricide::findOrFail($id);
         return view('crops.pests.acaricides_edit', compact('crops', 'acaricide'));
     }
+
     public function acaricides_update(AddPestRequest $request, $id)
     {
         $data = [
@@ -158,6 +132,36 @@ class CropsController extends Controller
         $acaricide->update($data);
 
         return Redirect::to('/crops/show/'.$acaricide->crop_id);
+    }
+
+    // NEMATOCIDES
+    public function nematocides_edit($id, $crop)
+    {
+        $crops = Crop::findOrFail($crop);
+        $nematocide = Nematocides::findOrFail($id);
+        return view('crops.pests.nematocides_edit', compact('crops', 'nematocide'));
+    }
+
+    public function nematocides_update(AddPestRequest $request, $id)
+    {
+        $data = [
+            'product' => $request['product'],
+            'productId' => $request['productId'],
+            'dose' => $request['dose'],
+            'note' => $request['note'],
+            'minimumUse' => $request['minimumUse'],
+            'disease' => $request['disease'],
+            'afterNote' => $request['afterNote'],
+            'quarantine' => $request['quarantine'],
+            'category' => $request['category'],
+            'practices' => $request['practices'],
+            'isActive' => $request['isActive'],
+        ];
+
+        $nematocide = Nematocides::findOrFail($id);
+        $nematocide->update($data);
+
+        return Redirect::to('/crops/show/'.$nematocide->crop_id);
     }
 
 }

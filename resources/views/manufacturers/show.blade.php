@@ -17,5 +17,15 @@
                 </ol>
             @endif
         </div>
+        <div class="row">
+            @if(count($nematocides) > 0)
+                <h4 class="bold">Нематоциди</h4>
+                <ol>
+                    @foreach($nematocides as $products)
+                        <li>{{$products['name']}} - {{$products['id']}} - {{$products['pesticide']}}</li>
+                    @endforeach
+                </ol>
+            @endif
+        </div>
     </div>
 @endsection

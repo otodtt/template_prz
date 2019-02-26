@@ -1,10 +1,10 @@
-@extends('substances.layout')
+@extends('nematocides.layout')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="row">
-                <a href="{!!URL::to('/acaricides/'.$acaricides->id)!!}"><- {{$acaricides->name}}</a>
+                <a href="{!!URL::to('/nematocides/'.$nematocides->id)!!}"><- {{$nematocides->name}}</a>
             </div>
             <div class="col-lg-12">
                 @if(count($errors)>0)
@@ -16,9 +16,9 @@
                         </ul>
                     </div>
                 @endif
-                {!! Form::open(['url'=>'acaricides/subs_add/'.$acaricides->id , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+                {!! Form::open(['url'=>'nematocides/subs_add/'.$nematocides->id , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
                 <fieldset>
-                    <legend style="color: blue">ДОБАВЯНЕ НА АКТИВНО ВЕЩЕСТВО КЪМ {{$acaricides->name}}</legend>
+                    <legend style="color: blue">ДОБАВЯНЕ НА АКТИВНО ВЕЩЕСТВО КЪМ {{$nematocides->name}}</legend>
                     <div class="form-group">
                         <div class="col-lg-3">
                             <div class="col-lg-12">
