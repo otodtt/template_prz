@@ -44,10 +44,6 @@
             <p style="font-weight: bold">Забележка:</p>
             <p>{!! $nematocide[0]['totalNoteAfterDose'] !!}</p>
         </div>
-        <?php
-//            var_dump($acaricide[0]['doses']);
-//            var_dump($acaricide[0]['id']);
-        ?>
         <div class="row">
             <table class="table" style="width: 100%">
                 <thead>
@@ -84,7 +80,7 @@
                             <td>{{$dose['crop']}}</td>
                             <td>
                                 <?php
-                                    if(strlen($dose['afterNote']) > 0) {
+                                    if(strlen($dose['note']) > 0) {
                                         ?>
                                             <span class="bold underline">{{$dose['note']}}</span><br/>
                                         <?php
