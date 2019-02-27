@@ -88,6 +88,10 @@ Route::get('vitis','TemplateController@vitis');
 Route::get('products/acaricides','GetProductsController@acaricides');
 Route::get('products/acaricides/{id}','GetProductsController@show_acaricide');
 
+Route::get('products/nematocides','GetProductsController@nematocides');
+Route::get('products/nematocides/{id}','GetProductsController@show_nematocide');
+
+////// Препарати
 
 
 //Route::resource('culture', 'CultureController');
