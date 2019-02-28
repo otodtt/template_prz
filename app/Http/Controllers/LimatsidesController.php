@@ -6,26 +6,26 @@ use App\Crop;
 use App\Dose;
 use App\Http\Requests\AcaricideRequest;
 use App\Http\Requests\AddCropDoseRequest;
+use App\Limatsides;
 use App\Manufacturer;
-use App\Nematocides;
 use App\Pesticides;
 use App\PestSubstance;
 use App\Substance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
-class NematocidesController extends Controller
+class LimatsidesController extends Controller
 {
     public function index()
     {
-        $nematocides = Pesticides::where('pesticideId', 4)->where('isActive', 0)->orderBy('alphabet', 'asc')->get();
-        return view('nematocides.index', compact('nematocides'));
+        $limatsides = Pesticides::where('pesticideId', 6)->where('isActive', 0)->orderBy('alphabet', 'asc')->get();
+        return view('limatsides.index', compact('limatsides'));
     }
 
     public function create()
     {
         $firms = Manufacturer::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
-        return view('nematocides.form.create', compact('firms'));
+        return view('limatsides.form.create', compact('firms'));
     }
 
     public function store(AcaricideRequest $request)
@@ -63,8 +63,8 @@ class NematocidesController extends Controller
             'lethal' => $request['lethal'],
             'category' => $request['category'],
             'categoryNote' => $request['categoryNote'],
-            'pesticide' => 'nematocides',
-            'pesticideId' => 4,
+            'pesticide' => 'limatsides',
+            'pesticideId' => 6,
             'pestDescription' => $request['pestDescription'],
             'min' => $request['min'],
             'max' => $request['max'],
@@ -77,21 +77,21 @@ class NematocidesController extends Controller
         ];
         Pesticides::create($data);
 //        dd($data);
-        return Redirect::to('/nematocides');
+        return Redirect::to('/limatsides');
     }
 
     public function show($id)
     {
-        $nematocide = Pesticides::where('id', $id)->with('Pestsubstanse')->with('Doses')->get()->toArray();
-        return view('nematocides.show', compact('nematocide'));
+        $limatside = Pesticides::where('id', $id)->with('Pestsubstanse')->with('Doses')->get()->toArray();
+        return view('limatsides.show', compact('limatside'));
     }
 
     public function edit($id)
     {
-        $nematocides = Pesticides::findOrFail($id);
+        $limatsides = Pesticides::findOrFail($id);
         $firms = Manufacturer::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
 
-        return view('nematocides.form.edit', compact('nematocides', 'firms'));
+        return view('limatsides.form.edit', compact('limatsides', 'firms'));
     }
 
     public function update(AcaricideRequest $request, $id)
@@ -129,8 +129,8 @@ class NematocidesController extends Controller
             'lethal' => $request['lethal'],
             'category' => $request['category'],
             'categoryNote' => $request['categoryNote'],
-            'pesticide' => 'nematocides',
-            'pesticideId' => 4,
+            'pesticide' => 'limatsides',
+            'pesticideId' => 6,
             'pestDescription' => $request['pestDescription'],
             'min' => $request['min'],
             'max' => $request['max'],
@@ -140,8 +140,8 @@ class NematocidesController extends Controller
 
         ];
 
-        $nematocides = Pesticides::findOrFail($id);
-        $nematocides->update($data);
+        $limatsides = Pesticides::findOrFail($id);
+        $limatsides->update($data);
 
         $dataSubs = [
             'name' => $request['name'],
@@ -150,21 +150,21 @@ class NematocidesController extends Controller
             'alphabet' => $in
         ];
 
-        return Redirect::to('/nematocides/'.$nematocides['id']);
+        return Redirect::to('/limatsides/'.$limatsides['id']);
     }
 
     // СУБСТАНЦИИ ===========
     public function substances($id)
     {
-        $nematocides = Pesticides::findOrFail($id);
+        $limatsides = Pesticides::findOrFail($id);
         $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
 
-        return view('nematocides.form.substances', compact('nematocides', 'substances'));
+        return view('limatsides.form.substances', compact('limatsides', 'substances'));
     }
 
     public function subs_add(Request $request, $id)
     {
-        $nematocide = Pesticides::findOrFail($id);
+        $limatside = Pesticides::findOrFail($id);
 
         $subs = explode(', ', $request['substance_id'][0]);
         $data = [
@@ -172,27 +172,27 @@ class NematocidesController extends Controller
             'substance_id' => $subs[0],
             'quantity' => $request['quantity'],
             'quantityAfter' => $request['quantityAfter'],
-            'pesticide_name' => $nematocide->name,
-            'pesticide_type' => $nematocide->pesticide,
-            'manufacturersId' => $nematocide->manufacturersId,
-            'firmName' => $nematocide->firmName,
-            'isActive' => $nematocide->isActive,
+            'pesticide_name' => $limatside->name,
+            'pesticide_type' => $limatside->pesticide,
+            'manufacturersId' => $limatside->manufacturersId,
+            'firmName' => $limatside->firmName,
+            'isActive' => $limatside->isActive,
 //            'pesticideId' => $id,
         ];
 
         $substance = new PestSubstance($data);
-        $nematocide->pestsubstanse()->save($substance);
+        $limatside->pestsubstanse()->save($substance);
 
-        return Redirect::to('/nematocides/'.$nematocide['id']);
+        return Redirect::to('/limatsides/'.$limatside['id']);
     }
 
     public function substances_edit($id, $pest)
     {
-        $nematocide = Pesticides::findOrFail($pest);
+        $limatside = Pesticides::findOrFail($pest);
         $subs = PestSubstance::where('id', $id)->where('pesticides_id', $pest)->get()->toArray();
         $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
 
-        return view('nematocides.form.substances_edit', compact('subs', 'substances', 'nematocide'));
+        return view('limatsides.form.substances_edit', compact('subs', 'substances', 'limatside'));
     }
 
     public function subs_update(Request $request, $id, $pest)
@@ -207,16 +207,16 @@ class NematocidesController extends Controller
 
         PestSubstance::where('id', $id)->update($data);
 
-        return Redirect::to('/nematocides/'.$pest);
+        return Redirect::to('/limatsides/'.$pest);
     }
 
     // ДОЗИ ===========
     public function dose($id)
     {
-        $nematocide = Pesticides::findOrFail($id);
+        $limatside = Pesticides::findOrFail($id);
         $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
 
-        return view('nematocides.form.dose', compact('nematocide', 'substances'));
+        return view('limatsides.form.dose', compact('limatside', 'substances'));
     }
 
     public function dose_add(Request $request, $id)
@@ -238,20 +238,20 @@ class NematocidesController extends Controller
             "isActive" => $request['isActive'],
         ];
 
-        $nematocide = Pesticides::findOrFail($id);
+        $limatside = Pesticides::findOrFail($id);
         $dose = new Dose($data);
-        $nematocide->doses()->save($dose);
+        $limatside->doses()->save($dose);
 
-        return view('nematocides.form.dose', compact('nematocide', 'substances'));
+        return view('limatsides.form.dose', compact('limatside', 'substances'));
     }
 
     public function dose_edit($id, $pest)
     {
         $dose = Dose::where('id', $id)->where('pesticides_id', $pest)->get()->toArray();
-        $nematocide = Pesticides::findOrFail($pest);
+        $limatside = Pesticides::findOrFail($pest);
         $substances = Substance::select('name', 'id')->orderBy('alphabet', 'asc')->pluck('name', 'id')->all();
 
-        return view('nematocides.form.dose_edit', compact('dose', 'substances', 'nematocide'));
+        return view('limatsides.form.dose_edit', compact('dose', 'substances', 'limatside'));
     }
 
     public function dose_update(Request $request, $id, $pest)
@@ -273,7 +273,7 @@ class NematocidesController extends Controller
 
         Dose::where('id', $id)->update($data);
 
-        return Redirect::to('/nematocides/'.$pest);
+        return Redirect::to('/limatsides/'.$pest);
     }
 
     public function destroy($id){}
@@ -283,23 +283,22 @@ class NematocidesController extends Controller
     {
         $crops = Crop::orderBy('name')->get();
         $doses = Dose::where('id', $doseId)->where('pesticides_id', $id)->get()->toArray();
-        $nematocide = Pesticides::findOrFail($id);
+        $limatside = Pesticides::findOrFail($id);
 
-        return view('nematocides.crops.add_crop_dose', compact('doses', 'crops', 'nematocide'));
+        return view('limatsides.crops.add_crop_dose', compact('doses', 'crops', 'limatside'));
     }
 
     public function dose_crop_store (AddCropDoseRequest $request, $id, $doseId)
     {
-
         $dose = Dose::where('id', $doseId)->where('pesticides_id', $id)->get()->toArray();
-        $nematocide = Pesticides::findOrFail($id);
+        $limatside = Pesticides::findOrFail($id);
 
         $doseData = $dose[0]['dose'].' '.$dose[0]['measure'].' '.$dose[0]['secondDose'];
 
         $data = [
             'crop_id' => $request['crop_id'],
-            'product' => $nematocide->name,
-            'productId' => $nematocide->id,
+            'product' => $limatside->name,
+            'productId' => $limatside->id,
             'dose' => $doseData,
             'doseId' => $dose[0]['id'],
             'note' => $request['note'],
@@ -308,24 +307,24 @@ class NematocidesController extends Controller
             'disease' => $dose[0]['disease'],
             'application' => $dose[0]['application'],
             'quarantine' => $dose[0]['quarantine'],
-            'category' => $nematocide->category,
+            'category' => $limatside->category,
             'isActive' => $dose[0]['isActive'],
         ];
 
         $crops = Crop::findOrFail($request['crop_id']);
-        $nematocide = new Nematocides($data);
+        $limatside = new Limatsides($data);
 //        dd($acaricide);
-        $crops->acaricides()->save($nematocide);
-        return Redirect::to('/nematocides/dose_crop/'.$id.'/'.$doseId);
+        $crops->limatsides()->save($limatside);
+        return Redirect::to('/limatsides/dose_crop/'.$id.'/'.$doseId);
     }
     // ДОЗИ КУЛТУРИ ===========
 
     // ДЕАКТИВИРАНЕ НА ДОЗА И ПРЗ
     public function deactivate_one($dose, $pest) {
         $doses = Dose::where('id', $dose)->where('pesticides_id', $pest)->get()->toArray();
-        $nematocide = Pesticides::findOrFail($pest);
+        $limatside = Pesticides::findOrFail($pest);
 
-        return view('nematocides.active.deactive_on', compact('doses', 'nematocide'));
+        return view('limatsides.active.deactive_on', compact('doses', 'limatside'));
     }
 
     public function deactivate_one_store(Request $request, $dose, $pest) {
@@ -334,15 +333,15 @@ class NematocidesController extends Controller
         ];
 //        dd($request);
         Dose::where('id', $dose)->update($data);
-        Nematocides::where('productId', $pest)->where('doseId', $dose)->update($data);
+        Limatsides::where('productId', $pest)->where('doseId', $dose)->update($data);
 
-        return Redirect::to('/nematocides/'.$pest);
+        return Redirect::to('/limatsides/'.$pest);
     }
 
     public function deactivate($pest) {
-        $nematocide = Pesticides::findOrFail($pest);
+        $limatside = Pesticides::findOrFail($pest);
 
-        return view('nematocides.active.deactivate', compact('nematocide'));
+        return view('limatsides.active.deactivate', compact('limatside'));
     }
 
     public function deactivate_store(Request $request, $id) {
@@ -352,9 +351,9 @@ class NematocidesController extends Controller
 
         Pesticides::where('id', $id)->update($data);
         Dose::where('pesticides_id', $id)->update($data);
-        Nematocides::where('productId', $id)->update($data);
+        Limatsides::where('productId', $id)->update($data);
         PestSubstance::where('pesticides_id', $id)->update($data);
 
-        return Redirect::to('/nematocides/'.$id);
+        return Redirect::to('/limatsides/'.$id);
     }
 }

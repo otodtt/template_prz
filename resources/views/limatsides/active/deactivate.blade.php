@@ -1,12 +1,12 @@
-@extends('nematocides.layout')
+@extends('limatsides.layout')
 
 @section('content')
     <div class="container">
         <div class="row">
-            <a href="{!!URL::to('/nematocides/'.$nematocide->id)!!}"><- {{$nematocide->name}}</a>
+            <a href="{!!URL::to('/limatsides/'.$limatside->id)!!}"><- {{$limatside->name}}</a>
         </div>
         <div class="row" style="text-align: center; color: green">
-            <h4 style="color: red">АКТИВИРАНЕ ИЛИ ДЕАКТИВИРАНЕ НА ПРЗ {{$nematocide->name}}</h4>
+            <h4 style="color: red">АКТИВИРАНЕ ИЛИ ДЕАКТИВИРАНЕ НА ПРЗ {{$limatside->name}}</h4>
         </div>
         <div class="col-lg-12">
             @if(count($errors)>0)
@@ -20,7 +20,7 @@
             @endif
         </div>
         <div class="col-lg-12" style="margin-top: 50px;">
-            {!! Form::model($nematocide, ['url'=>'nematocides/deactivate_store/'.$nematocide->id , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+            {!! Form::model($limatside, ['url'=>'limatsides/deactivate_store/'.$limatside->id , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
             <fieldset style="align-content: center">
                 <div class="col-lg-12" style="margin: 0 auto; text-align: center;">
                     <label for="isActive" class="control-label">АКТИВЕН ПРОДУКТ</label><br/>

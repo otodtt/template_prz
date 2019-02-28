@@ -166,6 +166,9 @@ Route::post('crops/acaricides_update/{id}', 'CropsController@acaricides_update')
 Route::get('crops/nematocides_edit/{id}/{crop}', 'CropsController@nematocides_edit');
 Route::post('crops/nematocides_update/{id}', 'CropsController@nematocides_update');
 
+Route::get('crops/limatsides_edit/{id}/{crop}', 'CropsController@limatsides_edit');
+Route::post('crops/limatsides_update/{id}', 'CropsController@limatsides_update');
+
 // PARALLEL
 Route::get('parallel', 'ParallelController@index');
 Route::get('parallel/create', 'ParallelController@create');
@@ -202,5 +205,35 @@ Route::post('nematocides/deactivate_one_store/{dose}/{pest}', 'NematocidesContro
 Route::get('nematocides/deactivate/{id}', 'NematocidesController@deactivate');
 Route::post('nematocides/deactivate_store/{id}', 'NematocidesController@deactivate_store');
 /////// Добавяне на дози към култури //////
+
+// ЛИМАЦИДИ
+Route::get('limatsides', 'LimatsidesController@index');
+Route::get('limatsides/create', 'LimatsidesController@create');
+Route::post('limatsides/store', 'LimatsidesController@store');
+Route::get('limatsides/{id}', 'LimatsidesController@show');
+Route::get('limatsides/edit/{id}', 'LimatsidesController@edit');
+Route::post('limatsides/update/{id}', 'LimatsidesController@update');
+
+Route::get('limatsides/substances/{id}', 'LimatsidesController@substances');
+Route::post('limatsides/subs_add/{id}', 'LimatsidesController@subs_add');
+Route::get('limatsides/substances_edit/{id}/{pest}', 'LimatsidesController@substances_edit');
+Route::post('limatsides/subs_update/{id}/{pest}', 'LimatsidesController@subs_update');
+
+Route::get('limatsides/dose/{id}', 'LimatsidesController@dose');
+Route::post('limatsides/dose_add/{id}', 'LimatsidesController@dose_add');
+Route::get('limatsides/dose_edit/{id}/{pest}', 'LimatsidesController@dose_edit');
+Route::post('limatsides/dose_update/{id}/{pest}', 'LimatsidesController@dose_update');
+
+/////// Добавяне на дози към култури //////
+Route::get('limatsides/dose_crop/{id}/{pest}', 'LimatsidesController@dose_crop');
+Route::post('limatsides/crop_dose_store/{id}/{pest}', 'LimatsidesController@dose_crop_store');
+
+/// Деактивиране на една доза
+Route::get('limatsides/deactivate_one_dose/{dose}/{pest}', 'LimatsidesController@deactivate_one');
+Route::post('limatsides/deactivate_one_store/{dose}/{pest}', 'LimatsidesController@deactivate_one_store');
+Route::get('limatsides/deactivate/{id}', 'LimatsidesController@deactivate');
+Route::post('limatsides/deactivate_store/{id}', 'LimatsidesController@deactivate_store');
+/////// Добавяне на дози към култури //////
+
 
 

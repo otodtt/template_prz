@@ -8,7 +8,7 @@
         <li><a href="{!!URL::to('/nematocides')!!}">Нематоциди</a></li><br/>
         <li><a href="{!!URL::to('/regulation')!!}">Регламент II</a></li><br/>
         <li><a href="{!!URL::to('/rodenticides')!!}">Родентициди</a></li><br/>
-        <li><a href="{!!URL::to('/limacides')!!}">Лимациди</a></li><br/>
+        <li><a href="{!!URL::to('/limatsides')!!}">Лимациди</a></li><br/>
         <li><a href="{!!URL::to('/repellents')!!}">Репеленти</a></li><br/>
         <li><a href="{!!URL::to('/pheromones')!!}">Феромони</a></li><br/>
         <li><a href="{!!URL::to('/herbicides')!!}">Хербициди</a></li><br/>

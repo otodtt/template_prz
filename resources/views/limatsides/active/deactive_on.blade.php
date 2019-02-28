@@ -1,12 +1,12 @@
-@extends('nematocides.layout')
+@extends('.limatsides.layout')
 
 @section('content')
     <div class="container">
         <div class="row">
-            <a href="{!!URL::to('/nematocides/'.$nematocide->id)!!}"><- {{$nematocide->name}}</a>
+            <a href="{!!URL::to('/limatsides/'.$limatside->id)!!}"><- {{$limatside->name}}</a>
         </div>
         <div class="row" style="text-align: center; color: green">
-            <h4 style="color: red">АКТИВИРАНЕ ИЛИ ДЕАКТИВИРАНЕ НА ПРЗ {{$nematocide->name}}</h4>
+            <h4>АКТИВИРАНЕ ИЛИ ДЕАКТИВИРАНЕ НА ДОЗА ОТ ПРЗ {{$limatside->name}}</h4>
         </div>
         <div class="col-lg-12">
             @if(count($errors)>0)
@@ -19,11 +19,16 @@
                 </div>
             @endif
         </div>
-        <div class="col-lg-12" style="margin-top: 50px;">
-            {!! Form::model($nematocide, ['url'=>'nematocides/deactivate_store/'.$nematocide->id , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
+        <div class="col-lg-12">
+            <p class="bold">{{ $doses[0]['crop'] }}</p>
+            <p > {{$limatside->name}} - {{ $doses[0]['dose'] }} {{ $doses[0]['measure'] }}</p>
+            <p >{!! $doses[0]['disease'] !!}</p>
+        </div>
+        <div class="col-lg-12" style="margin: 0 auto">
+            {!! Form::model($doses[0], ['url'=>'limatsides/deactivate_one_store/'.$doses[0]['id'].'/'.$limatside->id , 'method'=>'POST', 'id'=>'form', 'class'=>'form-horizontal']) !!}
             <fieldset style="align-content: center">
                 <div class="col-lg-12" style="margin: 0 auto; text-align: center;">
-                    <label for="isActive" class="control-label">АКТИВЕН ПРОДУКТ</label><br/>
+                    <label for="isActive" class="control-label">АКТИВНА ДОЗА</label><br/>
                     {{ Form::label('isActive', 'ДА') }}
                     {{ Form::radio('isActive', 0 ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     {{ Form::label('isActive', 'HE') }}

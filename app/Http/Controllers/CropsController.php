@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Acaricide;
 use App\Crop;
 use App\Http\Requests\AddPestRequest;
+use App\Limatsides;
 use App\Nematocides;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -63,6 +64,7 @@ class CropsController extends Controller
         $acaricides = Crop::where('id', $id)
                         ->with('Acaricides')
                         ->with('Nematocides')
+                        ->with('Limatsides')
                         ->get()->toArray();
 //        dd($acaricides);
         return view('crops.show', compact('crops', 'acaricides'));
@@ -162,6 +164,36 @@ class CropsController extends Controller
         $nematocide->update($data);
 
         return Redirect::to('/crops/show/'.$nematocide->crop_id);
+    }
+
+    // LIMATSIDES
+    public function limatsides_edit($id, $crop)
+    {
+        $crops = Crop::findOrFail($crop);
+        $limatside = Limatsides::findOrFail($id);
+        return view('crops.pests.limatsides_edit', compact('crops', 'limatside'));
+    }
+
+    public function limatsides_update(AddPestRequest $request, $id)
+    {
+        $data = [
+            'product' => $request['product'],
+            'productId' => $request['productId'],
+            'dose' => $request['dose'],
+            'note' => $request['note'],
+            'minimumUse' => $request['minimumUse'],
+            'disease' => $request['disease'],
+            'afterNote' => $request['afterNote'],
+            'quarantine' => $request['quarantine'],
+            'category' => $request['category'],
+            'practices' => $request['practices'],
+            'isActive' => $request['isActive'],
+        ];
+
+        $limatside = Limatsides::findOrFail($id);
+        $limatside->update($data);
+
+        return Redirect::to('/crops/show/'.$limatside->crop_id);
     }
 
 }
