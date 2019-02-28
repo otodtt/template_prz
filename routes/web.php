@@ -91,6 +91,9 @@ Route::get('products/acaricides/{id}','GetProductsController@show_acaricide');
 Route::get('products/nematocides','GetProductsController@nematocides');
 Route::get('products/nematocides/{id}','GetProductsController@show_nematocide');
 
+Route::get('products/limatsides','GetProductsController@limatsides');
+Route::get('products/limatsides/{id}','GetProductsController@show_limatside');
+
 ////// Препарати
 
 
