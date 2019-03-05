@@ -7,6 +7,7 @@ use App\Crop;
 use App\Http\Requests\AddPestRequest;
 use App\Limatsides;
 use App\Nematocides;
+use App\Pheromones;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -65,6 +66,7 @@ class CropsController extends Controller
                         ->with('Acaricides')
                         ->with('Nematocides')
                         ->with('Limatsides')
+                        ->with('Pheromones')
                         ->get()->toArray();
 //        dd($acaricides);
         return view('crops.show', compact('crops', 'acaricides'));
@@ -194,6 +196,36 @@ class CropsController extends Controller
         $limatside->update($data);
 
         return Redirect::to('/crops/show/'.$limatside->crop_id);
+    }
+
+    // PHEROMONES
+    public function pheromones_edit($id, $crop)
+    {
+        $crops = Crop::findOrFail($crop);
+        $pheromone = Pheromones::findOrFail($id);
+        return view('crops.pests.pheromones_edit', compact('crops', 'pheromone'));
+    }
+
+    public function pheromones_update(AddPestRequest $request, $id)
+    {
+        $data = [
+            'product' => $request['product'],
+            'productId' => $request['productId'],
+            'dose' => $request['dose'],
+            'note' => $request['note'],
+            'minimumUse' => $request['minimumUse'],
+            'disease' => $request['disease'],
+            'afterNote' => $request['afterNote'],
+            'quarantine' => $request['quarantine'],
+            'category' => $request['category'],
+            'practices' => $request['practices'],
+            'isActive' => $request['isActive'],
+        ];
+
+        $pheromone = Pheromones::findOrFail($id);
+        $pheromone->update($data);
+
+        return Redirect::to('/crops/show/'.$pheromone->crop_id);
     }
 
 }

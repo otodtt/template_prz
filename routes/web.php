@@ -94,6 +94,9 @@ Route::get('products/nematocides/{id}','GetProductsController@show_nematocide');
 Route::get('products/limatsides','GetProductsController@limatsides');
 Route::get('products/limatsides/{id}','GetProductsController@show_limatside');
 
+Route::get('products/pheromones','GetProductsController@pheromones');
+Route::get('products/pheromones/{id}','GetProductsController@show_pheromones');
+
 ////// Препарати
 
 
@@ -172,6 +175,9 @@ Route::post('crops/nematocides_update/{id}', 'CropsController@nematocides_update
 Route::get('crops/limatsides_edit/{id}/{crop}', 'CropsController@limatsides_edit');
 Route::post('crops/limatsides_update/{id}', 'CropsController@limatsides_update');
 
+Route::get('crops/pheromones_edit/{id}/{crop}', 'CropsController@pheromones_edit');
+Route::post('crops/pheromones_update/{id}', 'CropsController@pheromones_update');
+
 // PARALLEL
 Route::get('parallel', 'ParallelController@index');
 Route::get('parallel/create', 'ParallelController@create');
@@ -236,6 +242,36 @@ Route::get('limatsides/deactivate_one_dose/{dose}/{pest}', 'LimatsidesController
 Route::post('limatsides/deactivate_one_store/{dose}/{pest}', 'LimatsidesController@deactivate_one_store');
 Route::get('limatsides/deactivate/{id}', 'LimatsidesController@deactivate');
 Route::post('limatsides/deactivate_store/{id}', 'LimatsidesController@deactivate_store');
+/////// Добавяне на дози към култури //////
+
+
+// ФЕРОМОНИ
+Route::get('pheromones', 'PheromonesController@index');
+Route::get('pheromones/create', 'PheromonesController@create');
+Route::post('pheromones/store', 'PheromonesController@store');
+Route::get('pheromones/{id}', 'PheromonesController@show');
+Route::get('pheromones/edit/{id}', 'PheromonesController@edit');
+Route::post('pheromones/update/{id}', 'PheromonesController@update');
+
+Route::get('pheromones/substances/{id}', 'PheromonesController@substances');
+Route::post('pheromones/subs_add/{id}', 'PheromonesController@subs_add');
+Route::get('pheromones/substances_edit/{id}/{pest}', 'PheromonesController@substances_edit');
+Route::post('pheromones/subs_update/{id}/{pest}', 'PheromonesController@subs_update');
+
+Route::get('pheromones/dose/{id}', 'PheromonesController@dose');
+Route::post('pheromones/dose_add/{id}', 'PheromonesController@dose_add');
+Route::get('pheromones/dose_edit/{id}/{pest}', 'PheromonesController@dose_edit');
+Route::post('pheromones/dose_update/{id}/{pest}', 'PheromonesController@dose_update');
+
+/////// Добавяне на дози към култури //////
+Route::get('pheromones/dose_crop/{id}/{pest}', 'PheromonesController@dose_crop');
+Route::post('pheromones/crop_dose_store/{id}/{pest}', 'PheromonesController@dose_crop_store');
+
+/// Деактивиране на една доза
+Route::get('pheromones/deactivate_one_dose/{dose}/{pest}', 'PheromonesController@deactivate_one');
+Route::post('pheromones/deactivate_one_store/{dose}/{pest}', 'PheromonesController@deactivate_one_store');
+Route::get('pheromones/deactivate/{id}', 'PheromonesController@deactivate');
+Route::post('pheromones/deactivate_store/{id}', 'PheromonesController@deactivate_store');
 /////// Добавяне на дози към култури //////
 
 

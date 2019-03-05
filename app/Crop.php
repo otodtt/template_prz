@@ -34,4 +34,8 @@ class Crop extends Model
     public function limatsides(){
         return $this->hasMany('App\Limatsides')->where('isActive', '=', 0);
     }
+
+    public function pheromones(){
+        return $this->hasMany('App\Pheromones')->where('isActive', '=', 0);
+    }
 }
