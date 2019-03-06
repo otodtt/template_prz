@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Acaricide;
 use App\Crop;
+use App\Desiccant;
 use App\Http\Requests\AddPestRequest;
 use App\Limatsides;
 use App\Nematocides;
@@ -67,6 +68,7 @@ class CropsController extends Controller
                         ->with('Nematocides')
                         ->with('Limatsides')
                         ->with('Pheromones')
+                        ->with('desiccants')
                         ->get()->toArray();
 //        dd($acaricides);
         return view('crops.show', compact('crops', 'acaricides'));
@@ -226,6 +228,36 @@ class CropsController extends Controller
         $pheromone->update($data);
 
         return Redirect::to('/crops/show/'.$pheromone->crop_id);
+    }
+
+    // DESICCANTS
+    public function desiccants_edit($id, $crop)
+    {
+        $crops = Crop::findOrFail($crop);
+        $desiccants = Desiccant::findOrFail($id);
+        return view('crops.pests.desiccants_edit', compact('crops', 'desiccants'));
+    }
+
+    public function desiccants_update(AddPestRequest $request, $id)
+    {
+        $data = [
+            'product' => $request['product'],
+            'productId' => $request['productId'],
+            'dose' => $request['dose'],
+            'note' => $request['note'],
+            'minimumUse' => $request['minimumUse'],
+            'disease' => $request['disease'],
+            'afterNote' => $request['afterNote'],
+            'quarantine' => $request['quarantine'],
+            'category' => $request['category'],
+            'practices' => $request['practices'],
+            'isActive' => $request['isActive'],
+        ];
+
+        $desiccants = Desiccant::findOrFail($id);
+        $desiccants->update($data);
+
+        return Redirect::to('/crops/show/'.$desiccants->crop_id);
     }
 
 }

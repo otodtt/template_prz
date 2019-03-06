@@ -38,4 +38,8 @@ class Crop extends Model
     public function pheromones(){
         return $this->hasMany('App\Pheromones')->where('isActive', '=', 0);
     }
+
+    public function desiccants(){
+        return $this->hasMany('App\Desiccant')->where('isActive', '=', 0);
+    }
 }

@@ -163,7 +163,7 @@ Route::get('crops/show/{id}', 'CropsController@show');
 Route::get('crops/edit/{id}', 'CropsController@edit');
 Route::post('crops/update/{id}', 'CropsController@update');
 
-// ACARICIDES
+//
 Route::get('crops/acaricides/{id}', 'CropsController@acaricides');
 //Route::post('crops/acaricides_store/{id}', 'CropsController@acaricides_store');
 Route::get('crops/acaricides_edit/{id}/{crop}', 'CropsController@acaricides_edit');
@@ -177,6 +177,9 @@ Route::post('crops/limatsides_update/{id}', 'CropsController@limatsides_update')
 
 Route::get('crops/pheromones_edit/{id}/{crop}', 'CropsController@pheromones_edit');
 Route::post('crops/pheromones_update/{id}', 'CropsController@pheromones_update');
+
+Route::get('crops/desiccants_edit/{id}/{crop}', 'CropsController@desiccants_edit');
+Route::post('crops/desiccants_update/{id}', 'CropsController@desiccants_update');
 
 // PARALLEL
 Route::get('parallel', 'ParallelController@index');
@@ -272,6 +275,36 @@ Route::get('pheromones/deactivate_one_dose/{dose}/{pest}', 'PheromonesController
 Route::post('pheromones/deactivate_one_store/{dose}/{pest}', 'PheromonesController@deactivate_one_store');
 Route::get('pheromones/deactivate/{id}', 'PheromonesController@deactivate');
 Route::post('pheromones/deactivate_store/{id}', 'PheromonesController@deactivate_store');
+/////// Добавяне на дози към култури //////
+
+
+// ДЕСИКАНТИ
+Route::get('desiccants', 'DesiccantsController@index');
+Route::get('desiccants/create', 'DesiccantsController@create');
+Route::post('desiccants/store', 'DesiccantsController@store');
+Route::get('desiccants/{id}', 'DesiccantsController@show');
+Route::get('desiccants/edit/{id}', 'DesiccantsController@edit');
+Route::post('desiccants/update/{id}', 'DesiccantsController@update');
+
+Route::get('desiccants/substances/{id}', 'DesiccantsController@substances');
+Route::post('desiccants/subs_add/{id}', 'DesiccantsController@subs_add');
+Route::get('desiccants/substances_edit/{id}/{pest}', 'DesiccantsController@substances_edit');
+Route::post('desiccants/subs_update/{id}/{pest}', 'DesiccantsController@subs_update');
+
+Route::get('desiccants/dose/{id}', 'DesiccantsController@dose');
+Route::post('desiccants/dose_add/{id}', 'DesiccantsController@dose_add');
+Route::get('desiccants/dose_edit/{id}/{pest}', 'DesiccantsController@dose_edit');
+Route::post('desiccants/dose_update/{id}/{pest}', 'DesiccantsController@dose_update');
+
+/////// Добавяне на дози към култури //////
+Route::get('desiccants/dose_crop/{id}/{pest}', 'DesiccantsController@dose_crop');
+Route::post('desiccants/crop_dose_store/{id}/{pest}', 'DesiccantsController@dose_crop_store');
+
+/// Деактивиране на една доза
+Route::get('desiccants/deactivate_one_dose/{dose}/{pest}', 'DesiccantsController@deactivate_one');
+Route::post('desiccants/deactivate_one_store/{dose}/{pest}', 'DesiccantsController@deactivate_one_store');
+Route::get('desiccants/deactivate/{id}', 'DesiccantsController@deactivate');
+Route::post('desiccants/deactivate_store/{id}', 'DesiccantsController@deactivate_store');
 /////// Добавяне на дози към култури //////
 
 
