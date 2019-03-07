@@ -10,6 +10,7 @@ use App\Http\Requests\AddCropDoseRequest;
 use App\Manufacturer;
 use App\Pesticides;
 use App\Substance;
+use App\PestSubstance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -334,7 +335,7 @@ class DesiccantsController extends Controller
         ];
 //        dd($request);
         Dose::where('id', $dose)->update($data);
-        desiccants::where('productId', $pest)->where('doseId', $dose)->update($data);
+        Desiccant::where('productId', $pest)->where('doseId', $dose)->update($data);
 
         return Redirect::to('/desiccants/'.$pest);
     }
@@ -352,7 +353,7 @@ class DesiccantsController extends Controller
 
         Pesticides::where('id', $id)->update($data);
         Dose::where('pesticides_id', $id)->update($data);
-        desiccants::where('productId', $id)->update($data);
+        Desiccant::where('productId', $id)->update($data);
         PestSubstance::where('pesticides_id', $id)->update($data);
 
         return Redirect::to('/desiccants/'.$id);

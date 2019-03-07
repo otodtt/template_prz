@@ -121,4 +121,32 @@ class GetProductsController extends Controller
 //        dd($json);
         return view('templates.database_products', compact('practices'));
     }
+
+    //  ДЕСИКАНТИ
+    public function desiccants(Request $request)
+    {
+        $practices = Pesticides::where('pesticideId', 10)
+            ->where('isActive', 0)
+            ->orderBy('id', 'asc')
+            ->with('Pestsubstanse')->with('Doses')
+            ->get()
+            ->toArray();
+
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database_products', compact('practices'));
+    }
+
+    public function show_desiccants ($id)
+    {
+        $practices = Pesticides::where('pesticideId', 10)
+            ->where('id', '=', $id)
+            ->with('Pestsubstanse')->with('Doses')
+            ->get()
+            ->toArray();
+
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database_products', compact('practices'));
+    }
 }

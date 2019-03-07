@@ -97,6 +97,9 @@ Route::get('products/limatsides/{id}','GetProductsController@show_limatside');
 Route::get('products/pheromones','GetProductsController@pheromones');
 Route::get('products/pheromones/{id}','GetProductsController@show_pheromones');
 
+Route::get('products/desiccants','GetProductsController@desiccants');
+Route::get('products/desiccants/{id}','GetProductsController@show_desiccants');
+
 ////// Препарати
 
 
