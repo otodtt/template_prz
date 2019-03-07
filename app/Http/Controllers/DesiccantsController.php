@@ -9,8 +9,8 @@ use App\Http\Requests\AcaricideRequest;
 use App\Http\Requests\AddCropDoseRequest;
 use App\Manufacturer;
 use App\Pesticides;
-use App\Substance;
 use App\PestSubstance;
+use App\Substance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
