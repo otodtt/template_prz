@@ -9,6 +9,7 @@ use App\Http\Requests\AddPestRequest;
 use App\Limatsides;
 use App\Nematocides;
 use App\Pheromones;
+use App\Regulator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -69,6 +70,7 @@ class CropsController extends Controller
                         ->with('Limatsides')
                         ->with('Pheromones')
                         ->with('desiccants')
+                        ->with('regulators')
                         ->get()->toArray();
 //        dd($acaricides);
         return view('crops.show', compact('crops', 'acaricides'));
@@ -258,6 +260,36 @@ class CropsController extends Controller
         $desiccants->update($data);
 
         return Redirect::to('/crops/show/'.$desiccants->crop_id);
+    }
+
+    // REGULATORS
+    public function regulators_edit($id, $crop)
+    {
+        $crops = Crop::findOrFail($crop);
+        $regulator = Regulator::findOrFail($id);
+        return view('crops.pests.regulators_edit', compact('crops', 'regulator'));
+    }
+
+    public function regulators_update(AddPestRequest $request, $id)
+    {
+        $data = [
+            'product' => $request['product'],
+            'productId' => $request['productId'],
+            'dose' => $request['dose'],
+            'note' => $request['note'],
+            'minimumUse' => $request['minimumUse'],
+            'disease' => $request['disease'],
+            'afterNote' => $request['afterNote'],
+            'quarantine' => $request['quarantine'],
+            'category' => $request['category'],
+            'practices' => $request['practices'],
+            'isActive' => $request['isActive'],
+        ];
+
+        $regulator = Regulator::findOrFail($id);
+        $regulator->update($data);
+
+        return Redirect::to('/crops/show/'.$regulator->crop_id);
     }
 
 }

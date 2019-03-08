@@ -184,8 +184,12 @@ Route::post('crops/pheromones_update/{id}', 'CropsController@pheromones_update')
 Route::get('crops/desiccants_edit/{id}/{crop}', 'CropsController@desiccants_edit');
 Route::post('crops/desiccants_update/{id}', 'CropsController@desiccants_update');
 
+Route::get('crops/regulators_edit/{id}/{crop}', 'CropsController@regulators_edit');
+Route::post('crops/regulators_update/{id}', 'CropsController@regulators_update');
+
 // PARALLEL
 Route::get('parallel', 'ParallelController@index');
+Route::get('parallel/deactivated', 'ParallelController@deactivated');
 Route::get('parallel/create', 'ParallelController@create');
 Route::post('parallel/store', 'ParallelController@store');
 Route::get('parallel/edit/{id}', 'ParallelController@edit');
@@ -310,5 +314,32 @@ Route::get('desiccants/deactivate/{id}', 'DesiccantsController@deactivate');
 Route::post('desiccants/deactivate_store/{id}', 'DesiccantsController@deactivate_store');
 /////// Добавяне на дози към култури //////
 
+// РАСТЕЖНИ РЕГУЛАТОРИ
+Route::get('regulators', 'RegulatorsController@index');
+Route::get('regulators/create', 'RegulatorsController@create');
+Route::post('regulators/store', 'RegulatorsController@store');
+Route::get('regulators/{id}', 'RegulatorsController@show');
+Route::get('regulators/edit/{id}', 'RegulatorsController@edit');
+Route::post('regulators/update/{id}', 'RegulatorsController@update');
 
+Route::get('regulators/substances/{id}', 'RegulatorsController@substances');
+Route::post('regulators/subs_add/{id}', 'RegulatorsController@subs_add');
+Route::get('regulators/substances_edit/{id}/{pest}', 'RegulatorsController@substances_edit');
+Route::post('regulators/subs_update/{id}/{pest}', 'RegulatorsController@subs_update');
+
+Route::get('regulators/dose/{id}', 'RegulatorsController@dose');
+Route::post('regulators/dose_add/{id}', 'RegulatorsController@dose_add');
+Route::get('regulators/dose_edit/{id}/{pest}', 'RegulatorsController@dose_edit');
+Route::post('regulators/dose_update/{id}/{pest}', 'RegulatorsController@dose_update');
+
+/////// Добавяне на дози към култури //////
+Route::get('regulators/dose_crop/{id}/{pest}', 'RegulatorsController@dose_crop');
+Route::post('regulators/crop_dose_store/{id}/{pest}', 'RegulatorsController@dose_crop_store');
+
+/// Деактивиране на една доза
+Route::get('regulators/deactivate_one_dose/{dose}/{pest}', 'RegulatorsController@deactivate_one');
+Route::post('regulators/deactivate_one_store/{dose}/{pest}', 'RegulatorsController@deactivate_one_store');
+Route::get('regulators/deactivate/{id}', 'RegulatorsController@deactivate');
+Route::post('regulators/deactivate_store/{id}', 'RegulatorsController@deactivate_store');
+/////// Добавяне на дози към култури //////
 

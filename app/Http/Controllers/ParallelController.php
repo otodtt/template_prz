@@ -15,6 +15,12 @@ class ParallelController extends Controller
         return view('parallel.index', compact('parallels'));
     }
 
+    public function deactivated()
+    {
+        $parallels = Parallel::where('isActive', 1)->orderBy('id', 'asc')->get();
+        return view('parallel.deactivated', compact('parallels'));
+    }
+
     public function create()
     {
         return view('parallel.form.create');

@@ -42,4 +42,8 @@ class Crop extends Model
     public function desiccants(){
         return $this->hasMany('App\Desiccant')->where('isActive', '=', 0);
     }
+
+    public function regulators(){
+        return $this->hasMany('App\Regulator')->where('isActive', '=', 0);
+    }
 }

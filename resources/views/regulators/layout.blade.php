@@ -2,12 +2,12 @@
 <html lang="bg">
 <head>
     <meta charset="utf-8">
-    <title>ПАРАЛЕЛНА ТЪРГОВИЯ</title>
+    <title>РАСТЕЖНИ РЕГУЛАТОРИ</title>
 
     {!!Html::style("css/bootstrap.css" )!!}
     <style>
         /*.latin_name {*/
-        /*font-style: italic;*/
+            /*font-style: italic;*/
         /*}*/
         .overflow {
             width: 10em;
@@ -31,16 +31,11 @@
         .dose {
             width: 80px;
         }
-        #exampleTable {
-            border: 1px solid gray;
-        }
-        td, th {
-            border: 1px solid gray;
-        }
-        #exampleTable > thead > tr > th {
-            border: 2px solid gray;
+        .latin_name {
+            font-style: italic;
         }
     </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
 
@@ -51,12 +46,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li><a href="{!!URL::to('/parallel/create')!!}">Добави Продукт</a></li>
+                <li><a href="{!!URL::to('/regulators/create')!!}">Добави РЕГУЛАТОР</a></li>
             </ul>
-            <ul class="nav navbar-nav">
-                <li><a href="{!!URL::to('/parallel/deactivated')!!}">Деактивирани</a></li>
-            </ul>
-            <h3 style="margin-left: 500px">ПАРАЛЕЛНА ТЪРГОВИЯ</h3>
+            <h3 style="margin-left: 500px">РАСТЕЖНИ РЕГУЛАТОРИ</h3>
         </div>
     </div>
 </div>
