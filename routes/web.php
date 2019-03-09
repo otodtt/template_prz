@@ -84,6 +84,7 @@ Route::get('nigrum','TemplateController@nigrum');
 /////// Лоза
 Route::get('vitis','TemplateController@vitis');
 
+
 ////// Препарати
 Route::get('products/acaricides','GetProductsController@acaricides');
 Route::get('products/acaricides/{id}','GetProductsController@show_acaricide');
@@ -99,6 +100,9 @@ Route::get('products/pheromones/{id}','GetProductsController@show_pheromones');
 
 Route::get('products/desiccants','GetProductsController@desiccants');
 Route::get('products/desiccants/{id}','GetProductsController@show_desiccants');
+
+Route::get('products/regulators','GetProductsController@regulators');
+Route::get('products/desiccants/{id}','GetProductsController@show_regulators');
 
 ////// Препарати
 

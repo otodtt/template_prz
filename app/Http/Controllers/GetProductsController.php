@@ -149,4 +149,32 @@ class GetProductsController extends Controller
 //        dd($json);
         return view('templates.database_products', compact('practices'));
     }
+
+    //  Р. РЕГУЛАТОРИ
+    public function regulators(Request $request)
+    {
+        $practices = Pesticides::where('pesticideId', 11)
+            ->where('isActive', 0)
+            ->orderBy('id', 'asc')
+            ->with('Pestsubstanse')->with('Doses')
+            ->get()
+            ->toArray();
+
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database_products', compact('practices'));
+    }
+
+    public function show_regulators ($id)
+    {
+        $practices = Pesticides::where('pesticideId', 11)
+            ->where('id', '=', $id)
+            ->with('Pestsubstanse')->with('Doses')
+            ->get()
+            ->toArray();
+
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database_products', compact('practices'));
+    }
 }
