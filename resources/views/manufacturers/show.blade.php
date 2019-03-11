@@ -27,5 +27,71 @@
                 </ol>
             @endif
         </div>
+
+        <div class="row">
+            @if(count($rodenticides) > 0)
+                <h4 class="bold">Родентоциди</h4>
+                <ol>
+                    @foreach($rodenticides as $products)
+                        <li>{{$products['name']}} - {{$products['id']}} - {{$products['pesticide']}}</li>
+                    @endforeach
+                </ol>
+            @endif
+        </div>
+
+        <div class="row">
+            @if(count($limatsides) > 0)
+                <h4 class="bold">Лимациди</h4>
+                <ol>
+                    @foreach($limatsides as $products)
+                        <li>{{$products['name']}} - {{$products['id']}} - {{$products['pesticide']}}</li>
+                    @endforeach
+                </ol>
+            @endif
+        </div>
+
+        <div class="row">
+            @if(count($repellents) > 0)
+                <h4 class="bold">Репеленти</h4>
+                <ol>
+                    @foreach($repellents as $products)
+                        <li>{{$products['name']}} - {{$products['id']}} - {{$products['pesticide']}}</li>
+                    @endforeach
+                </ol>
+            @endif
+        </div>
+
+        <div class="row">
+            @if(count($pheromones) > 0)
+                <h4 class="bold">Феромони</h4>
+                <ol>
+                    @foreach($pheromones as $products)
+                        <li>{{$products['name']}} - {{$products['id']}} - {{$products['pesticide']}}</li>
+                    @endforeach
+                </ol>
+            @endif
+        </div>
+
+        <div class="row">
+            @if(count($desiccants) > 0)
+                <h4 class="bold">Десиканти</h4>
+                <ol>
+                    @foreach($desiccants as $products)
+                        <li>{{$products['name']}} - {{$products['id']}} - {{$products['pesticide']}}</li>
+                    @endforeach
+                </ol>
+            @endif
+        </div>
+
+        <div class="row">
+            @if(count($regulators) > 0)
+                <h4 class="bold">Р. Регулатори</h4>
+                <ol>
+                    @foreach($regulators as $products)
+                        <li>{{$products['name']}} - {{$products['id']}} - {{$products['pesticide']}}</li>
+                    @endforeach
+                </ol>
+            @endif
+        </div>
     </div>
 @endsection

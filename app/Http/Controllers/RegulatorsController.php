@@ -295,7 +295,13 @@ class RegulatorsController extends Controller
         $dose = Dose::where('id', $doseId)->where('pesticides_id', $id)->get()->toArray();
         $regulator = Pesticides::findOrFail($id);
 
-        $doseData = $dose[0]['dose'].' '.$dose[0]['measure'].' '.$dose[0]['secondDose'];
+        if ($dose[0]['measureId'] == 6) {
+            $doseData = $dose[0]['dose'].' '.$dose[0]['secondDose'];
+        } else {
+            $doseData = $dose[0]['dose'].' '.$dose[0]['measure'].' '.$dose[0]['secondDose'];
+        }
+
+
 
         $data = [
             'crop_id' => $request['crop_id'],

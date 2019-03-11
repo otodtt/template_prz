@@ -32,7 +32,7 @@
                             <a href="{!!URL::to('/regulators/'.$acaricide['productId'])!!}">{{$acaricide['product']}}</a>
                             - {{$acaricide['productId']}}
                         </td>
-                        <td class="dose">{{$acaricide['dose']}}</td>
+                        <td class="dose">{!! $acaricide['dose'] !!}</td>
                         <?php
                         if(strlen($acaricide['note'])  > 0) {
                         ?>

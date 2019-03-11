@@ -110,12 +110,22 @@
                                 <?php
                                 if(strlen($dose['doseNote']) > 0) {
                                     ?>
-                                        {{$dose['dose']}} {{$dose['measure']}}<br/>
-                                        <span class="bold">{{$dose['doseNote']}}</span>
+                                        @if($dose['measureId'] === 6)
+                                            {!! $dose['dose'] !!}<br/>
+                                            <span class="bold">{{$dose['doseNote']}}</span>
+                                        @else
+                                            {!! $dose['dose'] !!}} {{$dose['measure']}}<br/>
+                                            <span class="bold">{{$dose['doseNote']}}</span>
+                                        @endif
                                     <?php
                                 } else {
                                     ?>
-                                        {{$dose['dose']}} {{$dose['measure']}} {{$dose['secondDose']}}
+                                        @if($dose['measureId'] === 6)
+                                            {!! $dose['dose'] !!} {{$dose['secondDose']}}
+                                        @else
+                                            {!! $dose['dose'] !!} {{$dose['measure']}} {{$dose['secondDose']}}
+                                        @endif
+
                                     <?php
                                 }
                                 ?>

@@ -66,7 +66,44 @@ class ManufacturersController extends Controller
             ->where('isActive', 0)
             ->get()->toArray();
 
-        return view('manufacturers.show', compact('firms', 'acaricides', 'nematocides'));
+        $rodenticides = Pesticides::where('manufacturersId', $id)
+            ->where('pesticideId', 5)
+            ->where('isActive', 0)
+            ->get()->toArray();
+
+        $limatsides = Pesticides::where('manufacturersId', $id)
+            ->where('pesticideId', 6)
+            ->where('isActive', 0)
+            ->get()->toArray();
+
+        $repellents = Pesticides::where('manufacturersId', $id)
+            ->where('pesticideId', 7)
+            ->where('isActive', 0)
+            ->get()->toArray();
+
+        $pheromones = Pesticides::where('manufacturersId', $id)
+            ->where('pesticideId', 8)
+            ->where('isActive', 0)
+            ->get()->toArray();
+
+        $herbicides = Pesticides::where('manufacturersId', $id)
+            ->where('pesticideId', 9)
+            ->where('isActive', 0)
+            ->get()->toArray();
+
+        $desiccants = Pesticides::where('manufacturersId', $id)
+            ->where('pesticideId', 10)
+            ->where('isActive', 0)
+            ->get()->toArray();
+
+        $regulators = Pesticides::where('manufacturersId', $id)
+            ->where('pesticideId', 11)
+            ->where('isActive', 0)
+            ->get()->toArray();
+
+        return view('manufacturers.show', compact('firms', 'acaricides',
+                    'nematocides', 'rodenticides', 'limatsides', 'repellents', 'pheromones',
+                    'desiccants', 'regulators'));
     }
 
     public function edit($id)
