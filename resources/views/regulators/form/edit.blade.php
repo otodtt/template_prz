@@ -142,31 +142,20 @@
                                 {{--<label for="measure" class="control-label">Мерна Единица</label><br/>--}}
                                 <?php
 //                                var_dump($regulator['measureId']);
-                                if($regulator['measureId'] == 0) {
-                                    $value1 = '1, мл/дка';
-                                    $value2 = '2, г/дка';
-                                    $value3 = '3, %';
-                                    $value4 = '4, л/дка';
-                                    $value5 = '5, кг/дка';
-
-                                    $select1 = '';
-                                    $select2 = '';
-                                    $select3 = '';
-                                    $select4 = '';
-                                    $select5 = '';
-                                }
                                 if($regulator['measureId'] == 1) {
                                     $value1 = '1, мл/дка';
                                     $value2 = '2, г/дка';
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
                                     $value5 = '5, кг/дка';
+                                    $value6 = '6, друго';
 
                                     $select1 = 'checked="checked"';
                                     $select2 = '';
                                     $select3 = '';
                                     $select4 = '';
                                     $select5 = '';
+                                    $select6 = '';
                                 }
                                 if($regulator['measureId'] == 2) {
                                     $value1 = '1, мл/дка';
@@ -174,12 +163,14 @@
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
                                     $value5 = '5, кг/дка';
+                                    $value6 = '6, друго';
 
                                     $select1 = '';
                                     $select2 = 'checked="checked"';
                                     $select3 = '';
                                     $select4 = '';
                                     $select5 = '';
+                                    $select6 = '';
                                 }
 
                                 if($regulator['measureId'] == 3) {
@@ -188,12 +179,14 @@
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
                                     $value5 = '5, кг/дка';
+                                    $value6 = '6, друго';
 
                                     $select1 = '';
                                     $select2 = '';
                                     $select3 = 'checked="checked"';
                                     $select4 = '';
                                     $select5 = '';
+                                    $select6 = '';
                                 }
 
                                 if($regulator['measureId'] == 4) {
@@ -202,12 +195,14 @@
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
                                     $value5 = '5, кг/дка';
+                                    $value6 = '6, друго';
 
                                     $select1 = '';
                                     $select2 = '';
                                     $select3 = '';
                                     $select4 = 'checked="checked"';
                                     $select5 = '';
+                                    $select6 = '';
                                 }
 
                                 if($regulator['measureId'] == 5) {
@@ -216,12 +211,29 @@
                                     $value3 = '3, %';
                                     $value4 = '4, л/дка';
                                     $value5 = '5, кг/дка';
+                                    $value6 = '6, друго';
 
                                     $select1 = '';
                                     $select2 = '';
                                     $select3 = '';
                                     $select4 = '';
                                     $select5 = 'checked="checked"';
+                                    $select6 = '';
+                                }
+                                if($regulator['measureId'] == 6) {
+                                    $value1 = '1, мл/дка';
+                                    $value2 = '2, г/дка';
+                                    $value3 = '3, %';
+                                    $value4 = '4, л/дка';
+                                    $value5 = '5, кг/дка';
+                                    $value6 = '6, друго';
+
+                                    $select1 = '';
+                                    $select2 = '';
+                                    $select3 = '';
+                                    $select4 = '';
+                                    $select5 = '';
+                                    $select6 = 'checked="checked"';
                                 }
 //                                                                var_dump($regulator['measureId']);
                                 ?>
@@ -239,6 +251,9 @@
 
                                 {{ Form::label('measure', 'кг/дка') }}
                                 <input {{$select5}} name="measure" type="radio" value="{{$value5}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                {{ Form::label('measure', 'друго') }}
+                                <input {{$select6}} name="measure" type="radio" value="{{$value6}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
                     </div>

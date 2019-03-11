@@ -140,6 +140,8 @@
                                 {{ Form::radio('measure', '4, л/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
                                 {{ Form::label('measure', 'кг/дка') }}
                                 {{ Form::radio('measure', '5, кг/дка' ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ Form::label('measure', 'друго') }}
+                                {{ Form::radio('measure', '6, друго' ) }}
                             </div>
                         </div>
                     </div>
