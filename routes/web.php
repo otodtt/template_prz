@@ -102,7 +102,7 @@ Route::get('products/desiccants','GetProductsController@desiccants');
 Route::get('products/desiccants/{id}','GetProductsController@show_desiccants');
 
 Route::get('products/regulators','GetProductsController@regulators');
-Route::get('products/desiccants/{id}','GetProductsController@show_regulators');
+Route::get('products/regulators/{id}','GetProductsController@show_regulators');
 
 ////// Препарати
 
