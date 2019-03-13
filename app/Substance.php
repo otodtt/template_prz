@@ -30,4 +30,18 @@ class Substance extends Model
     public function products(){
         return $this->hasMany('App\PestSubstance')->where('isActive', 0);
     }
+
+    public function acaricides(){
+        return $this->hasMany('App\PestSubstance')->where('pesticide_type', '=', 'acaricides')->where('isActive', 0);
+    }
+
+    public function nematocides(){
+        return $this->hasMany('App\PestSubstance')->where('pesticide_type', '=', 'nematocides')->where('isActive', 0);
+    }
+
+    public function limatsides(){
+        return $this->hasMany('App\PestSubstance')->where('pesticide_type', '=', 'limatsides')->where('isActive', 0);
+    }
+
+
 }

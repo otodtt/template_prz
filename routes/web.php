@@ -149,6 +149,7 @@ Route::post('substances/store', 'SubstancesController@store');
 Route::get('substances/{id}', 'SubstancesController@show');
 Route::get('substances/add/{id}', 'SubstancesController@add');
 Route::post('substances/store_add/{id}', 'SubstancesController@store_add');
+Route::get('registers/substances', 'SubstancesController@get_substances');
 
 /////// Добавяне на дози към култури //////
 Route::get('acaricides/dose_crop/{id}/{pest}', 'AcaricidesController@dose_crop');

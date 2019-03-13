@@ -9,11 +9,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class SubstancesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $substances = Substance::orderBy('alphabet', 'asc')->with('products')->get()->toArray();
@@ -23,22 +19,11 @@ class SubstancesController extends Controller
         return view('substances.index', compact('substances'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('substances.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $cyrillic= array(0=>'', 1=>'А', 2=>'Б', 3=>'В', 4=>'Г', 5=>'Д', 6=>'Е', 7=>'Ж', 8=>'З', 9=>'И', 10=>'Й',
@@ -64,12 +49,6 @@ class SubstancesController extends Controller
         return Redirect::to('substances');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $substances = Substance::where('id', $id)->with('products')->get()->toArray();
@@ -83,12 +62,6 @@ class SubstancesController extends Controller
         return view('substances.add', compact('substances'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store_add(Request $request, $id)
     {
         $cyrillic= array(0=>'', 1=>'А', 2=>'Б', 3=>'В', 4=>'Г', 5=>'Д', 6=>'Е', 7=>'Ж', 8=>'З', 9=>'И', 10=>'Й',
@@ -119,38 +92,24 @@ class SubstancesController extends Controller
         return Redirect::to('substances/'.$id);
     }
 
+    public function edit($id){}
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+    public function update(Request $request, $id){}
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    public function destroy($id){}
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function get_substances() {
+//        $practices = Substance::orderBy('alphabet', 'asc')->with('products')->get()->toArray();
+        $practices = Substance::orderBy('alphabet', 'asc')
+                                ->with('products')
+                                ->with('acaricides')
+                                ->with('nematocides')
+                                ->with('limatsides')
+                                ->get()->toArray();
+
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+//        dd($practices);
+        return view('templates.database_products', compact('practices'));
     }
 }
