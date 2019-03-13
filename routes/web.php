@@ -191,15 +191,6 @@ Route::post('crops/desiccants_update/{id}', 'CropsController@desiccants_update')
 Route::get('crops/regulators_edit/{id}/{crop}', 'CropsController@regulators_edit');
 Route::post('crops/regulators_update/{id}', 'CropsController@regulators_update');
 
-// PARALLEL
-Route::get('parallel', 'ParallelController@index');
-Route::get('parallel/deactivated', 'ParallelController@deactivated');
-Route::get('parallel/create', 'ParallelController@create');
-Route::post('parallel/store', 'ParallelController@store');
-Route::get('parallel/edit/{id}', 'ParallelController@edit');
-Route::post('parallel/update/{id}', 'ParallelController@update');
-Route::get('products/parallel','ParallelController@get_parallel');
-
 // НЕМАТОЦИДИ
 Route::get('nematocides', 'NematocidesController@index');
 Route::get('nematocides/create', 'NematocidesController@create');
@@ -346,4 +337,22 @@ Route::post('regulators/deactivate_one_store/{dose}/{pest}', 'RegulatorsControll
 Route::get('regulators/deactivate/{id}', 'RegulatorsController@deactivate');
 Route::post('regulators/deactivate_store/{id}', 'RegulatorsController@deactivate_store');
 /////// Добавяне на дози към култури //////
+
+// PARALLEL
+Route::get('parallel', 'ParallelController@index');
+Route::get('parallel/deactivated', 'ParallelController@deactivated');
+Route::get('parallel/create', 'ParallelController@create');
+Route::post('parallel/store', 'ParallelController@store');
+Route::get('parallel/edit/{id}', 'ParallelController@edit');
+Route::post('parallel/update/{id}', 'ParallelController@update');
+Route::get('products/parallel','ParallelController@get_parallel');
+
+// АДЮВАНТИ
+Route::get('adjuvants', 'AdjuvantsController@index');
+Route::get('adjuvants/deactivated', 'AdjuvantsController@deactivated');
+Route::get('adjuvants/create', 'AdjuvantsController@create');
+Route::post('adjuvants/store', 'AdjuvantsController@store');
+Route::get('adjuvants/edit/{id}', 'AdjuvantsController@edit');
+Route::post('adjuvants/update/{id}', 'AdjuvantsController@update');
+Route::get('products/adjuvants','AdjuvantsController@get_adjuvant');
 

@@ -15,6 +15,7 @@
         <li><a href="{!!URL::to('/desiccants')!!}">Десиканти</a></li><br/>
         <li><a href="{!!URL::to('/regulators')!!}">Растежни регулатори</a></li><br/>
         <li><a href="{!!URL::to('/parallel')!!}">Паралелна търговия</a></li><br/>
+        <li><a href="{!!URL::to('/adjuvants')!!}">Адюванти</a></li><br/>
         <li><a href="{!!URL::to('/deactivated')!!}">Деактивирани ПРЗ</a></li><br/>
     </ul>
 @endsection
