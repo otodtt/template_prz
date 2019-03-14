@@ -99,13 +99,21 @@ class SubstancesController extends Controller
     public function destroy($id){}
 
     public function get_substances() {
-//        $practices = Substance::orderBy('alphabet', 'asc')->with('products')->get()->toArray();
-        $practices = Substance::orderBy('alphabet', 'asc')
-                                ->with('products')
+        $practices = Substance::orderBy('alphabet', 'asc')->with('products')->get()->toArray();
+//        $products = Substance::orderBy('alphabet', 'asc')->with('products')->get()->toArray();
+        $acaricides = Substance::orderBy('alphabet', 'asc')
                                 ->with('acaricides')
-                                ->with('nematocides')
+                                ->get()->toArray();
+
+        $products_db = Substance::orderBy('alphabet', 'asc')
+                                ->with('acaricides')
                                 ->with('limatsides')
                                 ->get()->toArray();
+
+
+//        $practices = array_merge($products, $acaricides);
+
+
 
         $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
 //        dd($json);
