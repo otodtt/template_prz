@@ -29,9 +29,13 @@
                 <td>{{$parallel -> owner}}</td>
                 <td>{{$parallel -> type}}</td>
                 <td>{!! $parallel -> action !!}</td>
-                <td>{{$parallel -> crops}}</td>
+                <td>{!! $parallel -> crops !!}</td>
                 <td>{!! $parallel -> dose !!}</td>
-                <td>{!! $parallel -> application !!}</td>
+                <td>
+                    {!! $parallel -> application !!}
+                    <br/>
+                    <span style="font-style: italic; font-weight: bolder;" >{!! $parallel -> noteApplication !!}</span>
+                </td>
                 <td>
                     <a href="{!!URL::to('/adjuvants/edit/'.$parallel->id)!!}" class="fa fa-edit btn btn-primary">
                         &nbsp;EDIT!

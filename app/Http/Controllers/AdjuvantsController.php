@@ -51,6 +51,7 @@ class AdjuvantsController extends Controller
             'crops' => $request['crops'],
             'dose' => $request['dose'],
             'application' => $request['application'],
+            'noteApplication' => $request['noteApplication'],
             'alphabet' => $in,
             'isActive' => $request['isActive']
         ];
@@ -91,6 +92,7 @@ class AdjuvantsController extends Controller
             'crops' => $request['crops'],
             'dose' => $request['dose'],
             'application' => $request['application'],
+            'noteApplication' => $request['noteApplication'],
             'alphabet' => $in,
             'isActive' => $request['isActive']
         ];

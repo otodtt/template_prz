@@ -10,8 +10,8 @@ class Adjuvant extends Model
 
     public $timestamps = false;
 
-
     protected $fillable = [
-        'name', 'orderAdjuvant', 'owner', 'type', 'action',  'crops', 'dose',  'application', 'alphabet', 'isActive'
+        'name', 'orderAdjuvant', 'owner', 'type', 'action',  'crops', 'dose',
+        'application', 'noteApplication', 'alphabet', 'isActive'
     ];
 }

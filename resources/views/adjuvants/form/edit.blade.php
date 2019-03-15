@@ -79,6 +79,10 @@
 
                     <div class="form-group">
                         <div class="col-lg-6">
+                            <label for="noteApplication" class="control-label">Забележка при употрбата</label>
+                            {!! Form::text('noteApplication', null, ['class'=>'form-control', 'placeholder'=>'Забележка при употрбата', 'id'=>'noteApplication' ]) !!}
+                        </div>
+                        <div class="col-lg-6">
                             <label for="isActive" class="control-label">АКТИВНА</label><br/>
                             {{ Form::label('isActive', 'ДА') }}
                             {{ Form::radio('isActive', 0, true ) }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

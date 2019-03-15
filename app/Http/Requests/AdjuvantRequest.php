@@ -17,7 +17,6 @@ class AdjuvantRequest extends FormRequest
             'name'=> 'required|min:3|max:5000',
             'owner'=> 'required|min:3|max:5000',
             'action'=> 'required|min:3|max:5000',
-            'dose'=> 'required|min:3|max:5000',
             'isActive'=> 'required',
         ];
     }
