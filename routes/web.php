@@ -346,7 +346,7 @@ Route::get('parallel/create', 'ParallelController@create');
 Route::post('parallel/store', 'ParallelController@store');
 Route::get('parallel/edit/{id}', 'ParallelController@edit');
 Route::post('parallel/update/{id}', 'ParallelController@update');
-Route::get('products/parallel','ParallelController@get_parallel');
+Route::get('registers/parallel','ParallelController@get_parallel');
 
 // АДЮВАНТИ
 Route::get('adjuvants', 'AdjuvantsController@index');
@@ -355,5 +355,5 @@ Route::get('adjuvants/create', 'AdjuvantsController@create');
 Route::post('adjuvants/store', 'AdjuvantsController@store');
 Route::get('adjuvants/edit/{id}', 'AdjuvantsController@edit');
 Route::post('adjuvants/update/{id}', 'AdjuvantsController@update');
-Route::get('products/adjuvants','AdjuvantsController@get_adjuvant');
+Route::get('registers/adjuvants','AdjuvantsController@get_adjuvant');
 
