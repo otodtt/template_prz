@@ -23,6 +23,10 @@ class Crop extends Model
         'group_id', 'name', 'latin_name', 'cropDescription'
     ];
 
+    public function fungicides(){
+        return $this->hasMany('App\Fungicide')->where('isActive', '=', 0);
+    }
+
     public function acaricides(){
         return $this->hasMany('App\Acaricide')->where('isActive', '=', 0);
     }

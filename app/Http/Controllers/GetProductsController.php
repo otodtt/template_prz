@@ -10,6 +10,34 @@ use Illuminate\Contracts\Support\JsonableInterface;
 
 class GetProductsController extends Controller
 {
+    //  ФУНГИЦИДИ
+    public function fungicides(Request $request)
+    {
+        $practices = Pesticides::where('pesticideId', 1)
+            ->where('isActive', 0)
+            ->orderBy('id', 'asc')
+            ->with('Pestsubstanse')->with('Doses')
+            ->get()
+            ->toArray();
+
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database_products', compact('practices'));
+    }
+
+    public function show_fungicide ($id)
+    {
+        $practices = Pesticides::where('pesticideId', 1)
+            ->where('id', '=', $id)
+            ->with('Pestsubstanse')->with('Doses')
+            ->get()
+            ->toArray();
+
+        $json = json_encode($practices, JSON_UNESCAPED_UNICODE);
+//        dd($json);
+        return view('templates.database_products', compact('practices'));
+    }
+
     //  АКАРИЦИДИ
     public function acaricides(Request $request)
     {

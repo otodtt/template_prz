@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Acaricide;
 use App\Crop;
 use App\Desiccant;
+use App\Fungicide;
 use App\Http\Requests\AddPestRequest;
 use App\Limatsides;
 use App\Nematocides;
@@ -65,6 +66,7 @@ class CropsController extends Controller
     {
         $crops = Crop::findOrFail($id);
         $acaricides = Crop::where('id', $id)
+                        ->with('Fungicides')
                         ->with('Acaricides')
                         ->with('Nematocides')
                         ->with('Limatsides')
@@ -110,6 +112,38 @@ class CropsController extends Controller
         $crop->update($data);
 //        dd($data);
         return Redirect::to('/crops');
+    }
+
+    // FUNGICIDES
+    public function fungicides_edit($id, $crop)
+    {
+        $crops = Crop::findOrFail($crop);
+        $fungicide = Fungicide::findOrFail($id);
+//        dd($fungicide);
+        return view('crops.pests.fungicide_edit', compact('crops', 'fungicide'));
+    }
+
+    public function fungicides_update(AddPestRequest $request, $id)
+    {
+        $data = [
+            'product' => $request['product'],
+            'productId' => $request['productId'],
+            'dose' => $request['dose'],
+            'note' => $request['note'],
+            'minimumUse' => $request['minimumUse'],
+            'disease' => $request['disease'],
+            'afterNote' => $request['afterNote'],
+            'quarantine' => $request['quarantine'],
+            'category' => $request['category'],
+            'application' => $request['application'],
+            'practices' => $request['practices'],
+            'isActive' => $request['isActive'],
+        ];
+//        dd($data);
+        $fungicide = Fungicide::findOrFail($id);
+        $fungicide->update($data);
+
+        return Redirect::to('/crops/show/'.$fungicide->crop_id);
     }
 
     // ACARICIDES

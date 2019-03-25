@@ -28,7 +28,6 @@ class AddPestRequest extends FormRequest
             'productId' => 'required',
             'dose' => 'required',
             'disease' => 'required|min:2',
-            'quarantine' => 'required',
             'category' => 'required'
         ];
     }

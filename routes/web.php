@@ -86,6 +86,9 @@ Route::get('vitis','TemplateController@vitis');
 
 
 ////// Препарати
+Route::get('products/fungicides','GetProductsController@fungicides');
+Route::get('products/fungicides/{id}','GetProductsController@show_fungicides');
+
 Route::get('products/acaricides','GetProductsController@acaricides');
 Route::get('products/acaricides/{id}','GetProductsController@show_acaricide');
 
@@ -118,8 +121,6 @@ Route::get('manufacturers', 'ManufacturersController@index');
 Route::get('manufacturers/create', 'ManufacturersController@create');
 Route::get('manufacturers/{id}', 'ManufacturersController@show');
 Route::post('manufacturers/store', 'ManufacturersController@store');
-
-
 
 Route::get('products', 'PesticidesController@index');
 Route::get('deactivated', 'PesticidesController@deactivated');
@@ -174,6 +175,10 @@ Route::post('crops/update/{id}', 'CropsController@update');
 //
 Route::get('crops/acaricides/{id}', 'CropsController@acaricides');
 //Route::post('crops/acaricides_store/{id}', 'CropsController@acaricides_store');
+
+Route::get('crops/fungicides_edit/{id}/{crop}', 'CropsController@fungicides_edit');
+Route::post('crops/fungicides_update/{id}', 'CropsController@fungicides_update');
+
 Route::get('crops/acaricides_edit/{id}/{crop}', 'CropsController@acaricides_edit');
 Route::post('crops/acaricides_update/{id}', 'CropsController@acaricides_update');
 
@@ -338,6 +343,39 @@ Route::post('regulators/deactivate_one_store/{dose}/{pest}', 'RegulatorsControll
 Route::get('regulators/deactivate/{id}', 'RegulatorsController@deactivate');
 Route::post('regulators/deactivate_store/{id}', 'RegulatorsController@deactivate_store');
 /////// Добавяне на дози към култури //////
+
+
+// ФУНГИЦИДИ
+Route::get('fungicides', 'FungicidesController@index');
+Route::get('fungicides/create', 'FungicidesController@create');
+Route::post('fungicides/store', 'FungicidesController@store');
+Route::get('fungicides/{id}', 'FungicidesController@show');
+Route::get('fungicides/edit/{id}', 'FungicidesController@edit');
+Route::post('fungicides/update/{id}', 'FungicidesController@update');
+
+Route::get('fungicides/substances/{id}', 'FungicidesController@substances');
+Route::post('fungicides/subs_add/{id}', 'FungicidesController@subs_add');
+Route::get('fungicides/substances_edit/{id}/{pest}', 'FungicidesController@substances_edit');
+Route::post('fungicides/subs_update/{id}/{pest}', 'FungicidesController@subs_update');
+
+Route::get('fungicides/dose/{id}', 'FungicidesController@dose');
+Route::post('fungicides/dose_add/{id}', 'FungicidesController@dose_add');
+Route::get('fungicides/dose_edit/{id}/{pest}', 'FungicidesController@dose_edit');
+Route::post('fungicides/dose_update/{id}/{pest}', 'FungicidesController@dose_update');
+
+/////// Добавяне на дози към култури //////
+Route::get('fungicides/dose_crop/{id}/{pest}', 'FungicidesController@dose_crop');
+Route::post('fungicides/crop_dose_store/{id}/{pest}', 'FungicidesController@dose_crop_store');
+
+/// Деактивиране на една доза
+Route::get('fungicides/deactivate_one_dose/{dose}/{pest}', 'FungicidesController@deactivate_one');
+Route::post('fungicides/deactivate_one_store/{dose}/{pest}', 'FungicidesController@deactivate_one_store');
+Route::get('fungicides/deactivate/{id}', 'FungicidesController@deactivate');
+Route::post('fungicides/deactivate_store/{id}', 'FungicidesController@deactivate_store');
+/////// Добавяне на дози към култури //////
+
+
+
 
 // PARALLEL
 Route::get('parallel', 'ParallelController@index');
