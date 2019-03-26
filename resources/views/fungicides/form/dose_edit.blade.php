@@ -140,7 +140,7 @@
                                 {{ Form::label('measure', 'кг/дка') }}
                                 <input {{$select5}} name="measure" type="radio" value="{{$value5}}" id="measure" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                                {{ Form::label('measure', 'кг/дка') }}
+                                {{ Form::label('measure', 'друго') }}
                                 <input {{$select6}} name="measure" type="radio" value="{{$value6}}" id="measure" >
                             </div>
                         </div>
