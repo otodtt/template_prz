@@ -11,7 +11,8 @@ class ManufacturersController extends Controller
 {
     public function index()
     {
-        $firms = Manufacturer::orderBy('alphabet', 'asc')->with('Pesticides')->get()->toArray();
+//        $firms = Manufacturer::orderBy('alphabet', 'asc')->with('Pesticides')->get()->toArray();
+        $firms = Manufacturer::orderBy('id', 'asc')->with('Pesticides')->get()->toArray();
 //        dd($firms);
         return view('manufacturers.index', compact('firms'));
     }
